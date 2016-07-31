@@ -23,6 +23,9 @@
 		56BEFF5C1B68CE58006F0664 /* NSEntityDescription_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF521B68CE58006F0664 /* NSEntityDescription_Service.swift */; };
 		56BEFF5D1B68CE58006F0664 /* NSFetchRequest_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF531B68CE58006F0664 /* NSFetchRequest_Service.swift */; };
 		56BEFF611B68CE58006F0664 /* NamedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF581B68CE58006F0664 /* NamedEntity.swift */; };
+		F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */; };
+		F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */; };
+		F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF91D4DD19700715138 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,11 @@
 		56BEFF521B68CE58006F0664 /* NSEntityDescription_Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEntityDescription_Service.swift; sourceTree = "<group>"; };
 		56BEFF531B68CE58006F0664 /* NSFetchRequest_Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFetchRequest_Service.swift; sourceTree = "<group>"; };
 		56BEFF581B68CE58006F0664 /* NamedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedEntity.swift; sourceTree = "<group>"; };
+		F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthSeqViewController.swift; sourceTree = "<group>"; };
+		F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarMenuViewController.swift; sourceTree = "<group>"; };
+		F6F5ABF71D4DD19700715138 /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6F5ABF81D4DD19700715138 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		F6F5ABF91D4DD19700715138 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +225,10 @@
 		562BB1591B5562E400B73F46 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F6F5ABF61D4DD14C00715138 /* SWRevealViewController */,
 				562BB1371B55627000B73F46 /* AppDelegate.swift */,
+				F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */,
+				F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +302,17 @@
 				56BEFF581B68CE58006F0664 /* NamedEntity.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F6F5ABF61D4DD14C00715138 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6F5ABF81D4DD19700715138 /* SWRevealViewController.h */,
+				F6F5ABF91D4DD19700715138 /* SWRevealViewController.m */,
+				F6F5ABF71D4DD19700715138 /* FinalProject-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,11 +427,12 @@
 		562BB12A1B55627000B73F46 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				TargetAttributes = {
 					562BB1311B55627000B73F46 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2LTD7GCD77;
 					};
 					562BB1461B55627000B73F46 = {
 						CreatedOnToolsVersion = 6.4;
@@ -496,6 +519,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */,
+				F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */,
+				F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */,
 				562BB1381B55627000B73F46 /* AppDelegate.swift in Sources */,
 				56BEFEBE1B68C3E0006F0664 /* Model.xcdatamodeld in Sources */,
 			);
@@ -672,11 +698,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/FinalProject/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cis399.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cis399.SynthSeq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalProject/Source/FinalProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -684,11 +715,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/FinalProject/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cis399.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cis399.SynthSeq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalProject/Source/FinalProject-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -858,6 +893,7 @@
 				564F70AC1BEABDA3009D186E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56BEFF461B68CE0A006F0664 /* Build configuration list for PBXNativeTarget "CoreDataService" */ = {
 			isa = XCConfigurationList;
