@@ -23,6 +23,7 @@
 		56BEFF5C1B68CE58006F0664 /* NSEntityDescription_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF521B68CE58006F0664 /* NSEntityDescription_Service.swift */; };
 		56BEFF5D1B68CE58006F0664 /* NSFetchRequest_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF531B68CE58006F0664 /* NSFetchRequest_Service.swift */; };
 		56BEFF611B68CE58006F0664 /* NamedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF581B68CE58006F0664 /* NamedEntity.swift */; };
+		F604C65C1D4DE74C002224E8 /* PresetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C65B1D4DE74C002224E8 /* PresetsListViewController.swift */; };
 		F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */; };
 		F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */; };
 		F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF91D4DD19700715138 /* SWRevealViewController.m */; };
@@ -104,6 +105,7 @@
 		56BEFF521B68CE58006F0664 /* NSEntityDescription_Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEntityDescription_Service.swift; sourceTree = "<group>"; };
 		56BEFF531B68CE58006F0664 /* NSFetchRequest_Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFetchRequest_Service.swift; sourceTree = "<group>"; };
 		56BEFF581B68CE58006F0664 /* NamedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedEntity.swift; sourceTree = "<group>"; };
+		F604C65B1D4DE74C002224E8 /* PresetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetsListViewController.swift; sourceTree = "<group>"; };
 		F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthSeqViewController.swift; sourceTree = "<group>"; };
 		F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarMenuViewController.swift; sourceTree = "<group>"; };
 		F6F5ABF71D4DD19700715138 /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				562BB1371B55627000B73F46 /* AppDelegate.swift */,
 				F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */,
 				F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */,
+				F604C65B1D4DE74C002224E8 /* PresetsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */,
 				562BB1381B55627000B73F46 /* AppDelegate.swift in Sources */,
 				56BEFEBE1B68C3E0006F0664 /* Model.xcdatamodeld in Sources */,
+				F604C65C1D4DE74C002224E8 /* PresetsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

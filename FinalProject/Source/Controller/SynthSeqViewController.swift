@@ -9,8 +9,7 @@
 import UIKit
 
 class SynthSeqViewController: UIViewController {
-    
-//    @IBAction func 
+
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -19,7 +18,8 @@ class SynthSeqViewController: UIViewController {
         if self.revealViewController() != nil {
             menuButton!.target = self.revealViewController()
             menuButton!.action = #selector(SWRevealViewController.revealToggle(_:))
-//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
     }
