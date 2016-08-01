@@ -21,8 +21,9 @@ class SynthSeqViewController: UIViewController {
 
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
-        
     }
+    
+    
     
     @IBOutlet var menuButton: UIBarButtonItem?
 }
