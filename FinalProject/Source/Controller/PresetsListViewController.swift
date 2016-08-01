@@ -8,25 +8,14 @@
 
 import UIKit
 
-class PresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PresetsListViewController: UITableViewController, SWRevealViewControllerDelegate {
     
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    // TODO: Table View
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PresetCell", forIndexPath: indexPath)
         
-        return cell
-    }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        let revealController = self.revealViewController()
+        revealController.delegate = self
     }
     
     

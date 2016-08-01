@@ -8,31 +8,38 @@
 
 import UIKit
 
-class SideBarMenuViewController: UITableViewController {
+class SideBarMenuViewController: UITableViewController, SWRevealViewControllerDelegate {
     
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let revealController = self.revealViewController()
+        revealController.delegate = self
     }
     
-//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        if let menuTableViewIndex = menuTableView.indexPathForSelectedRow {
-//            print(menuTableViewIndex)
-////            print(indexPath)
-//            tableView.deselectRowAtIndexPath(menuTableViewIndex, animated: true)
-//        }
-//
-//    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let tableViewCellIdentifier = tableView.cellForRowAtIndexPath(indexPath)?.reuseIdentifier
+        
+        switch(tableViewCellIdentifier) {
+        case ("PresetsCell"?):
+            return
+        case ("SaveCell"?):
+            return
+        case ("UndoCell"?):
+            return
+        case (_):
+            return
+        }
+        
+    }
     
-//    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        if let menuTableViewIndex = menuTableView.indexPathForSelectedRow {
-//            print(menuTableViewIndex)
-//            menuTableView.deselectRowAtIndexPath(menuTableViewIndex, animated: true)
-//        }
-//    }
-    
+
     
     
     @IBOutlet var menuTableView: UITableView!
+    
 
 }
