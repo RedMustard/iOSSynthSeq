@@ -19,5 +19,18 @@ class PresetsListViewController: UITableViewController, SWRevealViewControllerDe
     }
     
     
+    func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
+        if revealController.frontViewPosition == FrontViewPosition.Right {
+            return true
+        } else {
+            revealController.setRearViewController(SideBarMenuViewController(), animated: true)
+            return false
+        }
+    }
+
+//    override func performSegueWithIdentifier(identifier: String, sender: AnyObject?) {
+//        <#code#>
+//    }
+    
     @IBOutlet var presetTableView: UITableView!
 }
