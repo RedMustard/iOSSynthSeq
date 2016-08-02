@@ -47,6 +47,15 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
         
         let revealController = self.revealViewController()
         revealController.delegate = self
+        
+        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
+        recognizer.direction = .Right
+        self.view .addGestureRecognizer(recognizer)
+    }
+    
+    
+    func swipeRight(recognizer : UISwipeGestureRecognizer) {
+        goBackToPreviousMenu()
     }
     
     
