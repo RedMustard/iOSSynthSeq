@@ -24,6 +24,9 @@
 		56BEFF5D1B68CE58006F0664 /* NSFetchRequest_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF531B68CE58006F0664 /* NSFetchRequest_Service.swift */; };
 		56BEFF611B68CE58006F0664 /* NamedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BEFF581B68CE58006F0664 /* NamedEntity.swift */; };
 		F604C65C1D4DE74C002224E8 /* PresetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C65B1D4DE74C002224E8 /* PresetsListViewController.swift */; };
+		F604C65E1D50437B002224E8 /* FullPresetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C65D1D50437B002224E8 /* FullPresetsListViewController.swift */; };
+		F604C6601D50438D002224E8 /* SynthPresetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C65F1D50438D002224E8 /* SynthPresetsListViewController.swift */; };
+		F604C6621D504398002224E8 /* SequencesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C6611D504398002224E8 /* SequencesListViewController.swift */; };
 		F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */; };
 		F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */; };
 		F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF91D4DD19700715138 /* SWRevealViewController.m */; };
@@ -106,6 +109,9 @@
 		56BEFF531B68CE58006F0664 /* NSFetchRequest_Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFetchRequest_Service.swift; sourceTree = "<group>"; };
 		56BEFF581B68CE58006F0664 /* NamedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedEntity.swift; sourceTree = "<group>"; };
 		F604C65B1D4DE74C002224E8 /* PresetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetsListViewController.swift; sourceTree = "<group>"; };
+		F604C65D1D50437B002224E8 /* FullPresetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullPresetsListViewController.swift; sourceTree = "<group>"; };
+		F604C65F1D50438D002224E8 /* SynthPresetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthPresetsListViewController.swift; sourceTree = "<group>"; };
+		F604C6611D504398002224E8 /* SequencesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencesListViewController.swift; sourceTree = "<group>"; };
 		F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthSeqViewController.swift; sourceTree = "<group>"; };
 		F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarMenuViewController.swift; sourceTree = "<group>"; };
 		F6F5ABF71D4DD19700715138 /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -232,6 +238,9 @@
 				F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */,
 				F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */,
 				F604C65B1D4DE74C002224E8 /* PresetsListViewController.swift */,
+				F604C65D1D50437B002224E8 /* FullPresetsListViewController.swift */,
+				F604C65F1D50438D002224E8 /* SynthPresetsListViewController.swift */,
+				F604C6611D504398002224E8 /* SequencesListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -525,8 +534,11 @@
 				F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */,
 				F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */,
 				F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */,
+				F604C6621D504398002224E8 /* SequencesListViewController.swift in Sources */,
 				562BB1381B55627000B73F46 /* AppDelegate.swift in Sources */,
+				F604C65E1D50437B002224E8 /* FullPresetsListViewController.swift in Sources */,
 				56BEFEBE1B68C3E0006F0664 /* Model.xcdatamodeld in Sources */,
+				F604C6601D50438D002224E8 /* SynthPresetsListViewController.swift in Sources */,
 				F604C65C1D4DE74C002224E8 /* PresetsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
