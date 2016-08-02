@@ -8,7 +8,27 @@
 
 import UIKit
 
-class PresetsListViewController: UITableViewController, SWRevealViewControllerDelegate {
+class PresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
+    
+    // MARK: Table View
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PresetsCell", forIndexPath: indexPath)
+        
+        // Configure the cell...
+        //        cell.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        cell.textLabel!.text = presetsItemArray[indexPath.row]
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        return cell
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -19,18 +39,18 @@ class PresetsListViewController: UITableViewController, SWRevealViewControllerDe
     }
     
     
+    // MARK: Reveal View Controller
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
         if revealController.frontViewPosition == FrontViewPosition.Right {
             return true
         } else {
-            revealController.setRearViewController(SideBarMenuViewController(), animated: true)
+            revealController.setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"), animated: true)
             return false
         }
     }
 
-//    override func performSegueWithIdentifier(identifier: String, sender: AnyObject?) {
-//        <#code#>
-//    }
     
+    // MARK: Properties
+    let presetsItemArray: Array<String> = ["Full Presets", "Synth Presets", "Sequences"]
     @IBOutlet var presetTableView: UITableView!
 }

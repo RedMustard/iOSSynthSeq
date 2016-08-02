@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SideBarMenuViewController: UITableViewController, SWRevealViewControllerDelegate {
+class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,SWRevealViewControllerDelegate {
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -16,27 +16,52 @@ class SideBarMenuViewController: UITableViewController, SWRevealViewControllerDe
 
         let revealController = self.revealViewController()
         revealController.delegate = self
-        
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    // MARK: Table View
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath)
+        
+        // Configure the cell...
+//        cell.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        cell.textLabel!.text = menuItemArray[indexPath.row]
+        
+        if menuItemArray[indexPath.row] == "Presets" {
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        }
+        
+        return cell
+
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if let tableViewCellIdentifier = tableView.cellForRowAtIndexPath(indexPath)?.reuseIdentifier {
+        if let tableViewCellIdentifier = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text {
         
             switch(tableViewCellIdentifier) {
-            case ("PresetsCell"):
-//                self.revealViewController().setRearViewController(PresetsListViewController(), animated: true)
+            case ("Presets"):
+                self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
+//                return
+            case ("Save"):
+                
                 return
-            case ("SaveCell"):
-                return
-            case ("UndoCell"):
+            case ("Undo"):
+                
                 return
             case (_):
                 return
             }
         }
-        
     }
     
     
@@ -45,17 +70,11 @@ class SideBarMenuViewController: UITableViewController, SWRevealViewControllerDe
         if revealController.frontViewPosition == FrontViewPosition.Right {
             return true
         } else {
-            
             return false
         }
     }
-    
-//    func revealController(revealController: SWRevealViewController!, willAddViewController viewController: UIViewController!, forOperation operation: SWRevealControllerOperation, animated: Bool) {
-//
-//    }
-    
 
+    // MARK: Properties
+    let menuItemArray: Array<String> = ["Presets", "Save", "Undo"]
     @IBOutlet var menuTableView: UITableView!
-    
-
 }
