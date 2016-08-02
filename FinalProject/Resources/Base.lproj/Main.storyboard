@@ -140,7 +140,8 @@
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="Xcl-ZU-MqK">
-                                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="bqM-Er-b7M">
+                                        <barButtonItem key="leftBarButtonItem" image="menuBarButton" id="bqM-Er-b7M">
+                                            <inset key="imageInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="toggleRearViewController" destination="4em-JS-S75" id="RYR-Gx-kYM"/>
@@ -193,7 +194,8 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Presets" id="Wmw-FY-4i2">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="jwh-2F-3XV">
+                                        <barButtonItem key="leftBarButtonItem" image="backBarButton" id="jwh-2F-3XV">
+                                            <inset key="imageInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="goBackToPreviousMenu" destination="eOv-jZ-eyd" id="6q2-5z-W4p"/>
@@ -261,7 +263,8 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Full Presets" id="x1E-Hf-hWC">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="xmF-dN-ubp">
+                                        <barButtonItem key="leftBarButtonItem" image="backBarButton" id="xmF-dN-ubp">
+                                            <inset key="imageInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="goBackToPreviousMenu" destination="oHh-xV-TCx" id="JSC-BO-fcs"/>
@@ -329,7 +332,8 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Synth Presets" id="Om4-uK-NVf">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ud8-AR-6CV">
+                                        <barButtonItem key="leftBarButtonItem" image="backBarButton" id="Ud8-AR-6CV">
+                                            <inset key="imageInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="goBackToPreviousMenu" destination="eZ5-3S-CGJ" id="SIl-cn-DqS"/>
@@ -397,7 +401,8 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Sequences" id="XS3-b5-Zrm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="oLR-RP-ZTs">
+                                        <barButtonItem key="leftBarButtonItem" image="backBarButton" id="oLR-RP-ZTs">
+                                            <inset key="imageInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="goBackToPreviousMenu" destination="GHX-TZ-tV5" id="W6W-sh-Q2k"/>
@@ -447,6 +452,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menuIcon" width="36" height="36"/>
+        <image name="backBarButton" width="30" height="36"/>
+        <image name="menuBarButton" width="36" height="36"/>
     </resources>
 </document>
