@@ -10,6 +10,7 @@ import UIKit
 
 class SynthPresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
     
+    // MARK: Navigation
     @IBAction func goBackToPreviousMenu() {
         self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
     }

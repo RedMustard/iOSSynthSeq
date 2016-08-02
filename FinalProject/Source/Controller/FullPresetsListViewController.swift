@@ -10,6 +10,7 @@ import UIKit
 
 class FullPresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
     
+    // MARK: Navigation
     @IBAction func goBackToPreviousMenu() {
         self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
     }
@@ -62,5 +63,4 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     // MARK: Properties
     let fullPresetItemArray: Array<String> = ["Full Preset 1", "Full Preset 2", "Full Preset 3"] // PLACEHOLDER
     @IBOutlet var fullPresetTableView: UITableView!
-    
 }

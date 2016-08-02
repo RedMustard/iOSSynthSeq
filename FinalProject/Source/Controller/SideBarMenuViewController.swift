@@ -72,6 +72,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
 
+    
     // MARK: Properties
     let menuItemArray: Array<String> = ["Presets", "Save", "Undo"]
     @IBOutlet var menuTableView: UITableView!

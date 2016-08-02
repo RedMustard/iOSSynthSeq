@@ -10,6 +10,7 @@ import UIKit
 
 class PresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
     
+    // MARK: Navigation
     @IBAction func goBackToPreviousMenu() {
         self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"), animated: true)
     }
@@ -58,7 +59,6 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     
-    
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +73,6 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
         if revealController.frontViewPosition == FrontViewPosition.Right {
             return true
         } else {
-            revealController.setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"), animated: true)
             return false
         }
     }

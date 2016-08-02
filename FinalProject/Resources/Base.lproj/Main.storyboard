@@ -143,7 +143,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="menuIcon" id="bqM-Er-b7M">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="setSideBarToMenuViewController" destination="4em-JS-S75" id="t2i-0Y-I2x"/>
+                                                <action selector="toggleRearViewController" destination="4em-JS-S75" id="RYR-Gx-kYM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
