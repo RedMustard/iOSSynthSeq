@@ -10,25 +10,54 @@ import UIKit
 
 class PresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
     
-    // MARK: Table View
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    @IBAction func goBackToPreviousMenu() {
+        self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"), animated: true)
     }
+
+    
+    // MARK: Table View
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presetsItemArray.count
+    }
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PresetsCell", forIndexPath: indexPath)
         
-        // Configure the cell...
-        //        cell.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
         cell.textLabel!.text = presetsItemArray[indexPath.row]
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if let tableViewCellIdentifier = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text {
+            
+            switch(tableViewCellIdentifier) {
+            case ("Full Presets"):
+                self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("FullPresetsViewController"), animated: true)
+            
+            case ("Synth Presets"):
+                self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("SynthPresetsViewController"), animated: true)
+
+            case ("Sequences"):
+                self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("SequencesViewController"), animated: true)
+
+            case (_):
+                return
+            }
+        }
     }
+
+    
     
     // MARK: View Controller
     override func viewDidLoad() {

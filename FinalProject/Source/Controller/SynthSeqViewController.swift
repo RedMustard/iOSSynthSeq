@@ -9,7 +9,12 @@
 import UIKit
 
 class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
-
+    
+    // MARK: Reveal View Controller
+    func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
+        return false
+    }
+    
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -19,10 +24,10 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
         revealController.delegate = self
         
         if revealController != nil {
-            // Gestures
+            // Menu Button and Gestures
             menuButton!.target = revealController
             menuButton!.action = #selector(SWRevealViewController.revealToggle(_:))
-
+            
             self.view.addGestureRecognizer(revealController.panGestureRecognizer())
             self.view.addGestureRecognizer(revealController.tapGestureRecognizer())
             
@@ -34,10 +39,6 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
         
     }
     
-    func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
-        return false
-    }
-    
-    
+    // MARK: Properties
     @IBOutlet var menuButton: UIBarButtonItem?
 }
