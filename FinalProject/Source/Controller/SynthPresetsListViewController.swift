@@ -49,6 +49,7 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
         revealController.delegate = self
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
+        
         recognizer.direction = .Right
         self.view .addGestureRecognizer(recognizer)
     }
