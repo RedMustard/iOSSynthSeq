@@ -318,9 +318,66 @@
                                             <constraint firstItem="nCy-lV-Y4P" firstAttribute="leading" secondItem="trQ-Rz-lqx" secondAttribute="trailing" constant="30" id="xTp-pm-nqE"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEa-Uq-fDZ">
-                                        <rect key="frame" x="411" y="146" width="347" height="201"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEa-Uq-fDZ">
+                                        <rect key="frame" x="390" y="148" width="368" height="195"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IN-eT-zqa" customClass="MHRotaryKnob">
+                                                <rect key="frame" x="15" y="15" width="70" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="dkO-dC-d2W"/>
+                                                    <constraint firstAttribute="width" constant="70" id="nHW-Vh-IAg"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOM-Mi-GCh" customClass="MHRotaryKnob">
+                                                <rect key="frame" x="15" y="100" width="70" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="MdX-t7-gqS"/>
+                                                    <constraint firstAttribute="height" constant="70" id="PGs-kc-wRy"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e18-pi-ugK" customClass="MHRotaryKnob">
+                                                <rect key="frame" x="283" y="15" width="70" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Eeg-Uz-182"/>
+                                                    <constraint firstAttribute="height" constant="70" id="V7R-93-4ZE"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-5X-gCQ" customClass="MHRotaryKnob">
+                                                <rect key="frame" x="283" y="100" width="70" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="KQQ-f2-O4c"/>
+                                                    <constraint firstAttribute="height" constant="70" id="e6J-uY-Vog"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-Yq-ZZp" customClass="MHRotaryKnob">
+                                                <rect key="frame" x="124" y="38" width="120" height="120"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <accessibility key="accessibilityConfiguration" label="CutoffKnob"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="7fc-Qf-7cu"/>
+                                                    <constraint firstAttribute="height" constant="120" id="ymh-93-XrD"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="bmy-Yq-ZZp" firstAttribute="centerY" secondItem="oEa-Uq-fDZ" secondAttribute="centerY" id="20Q-Kf-2qm"/>
+                                            <constraint firstAttribute="bottom" secondItem="sOM-Mi-GCh" secondAttribute="bottom" constant="25" id="6fH-hW-hbO"/>
+                                            <constraint firstItem="6IN-eT-zqa" firstAttribute="leading" secondItem="oEa-Uq-fDZ" secondAttribute="leading" constant="15" id="70R-1q-sdO"/>
+                                            <constraint firstItem="bmy-Yq-ZZp" firstAttribute="centerX" secondItem="oEa-Uq-fDZ" secondAttribute="centerX" id="7Sx-TD-rtW"/>
+                                            <constraint firstAttribute="trailing" secondItem="EQL-5X-gCQ" secondAttribute="trailing" constant="15" id="CP2-2i-yVG"/>
+                                            <constraint firstItem="6IN-eT-zqa" firstAttribute="top" secondItem="oEa-Uq-fDZ" secondAttribute="top" constant="15" id="FoN-cM-cFB"/>
+                                            <constraint firstItem="EQL-5X-gCQ" firstAttribute="top" secondItem="e18-pi-ugK" secondAttribute="bottom" constant="15" id="Glm-Eh-ktq"/>
+                                            <constraint firstAttribute="trailing" secondItem="e18-pi-ugK" secondAttribute="trailing" constant="15" id="Ofq-J2-Aol"/>
+                                            <constraint firstItem="e18-pi-ugK" firstAttribute="top" secondItem="oEa-Uq-fDZ" secondAttribute="top" constant="15" id="Rob-Ag-6SL"/>
+                                            <constraint firstItem="sOM-Mi-GCh" firstAttribute="top" secondItem="6IN-eT-zqa" secondAttribute="bottom" constant="15" id="XcK-lH-Xc9"/>
+                                            <constraint firstAttribute="bottom" secondItem="EQL-5X-gCQ" secondAttribute="bottom" constant="25" id="dRg-Dw-p7n"/>
+                                            <constraint firstItem="sOM-Mi-GCh" firstAttribute="leading" secondItem="oEa-Uq-fDZ" secondAttribute="leading" constant="15" id="wFz-pQ-UTP"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,7 +395,7 @@
                                     <constraint firstItem="oEa-Uq-fDZ" firstAttribute="top" secondItem="FFV-lZ-f8m" secondAttribute="bottom" constant="10" id="aMa-kR-rCp"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="leading" secondItem="pgY-DB-hSA" secondAttribute="trailing" constant="10" id="b82-Mx-EMi"/>
                                     <constraint firstItem="pgY-DB-hSA" firstAttribute="leading" secondItem="1FQ-V2-h2Y" secondAttribute="trailing" constant="10" id="fkh-4D-VM3"/>
-                                    <constraint firstItem="oEa-Uq-fDZ" firstAttribute="leading" secondItem="BhS-LA-Nih" secondAttribute="trailing" constant="14" id="iXW-dL-DEE"/>
+                                    <constraint firstItem="oEa-Uq-fDZ" firstAttribute="leading" secondItem="BhS-LA-Nih" secondAttribute="trailing" constant="10" id="iXW-dL-DEE"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -350,28 +407,38 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outlet property="attackRotaryKnob" destination="auf-Mx-Rg2" id="Mx9-YX-ox2"/>
-                                    <outlet property="decayRotaryKnob" destination="O7C-Lo-cjW" id="rcB-3W-8p4"/>
-                                    <outlet property="osc1OctRotaryKnob" destination="ZmJ-cU-3LC" id="E9F-M8-h2T"/>
-                                    <outlet property="osc1VolRotaryKnob" destination="trQ-Rz-lqx" id="FdN-M5-N55"/>
-                                    <outlet property="osc1WaveRotaryKnob" destination="mc9-pG-AX2" id="fJL-WJ-MPI"/>
-                                    <outlet property="osc2OctRotaryKnob" destination="nCy-lV-Y4P" id="qPh-QC-iYc"/>
-                                    <outlet property="osc2VolRotaryKnob" destination="iIa-W5-1Zc" id="jQj-7W-Nd8"/>
-                                    <outlet property="osc2WaveRotaryKnob" destination="atG-0T-xRc" id="sUj-VW-lmf"/>
-                                    <outlet property="releaseRotaryKnob" destination="5aX-wM-Zl6" id="d6c-g2-0IB"/>
-                                    <outlet property="sustainRotaryKnob" destination="La6-Qk-OPM" id="KyS-6V-Tdg"/>
-                                    <outlet property="volRotaryKnob" destination="lJO-9s-DM3" id="Be5-t1-Eyh"/>
-                                    <outletCollection property="rotaryKnobArray" destination="lJO-9s-DM3" id="Xtg-P7-qmh"/>
-                                    <outletCollection property="rotaryKnobArray" destination="5aX-wM-Zl6" id="kib-Y4-VeW"/>
-                                    <outletCollection property="rotaryKnobArray" destination="La6-Qk-OPM" id="vqN-d4-9AR"/>
-                                    <outletCollection property="rotaryKnobArray" destination="O7C-Lo-cjW" id="l60-pA-iSN"/>
-                                    <outletCollection property="rotaryKnobArray" destination="auf-Mx-Rg2" id="MLl-jF-Btz"/>
-                                    <outletCollection property="rotaryKnobArray" destination="iIa-W5-1Zc" id="bMC-mO-HMf"/>
-                                    <outletCollection property="rotaryKnobArray" destination="nCy-lV-Y4P" id="oPi-se-3PM"/>
-                                    <outletCollection property="rotaryKnobArray" destination="atG-0T-xRc" id="lFZ-jT-QXK"/>
-                                    <outletCollection property="rotaryKnobArray" destination="trQ-Rz-lqx" id="FLh-rQ-ILB"/>
-                                    <outletCollection property="rotaryKnobArray" destination="ZmJ-cU-3LC" id="Rvc-pW-JRe"/>
-                                    <outletCollection property="rotaryKnobArray" destination="mc9-pG-AX2" id="x60-Dr-ILN"/>
+                                    <outlet property="attackRotaryKnob" destination="auf-Mx-Rg2" id="MTn-df-COC"/>
+                                    <outlet property="cutoffRotaryKnob" destination="bmy-Yq-ZZp" id="ePk-3P-Y4z"/>
+                                    <outlet property="decayRotaryKnob" destination="O7C-Lo-cjW" id="9zT-e5-wpZ"/>
+                                    <outlet property="feedbackRotaryKnob" destination="EQL-5X-gCQ" id="BZe-t2-tvP"/>
+                                    <outlet property="noiseRotaryKnob" destination="6IN-eT-zqa" id="l7v-pQ-jpT"/>
+                                    <outlet property="osc1OctRotaryKnob" destination="ZmJ-cU-3LC" id="io0-cd-Uwc"/>
+                                    <outlet property="osc1VolRotaryKnob" destination="trQ-Rz-lqx" id="oYL-IP-REj"/>
+                                    <outlet property="osc1WaveRotaryKnob" destination="mc9-pG-AX2" id="i0a-bW-1uB"/>
+                                    <outlet property="osc2OctRotaryKnob" destination="nCy-lV-Y4P" id="Hpc-7b-8qL"/>
+                                    <outlet property="osc2VolRotaryKnob" destination="iIa-W5-1Zc" id="M5Z-d8-cDW"/>
+                                    <outlet property="osc2WaveRotaryKnob" destination="atG-0T-xRc" id="Txh-BA-dNs"/>
+                                    <outlet property="releaseRotaryKnob" destination="5aX-wM-Zl6" id="Oet-IA-T1T"/>
+                                    <outlet property="resonanceRotaryKnob" destination="sOM-Mi-GCh" id="gE7-Fr-et1"/>
+                                    <outlet property="slopeRotaryKnob" destination="e18-pi-ugK" id="oDo-D4-Wnf"/>
+                                    <outlet property="sustainRotaryKnob" destination="La6-Qk-OPM" id="ucX-1u-h0b"/>
+                                    <outlet property="volRotaryKnob" destination="lJO-9s-DM3" id="w7J-GH-69o"/>
+                                    <outletCollection property="rotaryKnobArray" destination="lJO-9s-DM3" collectionClass="NSMutableArray" id="ftl-PY-wNF"/>
+                                    <outletCollection property="rotaryKnobArray" destination="5aX-wM-Zl6" collectionClass="NSMutableArray" id="gQX-K6-IzN"/>
+                                    <outletCollection property="rotaryKnobArray" destination="La6-Qk-OPM" collectionClass="NSMutableArray" id="BRy-d8-11r"/>
+                                    <outletCollection property="rotaryKnobArray" destination="O7C-Lo-cjW" collectionClass="NSMutableArray" id="J0J-VN-qgv"/>
+                                    <outletCollection property="rotaryKnobArray" destination="auf-Mx-Rg2" collectionClass="NSMutableArray" id="hAj-BR-aSa"/>
+                                    <outletCollection property="rotaryKnobArray" destination="e18-pi-ugK" collectionClass="NSMutableArray" id="6Fx-31-NrF"/>
+                                    <outletCollection property="rotaryKnobArray" destination="EQL-5X-gCQ" collectionClass="NSMutableArray" id="70e-NX-NgN"/>
+                                    <outletCollection property="rotaryKnobArray" destination="bmy-Yq-ZZp" collectionClass="NSMutableArray" id="yf9-7q-4JK"/>
+                                    <outletCollection property="rotaryKnobArray" destination="6IN-eT-zqa" collectionClass="NSMutableArray" id="wtQ-3Y-QsU"/>
+                                    <outletCollection property="rotaryKnobArray" destination="sOM-Mi-GCh" collectionClass="NSMutableArray" id="IqM-Qb-VgC"/>
+                                    <outletCollection property="rotaryKnobArray" destination="iIa-W5-1Zc" collectionClass="NSMutableArray" id="uGf-AZ-gHS"/>
+                                    <outletCollection property="rotaryKnobArray" destination="atG-0T-xRc" collectionClass="NSMutableArray" id="m1Q-p4-qhM"/>
+                                    <outletCollection property="rotaryKnobArray" destination="nCy-lV-Y4P" collectionClass="NSMutableArray" id="RiC-ck-ICf"/>
+                                    <outletCollection property="rotaryKnobArray" destination="trQ-Rz-lqx" collectionClass="NSMutableArray" id="5sk-AK-8ep"/>
+                                    <outletCollection property="rotaryKnobArray" destination="mc9-pG-AX2" collectionClass="NSMutableArray" id="Pgn-eA-aPs"/>
+                                    <outletCollection property="rotaryKnobArray" destination="ZmJ-cU-3LC" collectionClass="NSMutableArray" id="K0n-Hb-9cU"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-1s-AUK">

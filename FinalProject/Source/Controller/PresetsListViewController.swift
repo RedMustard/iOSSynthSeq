@@ -16,7 +16,7 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     
-    // MARK: Table View
+    // MARK: UITableViewDelegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -59,7 +59,7 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     
-    // MARK: View Controller
+    // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,7 +77,7 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
-    // MARK: Reveal View Controller
+    // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
         if revealController.frontViewPosition == FrontViewPosition.Right {
             return true

@@ -16,7 +16,7 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
-    // TODO: Table View
+    // TODO: UITableViewDelegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -41,7 +41,7 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
-    // MARK: View Controller
+    // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +59,7 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
-    // MARK: Reveal View Controller
+    // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
         if revealController.frontViewPosition == FrontViewPosition.Right {
             return true

@@ -10,7 +10,7 @@ import UIKit
 
 class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
     
-    // MARK: View Controller
+    // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,22 +26,10 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
             revealController.rearViewRevealOverdraw = 0
             
         }
-        
-//        rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyle.SliderVertical
-//        rotaryKnob.scalingFactor = 1.5
-//        rotaryKnob.defaultValue = rotaryKnob.value
-//        rotaryKnob.resetsToDefault = true
-//        rotaryKnob.backgroundColor = UIColor.clearColor()
-//        rotaryKnob.backgroundImage = UIImage(imageLiteral: "Knob Background")
-//        rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob"), forState: UIControlState.Normal)
-//        rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Highlighted"), forState: UIControlState.Highlighted)
-//        rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Disabled"), forState: UIControlState.Disabled)
-//        rotaryKnob.knobImageCenter = CGPointMake(80.0, 76.0)
-//        rotaryKnob.addTarget(self, action: #selector(rotaryKnob.didChangeValueForKey(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     
-    // MARK: Reveal View Controller
+    // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
         return false
     }
@@ -60,9 +48,6 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
     
     // MARK: Properties
     @IBOutlet var menuButton: UIBarButtonItem!
-    
-//    @IBOutlet var knobPlaceholder: UIView!
     @IBOutlet var synthView: SynthView!
     
-//    var rotaryKnob: RotaryUIControl!
 }
