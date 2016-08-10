@@ -1045,7 +1045,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.11838942307692313" green="0.11838942307692313" blue="0.11838942307692313" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="tuc-rd-5er" firstAttribute="top" secondItem="nCy-lV-Y4P" secondAttribute="bottom" constant="5" id="1UJ-jj-ii4"/>
                                     <constraint firstItem="tbw-SN-1gv" firstAttribute="centerX" secondItem="mc9-pG-AX2" secondAttribute="centerX" id="2RQ-gD-78p"/>
@@ -1145,15 +1145,297 @@
                                     <outletCollection property="rotaryKnobArray" destination="5O9-t4-Ove" collectionClass="NSMutableArray" id="mau-Wa-iGg"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-1s-AUK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-1s-AUK" customClass="SeqView" customModule="FinalProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="513" width="1024" height="255"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qce-vY-GVB" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="929" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="V6J-GP-wqc"/>
+                                            <constraint firstAttribute="width" constant="70" id="ZH2-If-Xd1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-OG-tWh" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="834" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="LDa-Wa-aR2"/>
+                                            <constraint firstAttribute="width" constant="70" id="vq6-D6-Sa5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQg-rG-XgQ" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="739" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Ia0-kY-0ny"/>
+                                            <constraint firstAttribute="width" constant="70" id="NDA-lv-7JJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-aB-h5W" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="644" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="r88-DC-C09"/>
+                                            <constraint firstAttribute="height" constant="70" id="voV-rg-JEe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxT-go-hT8" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="549" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="GVt-2h-PJf"/>
+                                            <constraint firstAttribute="height" constant="70" id="MyI-6i-dXD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFh-ov-gqS" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="454" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="IlZ-f5-AOD"/>
+                                            <constraint firstAttribute="height" constant="70" id="JMv-u5-Ikg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oG-WO-eVU" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="359" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Avr-25-dqT"/>
+                                            <constraint firstAttribute="height" constant="70" id="klA-xr-Ovu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czJ-lf-z76" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="264" y="25" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="HC4-Mm-WF3"/>
+                                            <constraint firstAttribute="width" constant="70" id="isO-fU-v3s"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sr-8o-oEk" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="929" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="1YZ-xr-ha0"/>
+                                            <constraint firstAttribute="height" constant="70" id="Wm9-hu-UUj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4B-HS-tBJ" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="834" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Fx5-3a-77M"/>
+                                            <constraint firstAttribute="width" constant="70" id="fF9-IZ-Wnc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8d-ka-0Gg" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="739" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="IRR-OL-nBz"/>
+                                            <constraint firstAttribute="height" constant="70" id="qHN-qe-CNO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-qZ-38s" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="644" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="h8d-FQ-zMW"/>
+                                            <constraint firstAttribute="width" constant="70" id="h8g-lN-Ph4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="giE-5b-ZW8" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="549" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="4L8-Aw-kzj"/>
+                                            <constraint firstAttribute="height" constant="70" id="91c-xd-L5L"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEQ-yR-OLU" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="454" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Fbu-TU-DF3"/>
+                                            <constraint firstAttribute="width" constant="70" id="kVj-nF-BAe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C95-qp-1eZ" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="359" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="qLd-PT-yoW"/>
+                                            <constraint firstAttribute="height" constant="70" id="t5u-7l-l81"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2F-gj-OD9" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="264" y="145" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="hAy-yR-m7I"/>
+                                            <constraint firstAttribute="height" constant="70" id="mGX-KU-DxW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvt-TG-OMd" customClass="MHRotaryKnob">
+                                        <rect key="frame" x="19" y="92" width="120" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="FilterCutoffKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="7X4-jq-GtV"/>
+                                            <constraint firstAttribute="height" constant="120" id="e4K-iX-M8c"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7W-1v-e7K">
+                                        <rect key="frame" x="51" y="217" width="57" height="17"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="CUTOFF">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CT0-BY-2Il" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
+                                        <rect key="frame" x="179" y="40" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="VJH-lT-4ng"/>
+                                            <constraint firstAttribute="height" constant="40" id="nny-cb-B8i"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzb-I0-CVU">
+                                        <rect key="frame" x="188" y="85" width="22" height="17"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="1-8">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwR-Il-ogv" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
+                                        <rect key="frame" x="179" y="160" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="YEe-PD-fyY"/>
+                                            <constraint firstAttribute="height" constant="40" id="gNi-xL-xmR"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft3-5f-Wyg">
+                                        <rect key="frame" x="184" y="205" width="30" height="17"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="9-16">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.17057291666666652" green="0.17057291666666652" blue="0.17057291666666652" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="wKZ-aB-h5W" firstAttribute="leading" secondItem="JxT-go-hT8" secondAttribute="trailing" constant="25" id="1dE-uG-jLz"/>
+                                    <constraint firstItem="PQg-rG-XgQ" firstAttribute="centerY" secondItem="rMP-OG-tWh" secondAttribute="centerY" id="31h-43-KL2"/>
+                                    <constraint firstItem="ft3-5f-Wyg" firstAttribute="top" secondItem="wwR-Il-ogv" secondAttribute="bottom" constant="5" id="9dN-if-ttP"/>
+                                    <constraint firstItem="qce-vY-GVB" firstAttribute="leading" secondItem="rMP-OG-tWh" secondAttribute="trailing" constant="25" id="Cbf-bJ-65L"/>
+                                    <constraint firstItem="Z4B-HS-tBJ" firstAttribute="centerY" secondItem="0sr-8o-oEk" secondAttribute="centerY" id="CxN-04-zFw"/>
+                                    <constraint firstItem="giE-5b-ZW8" firstAttribute="leading" secondItem="zEQ-yR-OLU" secondAttribute="trailing" constant="25" id="DWi-Ri-V8v"/>
+                                    <constraint firstItem="C95-qp-1eZ" firstAttribute="centerY" secondItem="zEQ-yR-OLU" secondAttribute="centerY" id="EGq-iZ-HJf"/>
+                                    <constraint firstItem="JxT-go-hT8" firstAttribute="centerY" secondItem="wKZ-aB-h5W" secondAttribute="centerY" id="EfH-g4-E2d"/>
+                                    <constraint firstAttribute="trailing" secondItem="0sr-8o-oEk" secondAttribute="trailing" constant="25" id="EfK-Ck-2jc"/>
+                                    <constraint firstItem="czJ-lf-z76" firstAttribute="leading" secondItem="CT0-BY-2Il" secondAttribute="trailing" constant="45" id="Fws-Ff-h2U"/>
+                                    <constraint firstItem="PQg-rG-XgQ" firstAttribute="leading" secondItem="wKZ-aB-h5W" secondAttribute="trailing" constant="25" id="H1L-oM-E6k"/>
+                                    <constraint firstItem="X8d-ka-0Gg" firstAttribute="centerY" secondItem="Z4B-HS-tBJ" secondAttribute="centerY" id="HPg-6S-qjj"/>
+                                    <constraint firstItem="wKZ-aB-h5W" firstAttribute="centerY" secondItem="PQg-rG-XgQ" secondAttribute="centerY" id="HhO-di-dki"/>
+                                    <constraint firstItem="ft3-5f-Wyg" firstAttribute="top" secondItem="wwR-Il-ogv" secondAttribute="bottom" constant="5" id="Q0L-Xa-aOo"/>
+                                    <constraint firstItem="Z4B-HS-tBJ" firstAttribute="leading" secondItem="X8d-ka-0Gg" secondAttribute="trailing" constant="25" id="QHB-6n-whD"/>
+                                    <constraint firstItem="0sr-8o-oEk" firstAttribute="leading" secondItem="Z4B-HS-tBJ" secondAttribute="trailing" constant="25" id="QPZ-cZ-Knc"/>
+                                    <constraint firstItem="ft3-5f-Wyg" firstAttribute="centerX" secondItem="wwR-Il-ogv" secondAttribute="centerX" id="R4X-Nc-fWa"/>
+                                    <constraint firstItem="zEQ-yR-OLU" firstAttribute="centerY" secondItem="giE-5b-ZW8" secondAttribute="centerY" id="Rwl-kT-dRt"/>
+                                    <constraint firstItem="1oG-WO-eVU" firstAttribute="centerY" secondItem="AFh-ov-gqS" secondAttribute="centerY" id="UVU-ui-IfZ"/>
+                                    <constraint firstItem="wwR-Il-ogv" firstAttribute="centerY" secondItem="T2F-gj-OD9" secondAttribute="centerY" id="VD1-Nc-TSm"/>
+                                    <constraint firstItem="T2F-gj-OD9" firstAttribute="leading" secondItem="wwR-Il-ogv" secondAttribute="trailing" constant="45" id="Y0c-EN-ZtL"/>
+                                    <constraint firstItem="zEQ-yR-OLU" firstAttribute="leading" secondItem="C95-qp-1eZ" secondAttribute="trailing" constant="25" id="Y1p-xo-HJT"/>
+                                    <constraint firstItem="rMP-OG-tWh" firstAttribute="leading" secondItem="PQg-rG-XgQ" secondAttribute="trailing" constant="25" id="Z71-Ex-yjL"/>
+                                    <constraint firstItem="ft3-5f-Wyg" firstAttribute="centerX" secondItem="wwR-Il-ogv" secondAttribute="centerX" id="atc-gO-sb9"/>
+                                    <constraint firstItem="giE-5b-ZW8" firstAttribute="centerY" secondItem="Z83-qZ-38s" secondAttribute="centerY" id="b74-Bi-f1Y"/>
+                                    <constraint firstItem="rMP-OG-tWh" firstAttribute="centerY" secondItem="qce-vY-GVB" secondAttribute="centerY" id="cry-4S-BgG"/>
+                                    <constraint firstItem="czJ-lf-z76" firstAttribute="centerY" secondItem="1oG-WO-eVU" secondAttribute="centerY" id="e8w-xK-CVS"/>
+                                    <constraint firstItem="zzb-I0-CVU" firstAttribute="top" secondItem="CT0-BY-2Il" secondAttribute="bottom" constant="5" id="ehb-8f-7vz"/>
+                                    <constraint firstItem="CT0-BY-2Il" firstAttribute="centerY" secondItem="czJ-lf-z76" secondAttribute="centerY" id="f5O-oF-UxX"/>
+                                    <constraint firstItem="C95-qp-1eZ" firstAttribute="leading" secondItem="T2F-gj-OD9" secondAttribute="trailing" constant="25" id="hS4-6q-FrJ"/>
+                                    <constraint firstItem="X8d-ka-0Gg" firstAttribute="leading" secondItem="Z83-qZ-38s" secondAttribute="trailing" constant="25" id="j0c-z5-wm2"/>
+                                    <constraint firstItem="JxT-go-hT8" firstAttribute="leading" secondItem="AFh-ov-gqS" secondAttribute="trailing" constant="25" id="j5e-WA-aFd"/>
                                     <constraint firstAttribute="width" secondItem="Sav-1s-AUK" secondAttribute="height" multiplier="16:9" id="jgw-2w-vEi"/>
+                                    <constraint firstItem="Z83-qZ-38s" firstAttribute="leading" secondItem="giE-5b-ZW8" secondAttribute="trailing" constant="25" id="jyF-Le-5ph"/>
+                                    <constraint firstAttribute="trailing" secondItem="qce-vY-GVB" secondAttribute="trailing" constant="25" id="l6J-nr-MGd"/>
+                                    <constraint firstItem="T2F-gj-OD9" firstAttribute="centerY" secondItem="C95-qp-1eZ" secondAttribute="centerY" id="lpN-lr-IhB"/>
+                                    <constraint firstItem="T2F-gj-OD9" firstAttribute="leading" secondItem="wwR-Il-ogv" secondAttribute="trailing" constant="45" id="n0D-mI-cln"/>
+                                    <constraint firstItem="Z83-qZ-38s" firstAttribute="centerY" secondItem="X8d-ka-0Gg" secondAttribute="centerY" id="pLx-Ug-HP4"/>
+                                    <constraint firstItem="AFh-ov-gqS" firstAttribute="centerY" secondItem="JxT-go-hT8" secondAttribute="centerY" id="ppV-zX-44b"/>
+                                    <constraint firstItem="AFh-ov-gqS" firstAttribute="leading" secondItem="1oG-WO-eVU" secondAttribute="trailing" constant="25" id="saA-LE-iQg"/>
+                                    <constraint firstItem="0sr-8o-oEk" firstAttribute="top" secondItem="qce-vY-GVB" secondAttribute="bottom" constant="50" id="trk-CG-KLz"/>
+                                    <constraint firstItem="qce-vY-GVB" firstAttribute="top" secondItem="Sav-1s-AUK" secondAttribute="top" constant="25" id="vrN-kV-FPV"/>
+                                    <constraint firstItem="wwR-Il-ogv" firstAttribute="centerY" secondItem="T2F-gj-OD9" secondAttribute="centerY" id="wII-qk-UWw"/>
+                                    <constraint firstItem="1oG-WO-eVU" firstAttribute="leading" secondItem="czJ-lf-z76" secondAttribute="trailing" constant="25" id="yc5-uH-7Jp"/>
+                                    <constraint firstItem="zzb-I0-CVU" firstAttribute="centerX" secondItem="CT0-BY-2Il" secondAttribute="centerX" id="zf8-Bb-fZf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="jgw-2w-vEi"/>
+                                        <exclude reference="wII-qk-UWw"/>
+                                        <exclude reference="9dN-if-ttP"/>
+                                        <exclude reference="atc-gO-sb9"/>
+                                        <exclude reference="n0D-mI-cln"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1192,6 +1474,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="menuButton" destination="bqM-Er-b7M" id="URw-tS-GaT"/>
+                        <outlet property="seqView" destination="Sav-1s-AUK" id="KV0-in-ffg"/>
                         <outlet property="synthView" destination="k66-uy-iDN" id="idX-oX-Vcm"/>
                     </connections>
                 </viewController>
