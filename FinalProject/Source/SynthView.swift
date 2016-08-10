@@ -29,11 +29,9 @@ class SynthView: UIView {
     
     // MARK: Rotary Knob Management
     private func initializeRotaryKnobs() {
-        print(rotaryKnobArray)
-        
         for rotaryKnob in rotaryKnobArray {
             rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyle.SliderVertical
-            rotaryKnob.scalingFactor = 2
+//            rotaryKnob.scalingFactor = 2
             rotaryKnob.defaultValue = rotaryKnob.value
             rotaryKnob.resetsToDefault = true
             rotaryKnob.backgroundColor = UIColor.clearColor()
@@ -41,7 +39,7 @@ class SynthView: UIView {
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob"), forState: UIControlState.Normal)
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Highlighted"), forState: UIControlState.Highlighted)
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Disabled"), forState: UIControlState.Disabled)
-            if rotaryKnob.accessibilityLabel == "CutoffKnob" {
+            if rotaryKnob.accessibilityLabel == "FilterCutoffKnob" {
                 print("true")
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {
@@ -71,8 +69,14 @@ class SynthView: UIView {
     @IBOutlet var cutoffRotaryKnob: MHRotaryKnob!
     @IBOutlet var slopeRotaryKnob: MHRotaryKnob!
     @IBOutlet var feedbackRotaryKnob: MHRotaryKnob!
-//    @IBOutlet var rateRotaryKnob: MHRotaryKnob!
-//    @IBOutlet var amountRotaryKnob: MHRotaryKnob!
+    @IBOutlet var rateRotaryKnob: MHRotaryKnob!
+    @IBOutlet var amountRotaryKnob: MHRotaryKnob!
+    
+    
+    @IBOutlet var latchRadioButton: SSRadioButton!
+    @IBOutlet var syncRadioButton: SSRadioButton!
+    @IBOutlet var osc1RadioButton: SSRadioButton!
+    @IBOutlet var osc2RadioButton: SSRadioButton!
     
     
 }

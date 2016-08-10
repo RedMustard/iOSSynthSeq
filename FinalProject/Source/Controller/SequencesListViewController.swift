@@ -31,6 +31,8 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
         let cell = tableView.dequeueReusableCellWithIdentifier("SequenceCell", forIndexPath: indexPath)
         
         cell.textLabel!.text = sequenceItemArray[indexPath.row] // PLACEHOLDER
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
         
         return cell
     }
@@ -47,6 +49,9 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
         
         let revealController = self.revealViewController()
         revealController.delegate = self
+        
+        sequencesTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        sequencesTableView.separatorColor = UIColor.blackColor()
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         recognizer.direction = .Right

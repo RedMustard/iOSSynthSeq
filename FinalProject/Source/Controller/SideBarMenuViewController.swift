@@ -25,6 +25,8 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath)
         
         cell.textLabel!.text = menuItemArray[indexPath.row]
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
         
         if menuItemArray[indexPath.row] == "Presets" {
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -60,6 +62,9 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         
         let revealController = self.revealViewController()
         revealController.delegate = self
+        
+        menuTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        menuTableView.separatorColor = UIColor.blackColor()
     }
     
     

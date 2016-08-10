@@ -29,6 +29,8 @@
 		F604C6621D504398002224E8 /* SequencesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C6611D504398002224E8 /* SequencesListViewController.swift */; };
 		F65D46A71D59A8E000086F56 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46A61D59A8E000086F56 /* SynthView.swift */; };
 		F65D46A91D59A8FA00086F56 /* SeqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46A81D59A8FA00086F56 /* SeqView.swift */; };
+		F65D46AD1D5AFCCA00086F56 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46AB1D5AFCCA00086F56 /* SSRadioButton.swift */; };
+		F65D46AE1D5AFCCA00086F56 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46AC1D5AFCCA00086F56 /* SSRadioButtonsController.swift */; };
 		F6825D741D59756300961134 /* MHRotaryKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = F6825D731D59756300961134 /* MHRotaryKnob.m */; };
 		F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */; };
 		F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5ABF11D4DCBEE00715138 /* SideBarMenuViewController.swift */; };
@@ -117,6 +119,8 @@
 		F604C6611D504398002224E8 /* SequencesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencesListViewController.swift; sourceTree = "<group>"; };
 		F65D46A61D59A8E000086F56 /* SynthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
 		F65D46A81D59A8FA00086F56 /* SeqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeqView.swift; sourceTree = "<group>"; };
+		F65D46AB1D5AFCCA00086F56 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		F65D46AC1D5AFCCA00086F56 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		F6825D721D59756300961134 /* MHRotaryKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRotaryKnob.h; sourceTree = "<group>"; };
 		F6825D731D59756300961134 /* MHRotaryKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRotaryKnob.m; sourceTree = "<group>"; };
 		F6F5ABEF1D4DCAEE00715138 /* SynthSeqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthSeqViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 		562BB1591B5562E400B73F46 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F65D46AA1D5AFCAA00086F56 /* SSRadioButtonController */,
 				F6825D711D59754800961134 /* MHRotaryKnob */,
 				F6F5ABF61D4DD14C00715138 /* SWRevealViewController */,
 				562BB1371B55627000B73F46 /* AppDelegate.swift */,
@@ -323,6 +328,15 @@
 				56BEFF581B68CE58006F0664 /* NamedEntity.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F65D46AA1D5AFCAA00086F56 /* SSRadioButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				F65D46AB1D5AFCCA00086F56 /* SSRadioButton.swift */,
+				F65D46AC1D5AFCCA00086F56 /* SSRadioButtonsController.swift */,
+			);
+			name = SSRadioButtonController;
 			sourceTree = "<group>";
 		};
 		F6825D6E1D58107100961134 /* View */ = {
@@ -558,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F65D46AD1D5AFCCA00086F56 /* SSRadioButton.swift in Sources */,
 				F6F5ABF21D4DCBEE00715138 /* SideBarMenuViewController.swift in Sources */,
 				F6F5ABF01D4DCAEE00715138 /* SynthSeqViewController.swift in Sources */,
 				F6F5ABFA1D4DD19700715138 /* SWRevealViewController.m in Sources */,
@@ -566,6 +581,7 @@
 				F65D46A91D59A8FA00086F56 /* SeqView.swift in Sources */,
 				562BB1381B55627000B73F46 /* AppDelegate.swift in Sources */,
 				F604C65E1D50437B002224E8 /* FullPresetsListViewController.swift in Sources */,
+				F65D46AE1D5AFCCA00086F56 /* SSRadioButtonsController.swift in Sources */,
 				F65D46A71D59A8E000086F56 /* SynthView.swift in Sources */,
 				56BEFEBE1B68C3E0006F0664 /* Model.xcdatamodeld in Sources */,
 				F604C6601D50438D002224E8 /* SynthPresetsListViewController.swift in Sources */,

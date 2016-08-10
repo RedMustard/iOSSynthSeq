@@ -31,8 +31,10 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("PresetsCell", forIndexPath: indexPath)
         
         cell.textLabel!.text = presetsItemArray[indexPath.row]
+        cell.textLabel!.textColor = UIColor.whiteColor()
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        
+        cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
+
         return cell
     }
     
@@ -65,6 +67,9 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
         
         let revealController = self.revealViewController()
         revealController.delegate = self
+        
+        presetTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        presetTableView.separatorColor = UIColor.blackColor()
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         recognizer.direction = .Right

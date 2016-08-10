@@ -31,6 +31,8 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
         let cell = tableView.dequeueReusableCellWithIdentifier("SynthPresetCell", forIndexPath: indexPath)
         
         cell.textLabel!.text = synthPresetItemArray[indexPath.row] // PLACEHOLDER
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
         
         return cell
     }
@@ -47,6 +49,10 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
         
         let revealController = self.revealViewController()
         revealController.delegate = self
+        
+        synthPresetTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        synthPresetTableView.separatorColor = UIColor.blackColor()
+
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         

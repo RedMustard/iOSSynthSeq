@@ -30,7 +30,10 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FullPresetCell", forIndexPath: indexPath)
         
-        cell.textLabel!.text = fullPresetItemArray[indexPath.row] // PLACEHOLDER 
+        cell.textLabel!.text = fullPresetItemArray[indexPath.row] // PLACEHOLDER
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        
         
         return cell
     }
@@ -47,6 +50,10 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
         
         let revealController = self.revealViewController()
         revealController.delegate = self
+        
+        fullPresetTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        fullPresetTableView.separatorColor = UIColor.blackColor()
+
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         recognizer.direction = .Right
