@@ -31,6 +31,10 @@ class SynthView: UIView {
     private func initializeRotaryKnobs() {
         for rotaryKnob in rotaryKnobArray {
             rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyle.SliderVertical
+            
+//            if rotaryKnob.accessibilityLabel == "FilterSlopeKnob" {
+//                rotaryKnob.scalingFactor = 68
+//            }
 //            rotaryKnob.scalingFactor = 2
             rotaryKnob.defaultValue = rotaryKnob.value
             rotaryKnob.resetsToDefault = true
@@ -39,12 +43,14 @@ class SynthView: UIView {
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob"), forState: UIControlState.Normal)
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Highlighted"), forState: UIControlState.Highlighted)
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Disabled"), forState: UIControlState.Disabled)
+            
             if rotaryKnob.accessibilityLabel == "FilterCutoffKnob" {
                 print("true")
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {
-                rotaryKnob.knobImageCenter = CGPointMake(35.0, 35.0)
+                rotaryKnob.knobImageCenter = CGPointMake(35.0, 31.0)
             }
+            
             rotaryKnob.addTarget(self, action: #selector(rotaryKnob.didChangeValueForKey(_:)), forControlEvents: UIControlEvents.ValueChanged)
         }
     }

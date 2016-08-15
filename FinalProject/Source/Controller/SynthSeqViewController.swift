@@ -29,6 +29,10 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
     }
     
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.Default
+    }
+    
     // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
         return false

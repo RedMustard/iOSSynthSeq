@@ -68,6 +68,11 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.Default
+    }
+    
+    
     // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
         if revealController.frontViewPosition == FrontViewPosition.Right {
