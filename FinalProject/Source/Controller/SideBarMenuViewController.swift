@@ -69,7 +69,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.Default
+        return UIStatusBarStyle.LightContent
     }
     
     

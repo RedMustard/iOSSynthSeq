@@ -65,7 +65,7 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
     
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.Default
+        return UIStatusBarStyle.LightContent
     }
     
     

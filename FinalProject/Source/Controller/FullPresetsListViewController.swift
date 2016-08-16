@@ -67,7 +67,7 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.Default
+        return UIStatusBarStyle.LightContent
     }
     
     

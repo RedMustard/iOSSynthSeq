@@ -30,8 +30,9 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
     
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.Default
+        return UIStatusBarStyle.LightContent
     }
+    
     
     // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {

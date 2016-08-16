@@ -45,7 +45,6 @@ class SynthView: UIView {
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Disabled"), forState: UIControlState.Disabled)
             
             if rotaryKnob.accessibilityLabel == "FilterCutoffKnob" {
-                print("true")
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {
                 rotaryKnob.knobImageCenter = CGPointMake(35.0, 31.0)
@@ -79,10 +78,10 @@ class SynthView: UIView {
     @IBOutlet var amountRotaryKnob: MHRotaryKnob!
     
     
-    @IBOutlet var latchRadioButton: SSRadioButton!
-    @IBOutlet var syncRadioButton: SSRadioButton!
-    @IBOutlet var osc1RadioButton: SSRadioButton!
-    @IBOutlet var osc2RadioButton: SSRadioButton!
+//    @IBOutlet var latchRadioButton: SSRadioButton!
+//    @IBOutlet var syncRadioButton: SSRadioButton!
+//    @IBOutlet var osc1RadioButton: SSRadioButton!
+//    @IBOutlet var osc2RadioButton: SSRadioButton!
     
     
 }
