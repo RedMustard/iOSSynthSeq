@@ -39,6 +39,8 @@ class SeqView: UIView {
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Highlighted"), forState: UIControlState.Highlighted)
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Disabled"), forState: UIControlState.Disabled)
             
+//            rotaryKnob.enabled = false
+            
             if rotaryKnob.accessibilityLabel == "SequenceRateKnob" {
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {

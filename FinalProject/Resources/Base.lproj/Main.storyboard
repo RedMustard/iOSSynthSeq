@@ -1874,7 +1874,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.55000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.81801718202189133" green="0.81179966543512661" blue="0.84441105769230773" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="s5o-GT-RHZ" firstAttribute="top" secondItem="vEo-B2-XS0" secondAttribute="top" id="04N-Mc-BO2"/>
                                             <constraint firstItem="xqI-J7-RkF" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="07b-GZ-4Lt"/>
@@ -2070,7 +2070,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.73094951923076923" green="0.73094951923076923" blue="0.73094951923076923" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="I7W-1v-e7K" secondAttribute="bottom" constant="15" id="MPT-mj-E2D"/>
                                             <constraint firstAttribute="trailing" secondItem="hvt-TG-OMd" secondAttribute="trailing" constant="15" id="WR6-cR-b9h"/>
