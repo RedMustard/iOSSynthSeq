@@ -173,26 +173,6 @@
                                                     <constraint firstAttribute="width" constant="70" id="uTs-JS-vXK"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJ4-ih-xMB">
-                                                <rect key="frame" x="30" y="30" width="40" height="40"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="EYn-xf-SZW"/>
-                                                    <constraint firstAttribute="width" constant="40" id="QRb-Ce-Mjd"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-QW-UWN">
                                                 <rect key="frame" x="5" y="120" width="66" height="21"/>
                                                 <attributedString key="attributedText">
@@ -245,37 +225,45 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDR-Lk-g0S" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" label="OutputLatchButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="JOg-1J-28g"/>
+                                                    <constraint firstAttribute="width" constant="50" id="dRw-Xd-ZS9"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="k66-uy-iDN" eventType="touchUpInside" id="Kbc-ck-8mV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97148245573043823" green="0.96111327409744263" blue="0.89431947469711304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="h7g-QW-UWN" firstAttribute="top" secondItem="gFc-By-uJd" secondAttribute="bottom" constant="5" id="3mi-E0-HD8"/>
                                             <constraint firstItem="gFc-By-uJd" firstAttribute="leading" secondItem="FFV-lZ-f8m" secondAttribute="leading" constant="15" id="6Y6-UO-Y0O"/>
                                             <constraint firstAttribute="width" constant="180" id="AQ5-0R-mgx"/>
-                                            <constraint firstItem="UJ4-ih-xMB" firstAttribute="top" secondItem="FFV-lZ-f8m" secondAttribute="top" constant="15" id="B7t-io-llo"/>
                                             <constraint firstItem="Ukj-AQ-isV" firstAttribute="centerX" secondItem="lJO-9s-DM3" secondAttribute="centerX" id="KZt-lj-hBB"/>
-                                            <constraint firstItem="UJ4-ih-xMB" firstAttribute="leading" secondItem="FFV-lZ-f8m" secondAttribute="leading" constant="15" id="V8u-ea-Vnc"/>
+                                            <constraint firstItem="fDR-Lk-g0S" firstAttribute="centerY" secondItem="lJO-9s-DM3" secondAttribute="centerY" id="SIu-6Q-6yy"/>
+                                            <constraint firstItem="fDR-Lk-g0S" firstAttribute="centerX" secondItem="nJh-bO-Oc4" secondAttribute="centerX" id="Z6J-jy-5Ek"/>
                                             <constraint firstItem="lJO-9s-DM3" firstAttribute="leading" secondItem="FFV-lZ-f8m" secondAttribute="leading" priority="999" constant="100" id="a3r-9Q-yld"/>
-                                            <constraint firstItem="nJh-bO-Oc4" firstAttribute="centerX" secondItem="UJ4-ih-xMB" secondAttribute="centerX" id="a9v-VN-3x1"/>
                                             <constraint firstAttribute="trailing" secondItem="gFc-By-uJd" secondAttribute="trailing" constant="15" id="aJq-MS-3ou"/>
-                                            <constraint firstItem="lJO-9s-DM3" firstAttribute="leading" secondItem="UJ4-ih-xMB" secondAttribute="trailing" constant="15" id="aVP-YL-aC6"/>
                                             <constraint firstItem="h7g-QW-UWN" firstAttribute="leading" secondItem="FFV-lZ-f8m" secondAttribute="leading" constant="5" id="coV-Ug-DrE"/>
                                             <constraint firstAttribute="bottom" secondItem="h7g-QW-UWN" secondAttribute="bottom" constant="5" id="lLA-ag-vRo"/>
                                             <constraint firstAttribute="trailing" secondItem="lJO-9s-DM3" secondAttribute="trailing" constant="15" id="lpa-oN-80z"/>
                                             <constraint firstItem="lJO-9s-DM3" firstAttribute="top" secondItem="FFV-lZ-f8m" secondAttribute="top" constant="15" id="n8R-jd-iTc"/>
                                             <constraint firstItem="h7g-QW-UWN" firstAttribute="top" secondItem="lJO-9s-DM3" secondAttribute="bottom" constant="35" id="pey-XZ-OKl"/>
                                             <constraint firstItem="nJh-bO-Oc4" firstAttribute="bottom" secondItem="Ukj-AQ-isV" secondAttribute="bottom" id="qdr-Ig-rlB"/>
-                                            <constraint firstItem="UJ4-ih-xMB" firstAttribute="centerY" secondItem="lJO-9s-DM3" secondAttribute="centerY" id="tSK-T6-X6G"/>
                                             <constraint firstItem="Ukj-AQ-isV" firstAttribute="top" secondItem="lJO-9s-DM3" secondAttribute="bottom" constant="5" id="u2k-oT-YTD"/>
                                             <constraint firstAttribute="height" constant="128" id="ucv-Mx-di7"/>
+                                            <constraint firstItem="nJh-bO-Oc4" firstAttribute="top" secondItem="fDR-Lk-g0S" secondAttribute="bottom" constant="5" id="xzS-yY-JWp"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="AQ5-0R-mgx"/>
                                                 <exclude reference="ucv-Mx-di7"/>
-                                                <exclude reference="B7t-io-llo"/>
-                                                <exclude reference="V8u-ea-Vnc"/>
+                                                <exclude reference="xzS-yY-JWp"/>
                                                 <exclude reference="a3r-9Q-yld"/>
-                                                <exclude reference="aVP-YL-aC6"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -659,7 +647,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5O9-t4-Ove" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="120" y="15" width="70" height="70"/>
+                                                <rect key="frame" x="130" y="15" width="70" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="LFOAmountKnob"/>
                                                 <constraints>
@@ -693,59 +681,6 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-bL-UxI">
-                                                <rect key="frame" x="143" y="90" width="25" height="17"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="AMT">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-CondensedBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkC-Tv-sXN">
-                                                <rect key="frame" x="35" y="110" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="DGl-MH-s2f"/>
-                                                    <constraint firstAttribute="height" constant="30" id="zy8-Il-AqN"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Wc-PW-bpH">
-                                                <rect key="frame" x="110" y="110" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Iif-dV-Z0R"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Kuj-p4-maP"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XU-3o-jH6">
                                                 <rect key="frame" x="35" y="145" width="31" height="17"/>
                                                 <attributedString key="attributedText">
@@ -760,7 +695,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il7-82-llv">
-                                                <rect key="frame" x="109" y="145" width="33" height="17"/>
+                                                <rect key="frame" x="149" y="140" width="33" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="OSC 1">
                                                         <attributes>
@@ -772,28 +707,8 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oC2-Vm-eRC">
-                                                <rect key="frame" x="170" y="110" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Eso-Hb-ngO"/>
-                                                    <constraint firstAttribute="height" constant="30" id="fYc-e8-DLZ"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-gY-Bdl">
-                                                <rect key="frame" x="169" y="145" width="33" height="17"/>
+                                                <rect key="frame" x="149" y="186" width="33" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="OSC 2">
                                                         <attributes>
@@ -818,64 +733,101 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmu-gH-AOa" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="33" y="110" width="35" height="35"/>
+                                                <accessibility key="accessibilityConfiguration" label="LFOSyncButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="9eO-Ku-tjL"/>
+                                                    <constraint firstAttribute="width" constant="35" id="t0C-id-c16"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="k66-uy-iDN" eventType="touchUpInside" id="GjK-cO-3XM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87b-bP-sAd" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="110" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="LFOOsc1Button"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="133-rH-xer"/>
+                                                    <constraint firstAttribute="height" constant="30" id="rJT-G6-8bh"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="k66-uy-iDN" eventType="touchUpInside" id="Pb6-4O-Ahn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-WQ-AMF" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="156" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="LFOOsc2Button"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="chx-u9-ydD"/>
+                                                    <constraint firstAttribute="height" constant="30" id="wPD-YW-fWJ"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="k66-uy-iDN" eventType="touchUpInside" id="B5h-zQ-a0P"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-bL-UxI">
+                                                <rect key="frame" x="153" y="90" width="25" height="17"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="AMT">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-CondensedBold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97148245573043823" green="0.96111327409744263" blue="0.89431947469711304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="3Wc-PW-bpH" firstAttribute="centerX" secondItem="5O9-t4-Ove" secondAttribute="centerX" id="2WX-rA-tpw"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="trailing" secondItem="5O9-t4-Ove" secondAttribute="trailing" id="4gy-zB-eJs"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="top" secondItem="3Wc-PW-bpH" secondAttribute="bottom" id="4rH-5e-WjA"/>
+                                            <constraint firstItem="4XU-3o-jH6" firstAttribute="top" secondItem="wmu-gH-AOa" secondAttribute="bottom" id="1aa-KY-XgE"/>
                                             <constraint firstItem="Ykl-bL-UxI" firstAttribute="centerX" secondItem="5O9-t4-Ove" secondAttribute="centerX" id="6zB-fx-0dD"/>
-                                            <constraint firstItem="qw8-gY-Bdl" firstAttribute="centerX" secondItem="oC2-Vm-eRC" secondAttribute="centerX" id="Cne-Mz-DZY"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="centerX" secondItem="3Wc-PW-bpH" secondAttribute="centerX" id="FGm-oX-kis"/>
-                                            <constraint firstItem="Il7-82-llv" firstAttribute="top" secondItem="3Wc-PW-bpH" secondAttribute="bottom" constant="5" id="FsT-tl-e6U"/>
-                                            <constraint firstItem="3Wc-PW-bpH" firstAttribute="top" secondItem="qkC-Tv-sXN" secondAttribute="top" id="GB5-Uv-sZB"/>
+                                            <constraint firstAttribute="trailing" secondItem="5O9-t4-Ove" secondAttribute="trailing" constant="15" id="AJP-a2-2aK"/>
+                                            <constraint firstItem="87b-bP-sAd" firstAttribute="top" secondItem="wmu-gH-AOa" secondAttribute="top" id="D8O-Zt-bOt"/>
+                                            <constraint firstItem="wmu-gH-AOa" firstAttribute="top" secondItem="0Ub-hr-QzN" secondAttribute="bottom" constant="25" id="JWP-54-aFc"/>
+                                            <constraint firstItem="qw8-gY-Bdl" firstAttribute="top" secondItem="P8d-WQ-AMF" secondAttribute="bottom" id="KvU-mx-Th9"/>
                                             <constraint firstItem="Ykl-bL-UxI" firstAttribute="top" secondItem="5O9-t4-Ove" secondAttribute="bottom" constant="5" id="LxM-JK-oJH"/>
-                                            <constraint firstItem="4XU-3o-jH6" firstAttribute="centerX" secondItem="qkC-Tv-sXN" secondAttribute="centerX" id="PHB-KH-HQK"/>
                                             <constraint firstItem="0Ub-hr-QzN" firstAttribute="leading" secondItem="t7n-VI-YZC" secondAttribute="leading" constant="15" id="QyR-vu-wtN"/>
-                                            <constraint firstItem="qkC-Tv-sXN" firstAttribute="top" secondItem="0Ub-hr-QzN" secondAttribute="bottom" constant="25" id="TOS-nL-bfy"/>
                                             <constraint firstItem="vop-P3-VkR" firstAttribute="centerX" secondItem="0Ub-hr-QzN" secondAttribute="centerX" id="TwC-9n-WDM"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="top" secondItem="Il7-82-llv" secondAttribute="bottom" constant="5" id="USu-l4-JJV"/>
-                                            <constraint firstAttribute="trailing" secondItem="oC2-Vm-eRC" secondAttribute="trailing" constant="15" id="Uf6-OQ-GsE"/>
                                             <constraint firstItem="5O9-t4-Ove" firstAttribute="leading" secondItem="0Ub-hr-QzN" secondAttribute="trailing" constant="50" id="VHR-bN-kXc"/>
-                                            <constraint firstItem="qw8-gY-Bdl" firstAttribute="centerX" secondItem="oC2-Vm-eRC" secondAttribute="centerX" id="WJu-Vl-hCY"/>
+                                            <constraint firstItem="5O9-t4-Ove" firstAttribute="leading" secondItem="0Ub-hr-QzN" secondAttribute="trailing" constant="45" id="VoS-hh-iQR"/>
                                             <constraint firstItem="DZI-SI-5Sr" firstAttribute="leading" secondItem="t7n-VI-YZC" secondAttribute="leading" constant="5" id="WXr-K5-5Qt"/>
-                                            <constraint firstItem="4XU-3o-jH6" firstAttribute="top" secondItem="qkC-Tv-sXN" secondAttribute="bottom" constant="5" id="Z2p-kC-RJV"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="leading" secondItem="5O9-t4-Ove" secondAttribute="leading" id="ZXh-Wk-cwD"/>
+                                            <constraint firstItem="qw8-gY-Bdl" firstAttribute="centerX" secondItem="87b-bP-sAd" secondAttribute="centerX" id="WgM-Ce-xKx"/>
+                                            <constraint firstItem="87b-bP-sAd" firstAttribute="centerX" secondItem="5O9-t4-Ove" secondAttribute="centerX" id="YM6-dm-oi0"/>
+                                            <constraint firstItem="Il7-82-llv" firstAttribute="centerX" secondItem="87b-bP-sAd" secondAttribute="centerX" id="ZJs-Xe-XOd"/>
                                             <constraint firstItem="5O9-t4-Ove" firstAttribute="top" secondItem="t7n-VI-YZC" secondAttribute="top" constant="15" id="Zqd-eg-V4n"/>
-                                            <constraint firstItem="qkC-Tv-sXN" firstAttribute="centerX" secondItem="0Ub-hr-QzN" secondAttribute="centerX" id="aWl-aw-kq8"/>
                                             <constraint firstItem="vop-P3-VkR" firstAttribute="top" secondItem="0Ub-hr-QzN" secondAttribute="bottom" constant="5" id="dKu-HD-gh7"/>
+                                            <constraint firstItem="4XU-3o-jH6" firstAttribute="centerX" secondItem="wmu-gH-AOa" secondAttribute="centerX" id="ddR-7C-OU9"/>
                                             <constraint firstAttribute="trailing" secondItem="5O9-t4-Ove" secondAttribute="trailing" constant="15" id="dlF-O4-6WK"/>
                                             <constraint firstItem="DZI-SI-5Sr" firstAttribute="top" secondItem="5Le-xk-aGO" secondAttribute="bottom" constant="5" id="eSj-RE-Nhz"/>
                                             <constraint firstAttribute="bottom" secondItem="DZI-SI-5Sr" secondAttribute="bottom" constant="5" id="eli-FT-TZu"/>
                                             <constraint firstItem="5O9-t4-Ove" firstAttribute="leading" secondItem="0Ub-hr-QzN" secondAttribute="trailing" constant="50" id="gWz-15-6fq"/>
                                             <constraint firstAttribute="trailing" secondItem="5Le-xk-aGO" secondAttribute="trailing" constant="15" id="hSP-bp-6FM"/>
+                                            <constraint firstItem="P8d-WQ-AMF" firstAttribute="centerX" secondItem="87b-bP-sAd" secondAttribute="centerX" id="hdn-BC-gjm"/>
                                             <constraint firstItem="5O9-t4-Ove" firstAttribute="leading" secondItem="0Ub-hr-QzN" secondAttribute="trailing" constant="35" id="i9w-5D-kmM"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="leading" secondItem="3Wc-PW-bpH" secondAttribute="leading" id="m9h-A9-R4r"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="trailing" secondItem="5O9-t4-Ove" secondAttribute="trailing" constant="10" id="mVu-1p-5GT"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="top" secondItem="3Wc-PW-bpH" secondAttribute="top" id="og4-pI-ZvS"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="top" secondItem="3Wc-PW-bpH" secondAttribute="top" id="p9l-ei-6BX"/>
-                                            <constraint firstItem="qw8-gY-Bdl" firstAttribute="top" secondItem="oC2-Vm-eRC" secondAttribute="bottom" constant="5" id="rqc-tb-Sry"/>
-                                            <constraint firstItem="Il7-82-llv" firstAttribute="centerX" secondItem="3Wc-PW-bpH" secondAttribute="centerX" id="tUk-1s-IAi"/>
-                                            <constraint firstItem="3Wc-PW-bpH" firstAttribute="leading" secondItem="5O9-t4-Ove" secondAttribute="leading" constant="-10" id="uSj-HI-9tg"/>
+                                            <constraint firstItem="Il7-82-llv" firstAttribute="top" secondItem="87b-bP-sAd" secondAttribute="bottom" id="iHB-tp-x0E"/>
+                                            <constraint firstItem="P8d-WQ-AMF" firstAttribute="top" secondItem="Il7-82-llv" secondAttribute="bottom" constant="-1" id="jEY-ln-l2H"/>
+                                            <constraint firstItem="Il7-82-llv" firstAttribute="top" secondItem="4XU-3o-jH6" secondAttribute="top" id="sq6-AW-Lqx"/>
+                                            <constraint firstItem="87b-bP-sAd" firstAttribute="centerX" secondItem="5O9-t4-Ove" secondAttribute="centerX" id="tHj-Ef-0c9"/>
+                                            <constraint firstItem="wmu-gH-AOa" firstAttribute="centerX" secondItem="0Ub-hr-QzN" secondAttribute="centerX" id="u4i-NF-ACn"/>
                                             <constraint firstItem="5Le-xk-aGO" firstAttribute="leading" secondItem="t7n-VI-YZC" secondAttribute="leading" constant="15" id="udp-Fi-fg4"/>
                                             <constraint firstItem="0Ub-hr-QzN" firstAttribute="top" secondItem="t7n-VI-YZC" secondAttribute="top" constant="15" id="ujH-X6-LGs"/>
-                                            <constraint firstItem="oC2-Vm-eRC" firstAttribute="top" secondItem="3Wc-PW-bpH" secondAttribute="bottom" constant="35" id="vlw-Ee-noz"/>
+                                            <constraint firstItem="Il7-82-llv" firstAttribute="centerX" secondItem="87b-bP-sAd" secondAttribute="centerX" id="wlo-Yq-qr0"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="VHR-bN-kXc"/>
                                                 <exclude reference="dlF-O4-6WK"/>
                                                 <exclude reference="gWz-15-6fq"/>
-                                                <exclude reference="2WX-rA-tpw"/>
-                                                <exclude reference="4gy-zB-eJs"/>
-                                                <exclude reference="4rH-5e-WjA"/>
-                                                <exclude reference="FGm-oX-kis"/>
-                                                <exclude reference="USu-l4-JJV"/>
-                                                <exclude reference="ZXh-Wk-cwD"/>
-                                                <exclude reference="m9h-A9-R4r"/>
-                                                <exclude reference="og4-pI-ZvS"/>
-                                                <exclude reference="vlw-Ee-noz"/>
-                                                <exclude reference="Cne-Mz-DZY"/>
+                                                <exclude reference="i9w-5D-kmM"/>
+                                                <exclude reference="YM6-dm-oi0"/>
+                                                <exclude reference="ZJs-Xe-XOd"/>
+                                                <exclude reference="sq6-AW-Lqx"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1216,10 +1168,10 @@
                                     <constraint firstItem="1FQ-V2-h2Y" firstAttribute="height" secondItem="pgY-DB-hSA" secondAttribute="height" id="KJl-4k-Duw"/>
                                     <constraint firstItem="1FQ-V2-h2Y" firstAttribute="leading" secondItem="k66-uy-iDN" secondAttribute="leading" constant="10" id="L8N-54-hIq"/>
                                     <constraint firstItem="t7n-VI-YZC" firstAttribute="leading" secondItem="oEa-Uq-fDZ" secondAttribute="trailing" constant="10" id="Nxv-6j-s5e"/>
+                                    <constraint firstItem="fDR-Lk-g0S" firstAttribute="centerX" secondItem="0Ub-hr-QzN" secondAttribute="centerX" id="OHB-SO-mhO"/>
                                     <constraint firstItem="t7n-VI-YZC" firstAttribute="top" secondItem="FFV-lZ-f8m" secondAttribute="bottom" constant="10" id="P4m-Rc-7lv"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="leading" secondItem="pgY-DB-hSA" secondAttribute="trailing" constant="10" id="PwV-6T-uSx"/>
                                     <constraint firstAttribute="width" secondItem="k66-uy-iDN" secondAttribute="height" multiplier="384:305" id="QC9-M0-leW"/>
-                                    <constraint firstItem="UJ4-ih-xMB" firstAttribute="centerX" secondItem="0Ub-hr-QzN" secondAttribute="centerX" id="SB7-1Z-oj9"/>
                                     <constraint firstItem="pgY-DB-hSA" firstAttribute="leading" secondItem="1FQ-V2-h2Y" secondAttribute="trailing" constant="10" id="THy-HZ-z4t"/>
                                     <constraint firstItem="oEa-Uq-fDZ" firstAttribute="top" secondItem="FFV-lZ-f8m" secondAttribute="bottom" constant="10" id="aMa-kR-rCp"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="leading" secondItem="pgY-DB-hSA" secondAttribute="trailing" constant="10" id="b82-Mx-EMi"/>
@@ -1229,6 +1181,7 @@
                                     <constraint firstItem="pgY-DB-hSA" firstAttribute="leading" secondItem="1FQ-V2-h2Y" secondAttribute="trailing" constant="10" id="fkh-4D-VM3"/>
                                     <constraint firstItem="oEa-Uq-fDZ" firstAttribute="leading" secondItem="BhS-LA-Nih" secondAttribute="trailing" constant="10" id="iXW-dL-DEE"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="width" secondItem="t7n-VI-YZC" secondAttribute="width" id="jcg-zq-pah"/>
+                                    <constraint firstItem="qw8-gY-Bdl" firstAttribute="top" secondItem="LYv-87-i4y" secondAttribute="top" id="mpg-Nm-RPE"/>
                                     <constraint firstItem="pgY-DB-hSA" firstAttribute="height" secondItem="FFV-lZ-f8m" secondAttribute="height" id="qkN-UY-rex"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="height" secondItem="pgY-DB-hSA" secondAttribute="height" id="un8-jE-dlm"/>
                                     <constraint firstAttribute="bottom" secondItem="t7n-VI-YZC" secondAttribute="bottom" constant="10" id="zHB-6Y-yOZ"/>
@@ -1244,6 +1197,7 @@
                                         <exclude reference="b82-Mx-EMi"/>
                                         <exclude reference="un8-jE-dlm"/>
                                         <exclude reference="drb-Qj-eq8"/>
+                                        <exclude reference="mpg-Nm-RPE"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -1252,11 +1206,14 @@
                                     <outlet property="cutoffRotaryKnob" destination="bmy-Yq-ZZp" id="ePk-3P-Y4z"/>
                                     <outlet property="decayRotaryKnob" destination="O7C-Lo-cjW" id="9zT-e5-wpZ"/>
                                     <outlet property="feedbackRotaryKnob" destination="EQL-5X-gCQ" id="BZe-t2-tvP"/>
+                                    <outlet property="latchRadioButton" destination="fDR-Lk-g0S" id="7pp-4K-lLS"/>
                                     <outlet property="noiseRotaryKnob" destination="6IN-eT-zqa" id="l7v-pQ-jpT"/>
                                     <outlet property="osc1OctRotaryKnob" destination="ZmJ-cU-3LC" id="io0-cd-Uwc"/>
+                                    <outlet property="osc1RadioButton" destination="87b-bP-sAd" id="jpJ-T5-9Xz"/>
                                     <outlet property="osc1VolRotaryKnob" destination="trQ-Rz-lqx" id="oYL-IP-REj"/>
                                     <outlet property="osc1WaveRotaryKnob" destination="mc9-pG-AX2" id="i0a-bW-1uB"/>
                                     <outlet property="osc2OctRotaryKnob" destination="nCy-lV-Y4P" id="Hpc-7b-8qL"/>
+                                    <outlet property="osc2RadioButton" destination="P8d-WQ-AMF" id="ckd-dp-Bp2"/>
                                     <outlet property="osc2VolRotaryKnob" destination="iIa-W5-1Zc" id="M5Z-d8-cDW"/>
                                     <outlet property="osc2WaveRotaryKnob" destination="atG-0T-xRc" id="Txh-BA-dNs"/>
                                     <outlet property="rateRotaryKnob" destination="0Ub-hr-QzN" id="PB3-tc-GdF"/>
@@ -1264,6 +1221,7 @@
                                     <outlet property="resonanceRotaryKnob" destination="sOM-Mi-GCh" id="gE7-Fr-et1"/>
                                     <outlet property="slopeRotaryKnob" destination="e18-pi-ugK" id="oDo-D4-Wnf"/>
                                     <outlet property="sustainRotaryKnob" destination="La6-Qk-OPM" id="ucX-1u-h0b"/>
+                                    <outlet property="syncRadioButton" destination="wmu-gH-AOa" id="ohc-Bp-SJr"/>
                                     <outlet property="volRotaryKnob" destination="lJO-9s-DM3" id="w7J-GH-69o"/>
                                     <outletCollection property="rotaryKnobArray" destination="lJO-9s-DM3" collectionClass="NSMutableArray" id="ftl-PY-wNF"/>
                                     <outletCollection property="rotaryKnobArray" destination="5aX-wM-Zl6" collectionClass="NSMutableArray" id="gQX-K6-IzN"/>
@@ -1435,186 +1393,6 @@
                                                     <constraint firstAttribute="width" constant="60" id="gWF-3b-Jy7"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CT0-BY-2Il" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="28" width="35" height="35"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="35" id="VJH-lT-4ng"/>
-                                                    <constraint firstAttribute="height" constant="35" id="nny-cb-B8i"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMB-CF-edU" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="139" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="P3S-vB-LUI"/>
-                                                    <constraint firstAttribute="height" constant="30" id="iq6-Sh-la7"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkT-cH-A3W" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="229" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="3vB-At-xcj"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Gb2-X8-MRy"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-Ah-NCt" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="319" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="k3b-8g-Xq7"/>
-                                                    <constraint firstAttribute="height" constant="30" id="xdK-Ge-pRS"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKE-5c-cJP" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="409" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="36z-S2-iP6"/>
-                                                    <constraint firstAttribute="width" constant="30" id="Apd-Aa-oDl"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRd-iZ-qon" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="499" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="F5B-jW-Jb9"/>
-                                                    <constraint firstAttribute="width" constant="30" id="MxE-le-56p"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJL-KF-vOr" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="589" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="ATq-Os-bfk"/>
-                                                    <constraint firstAttribute="height" constant="30" id="RhK-ig-Ar0"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BH3-LC-akS" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="679" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="aJY-Yb-MuW"/>
-                                                    <constraint firstAttribute="height" constant="30" id="cZe-hb-e2u"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CQ-SF-OTA" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="769" y="97" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="IOc-T5-xzT"/>
-                                                    <constraint firstAttribute="width" constant="30" id="fVV-Ll-LzI"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzb-I0-CVU">
                                                 <rect key="frame" x="32" y="68" width="19" height="17"/>
                                                 <attributedString key="attributedText">
@@ -1628,26 +1406,6 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwR-Il-ogv" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="152" width="35" height="35"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="35" id="YEe-PD-fyY"/>
-                                                    <constraint firstAttribute="height" constant="35" id="gNi-xL-xmR"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft3-5f-Wyg">
                                                 <rect key="frame" x="29" y="192" width="26" height="17"/>
                                                 <attributedString key="attributedText">
@@ -1661,166 +1419,6 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nG-d2-062" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="139" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="9PO-sJ-t4q"/>
-                                                    <constraint firstAttribute="height" constant="30" id="iV9-6I-OqN"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3G-Gp-pk6" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="229" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="C0T-tN-c6l"/>
-                                                    <constraint firstAttribute="height" constant="30" id="OkV-HF-Z19"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-Jt-qUj" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="319" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="122-iu-0IW"/>
-                                                    <constraint firstAttribute="height" constant="30" id="45I-ga-EPh"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaI-Wn-hXI" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="409" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="bN1-YU-ib4"/>
-                                                    <constraint firstAttribute="height" constant="30" id="yin-ot-0jd"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZb-g7-xTY" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="499" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="FpI-Fz-IQy"/>
-                                                    <constraint firstAttribute="width" constant="30" id="WDg-w7-yMS"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iz-5a-eAB" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="589" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="3sZ-pF-sCj"/>
-                                                    <constraint firstAttribute="width" constant="30" id="H7M-tw-nei"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3l9-su-Anj" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="679" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="O4Y-QA-8Al"/>
-                                                    <constraint firstAttribute="height" constant="30" id="ja2-Yg-uAW"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szu-et-Mn0" customClass="SSRadioButton" customModule="FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="769" y="221" width="30" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <accessibility key="accessibilityConfiguration" label="OutputVolumeKnob"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="b9H-aU-N4H"/>
-                                                    <constraint firstAttribute="height" constant="30" id="jjI-lV-mrW"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8L-R7-nah">
                                                 <rect key="frame" x="151" y="204" width="7" height="17"/>
                                                 <attributedString key="attributedText">
@@ -2056,190 +1654,386 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-W1-1I1">
-                                                <rect key="frame" x="0.0" y="85" width="83" height="67"/>
+                                                <rect key="frame" x="0.0" y="85" width="83" height="62"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogX-u5-1Nh" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="19" y="23" width="45" height="45"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceSteps1To8OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="cMX-DS-uaP"/>
+                                                    <constraint firstAttribute="height" constant="45" id="dwt-K5-Rwa"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="7yR-d6-uyV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPE-pw-Hpa" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="19" y="147" width="45" height="45"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceSteps9To16OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="LSP-qN-Hpe"/>
+                                                    <constraint firstAttribute="width" constant="45" id="hMf-D0-QiN"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="Soo-en-53n"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5W-dg-ocQ" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="134" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep1OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="H6D-aC-NbH"/>
+                                                    <constraint firstAttribute="width" constant="40" id="TUf-W1-RVL"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="9fk-5a-ojJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-if-Ldk" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="224" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep2OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="7Uv-qb-Nk7"/>
+                                                    <constraint firstAttribute="width" constant="40" id="zb1-Jo-U2p"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="jxF-5k-70b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqI-J7-RkF" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="314" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep3OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="bGA-d9-Jtd"/>
+                                                    <constraint firstAttribute="height" constant="40" id="oww-jp-Elg"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="JGQ-B4-vS9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-75-EsQ" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep4OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="JHu-Ce-2mp"/>
+                                                    <constraint firstAttribute="height" constant="40" id="gsj-zm-9sB"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="FI6-Ts-U8t"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-WI-y9T" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="494" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep5OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2GA-oU-NVu"/>
+                                                    <constraint firstAttribute="width" constant="40" id="sK8-TU-bmW"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="bxg-wU-ZQy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-kW-tWV" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="584" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep6OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="C2K-qp-Flp"/>
+                                                    <constraint firstAttribute="width" constant="40" id="qOi-oW-VVV"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="3wb-Md-T0I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R10-kr-E1g" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="674" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep7OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TEh-YJ-HQC"/>
+                                                    <constraint firstAttribute="width" constant="40" id="x3I-Pz-W6K"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="jqE-ZW-HgW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-vj-gmK" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="764" y="92" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep8OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="mWa-SN-LOl"/>
+                                                    <constraint firstAttribute="width" constant="40" id="nEB-Zv-ybi"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="HNQ-kL-fRf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P5-tO-K24" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="134" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep9OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="kBj-ZP-JKZ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="mhu-1B-b8q"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="zpI-Ls-Sj6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-Xn-FIt" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="224" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep10OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="0sG-dg-eDw"/>
+                                                    <constraint firstAttribute="width" constant="40" id="8Be-aO-kbe"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="2Hh-c9-WEn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLV-9C-Ta2" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="314" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep11OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="OJc-xQ-FPq"/>
+                                                    <constraint firstAttribute="width" constant="40" id="rNm-Jv-ABL"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="TRu-Ye-TsX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-uV-pKO" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep12OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="G7E-jU-Q3m"/>
+                                                    <constraint firstAttribute="height" constant="40" id="kUO-Ag-AdH"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="AmT-21-uNU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yY-aJK" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="494" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep13OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kxc-c4-tAq"/>
+                                                    <constraint firstAttribute="width" constant="40" id="y7t-1k-q6Z"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="SPa-q1-Tj7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tP-Ky-aLO" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="584" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep14OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2aI-7d-pqj"/>
+                                                    <constraint firstAttribute="width" constant="40" id="NOz-Tr-lcH"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="Ewf-fj-wXi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-Wa-F1o" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="674" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep15OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="fCW-XH-bki"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tog-oU-1uL"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="cAU-ce-h72"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-3D-hyW" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="764" y="216" width="40" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" label="SequenceStep16OnButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="1Vp-hN-1Jm"/>
+                                                    <constraint firstAttribute="height" constant="40" id="VjU-tj-kph"/>
+                                                </constraints>
+                                                <state key="normal" image="Radio Button Off"/>
+                                                <connections>
+                                                    <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="gD6-kJ-ij2"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.10000000000000001" yellow="0.10000000000000001" black="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <color key="backgroundColor" white="0.55000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="s5o-GT-RHZ" firstAttribute="top" secondItem="vEo-B2-XS0" secondAttribute="top" id="04N-Mc-BO2"/>
-                                            <constraint firstItem="1CQ-SF-OTA" firstAttribute="centerX" secondItem="T2F-gj-OD9" secondAttribute="centerX" id="0hi-x2-cQV"/>
-                                            <constraint firstItem="BH3-LC-akS" firstAttribute="top" secondItem="yJL-KF-vOr" secondAttribute="top" id="1TP-XM-XB8"/>
+                                            <constraint firstItem="xqI-J7-RkF" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="07b-GZ-4Lt"/>
+                                            <constraint firstItem="CLV-9C-Ta2" firstAttribute="top" secondItem="H1L-Xn-FIt" secondAttribute="top" id="08B-fl-Onn"/>
+                                            <constraint firstItem="RuW-3D-hyW" firstAttribute="top" secondItem="cfK-Wa-F1o" secondAttribute="top" id="0Qc-Em-fJR"/>
+                                            <constraint firstItem="H1L-Xn-FIt" firstAttribute="centerX" secondItem="ez8-yi-UkC" secondAttribute="centerX" id="0w2-P3-7Yd"/>
+                                            <constraint firstItem="RuW-3D-hyW" firstAttribute="centerX" secondItem="fC3-49-FLT" secondAttribute="centerX" id="1ja-gT-Yun"/>
                                             <constraint firstItem="giE-5b-ZW8" firstAttribute="top" secondItem="q4x-XV-ONN" secondAttribute="top" id="1rN-e7-pMb"/>
-                                            <constraint firstItem="CT0-BY-2Il" firstAttribute="centerX" secondItem="eVa-W1-1I1" secondAttribute="centerX" id="2HX-91-R07"/>
                                             <constraint firstItem="Vb4-CJ-ZYw" firstAttribute="leading" secondItem="Cw2-A5-1aS" secondAttribute="trailing" constant="30" id="2J9-TM-Vpc"/>
                                             <constraint firstItem="GC4-Zm-OzJ" firstAttribute="top" secondItem="YXZ-AG-1Fq" secondAttribute="top" id="2LH-1N-rLX"/>
+                                            <constraint firstItem="psO-yY-aJK" firstAttribute="top" secondItem="HRm-uV-pKO" secondAttribute="top" id="2ub-Xz-wS6"/>
                                             <constraint firstItem="K8L-R7-nah" firstAttribute="centerX" secondItem="v2o-mb-KSk" secondAttribute="centerX" id="3Ys-gB-3s8"/>
                                             <constraint firstItem="MJz-cp-CW8" firstAttribute="centerX" secondItem="C95-qp-1eZ" secondAttribute="centerX" id="3f5-hg-f1h"/>
                                             <constraint firstItem="YBw-b1-Txx" firstAttribute="centerX" secondItem="34f-Vw-BKC" secondAttribute="centerX" id="48E-F5-CLj"/>
                                             <constraint firstItem="ez8-yi-UkC" firstAttribute="centerY" secondItem="bw2-qT-XKO" secondAttribute="centerY" id="589-WK-99f"/>
+                                            <constraint firstItem="ogX-u5-1Nh" firstAttribute="centerY" secondItem="ab5-1A-VN9" secondAttribute="centerY" id="5LY-2o-Wkj"/>
+                                            <constraint firstItem="ft3-5f-Wyg" firstAttribute="top" secondItem="uPE-pw-Hpa" secondAttribute="bottom" id="5d9-JN-m1l"/>
                                             <constraint firstItem="ab5-1A-VN9" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="15" id="6BA-3R-vud"/>
                                             <constraint firstItem="34f-Vw-BKC" firstAttribute="top" secondItem="ab5-1A-VN9" secondAttribute="top" id="6DG-Ab-KPx"/>
-                                            <constraint firstItem="7nG-d2-062" firstAttribute="centerX" secondItem="v2o-mb-KSk" secondAttribute="centerX" id="7bL-wf-n5F"/>
-                                            <constraint firstItem="1CQ-SF-OTA" firstAttribute="top" secondItem="T2F-gj-OD9" secondAttribute="bottom" constant="5" id="876-09-kTl"/>
-                                            <constraint firstItem="e8k-Jt-qUj" firstAttribute="centerX" secondItem="bw2-qT-XKO" secondAttribute="centerX" id="8de-ZJ-YYH"/>
+                                            <constraint firstItem="OnE-vj-gmK" firstAttribute="top" secondItem="R10-kr-E1g" secondAttribute="top" id="7nD-ux-BmE"/>
                                             <constraint firstItem="zEQ-yR-OLU" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="8iP-hL-SwK"/>
                                             <constraint firstItem="B9i-hF-W4R" firstAttribute="top" secondItem="QTa-4r-2un" secondAttribute="top" id="9h3-Qk-KQC"/>
-                                            <constraint firstItem="1iz-5a-eAB" firstAttribute="centerY" secondItem="CZb-g7-xTY" secondAttribute="centerY" id="AHU-qX-3dr"/>
-                                            <constraint firstItem="PaI-Wn-hXI" firstAttribute="centerX" secondItem="Cw2-A5-1aS" secondAttribute="centerX" id="BUh-Ru-LJu"/>
                                             <constraint firstItem="QTa-4r-2un" firstAttribute="centerX" secondItem="zEQ-yR-OLU" secondAttribute="centerX" id="BZb-1D-UsI"/>
-                                            <constraint firstItem="zzb-I0-CVU" firstAttribute="top" secondItem="CT0-BY-2Il" secondAttribute="bottom" constant="5" id="Bcm-e6-3qB"/>
+                                            <constraint firstItem="HRm-uV-pKO" firstAttribute="top" secondItem="CLV-9C-Ta2" secondAttribute="top" id="BeD-Ab-szL"/>
+                                            <constraint firstItem="HRm-uV-pKO" firstAttribute="centerX" secondItem="Cw2-A5-1aS" secondAttribute="centerX" id="BgI-74-Y5S"/>
                                             <constraint firstItem="ez8-yi-UkC" firstAttribute="leading" secondItem="v2o-mb-KSk" secondAttribute="trailing" constant="30" id="ByD-0x-eDY"/>
                                             <constraint firstItem="YXZ-AG-1Fq" firstAttribute="top" secondItem="s5o-GT-RHZ" secondAttribute="top" id="C0D-Nc-Rj7"/>
                                             <constraint firstItem="K8L-R7-nah" firstAttribute="top" secondItem="v2o-mb-KSk" secondAttribute="bottom" constant="5" id="CzT-GO-bNW"/>
-                                            <constraint firstItem="1iz-5a-eAB" firstAttribute="centerX" secondItem="nHG-E9-3E1" secondAttribute="centerX" id="EDl-fT-XgL"/>
                                             <constraint firstItem="SgC-5U-6Tn" firstAttribute="top" secondItem="oSX-nL-5pz" secondAttribute="top" id="EKq-rF-JWN"/>
                                             <constraint firstItem="GC4-Zm-OzJ" firstAttribute="centerX" secondItem="MJz-cp-CW8" secondAttribute="centerX" id="EVu-bd-fOB"/>
                                             <constraint firstItem="ab5-1A-VN9" firstAttribute="leading" secondItem="ekp-Ri-RV1" secondAttribute="trailing" constant="5" id="FD6-tM-q5L"/>
-                                            <constraint firstItem="7nG-d2-062" firstAttribute="top" secondItem="v2o-mb-KSk" secondAttribute="bottom" constant="20" id="FIy-df-6wZ"/>
+                                            <constraint firstItem="8P5-tO-K24" firstAttribute="centerX" secondItem="v2o-mb-KSk" secondAttribute="centerX" id="FKA-ld-WCf"/>
                                             <constraint firstItem="C95-qp-1eZ" firstAttribute="leading" secondItem="zEQ-yR-OLU" secondAttribute="trailing" constant="30" id="FcH-Rh-v8G"/>
-                                            <constraint firstItem="Szu-et-Mn0" firstAttribute="centerX" secondItem="fC3-49-FLT" secondAttribute="centerX" id="Fck-bC-kZc"/>
                                             <constraint firstItem="hXM-Dd-C8t" firstAttribute="top" secondItem="34f-Vw-BKC" secondAttribute="top" id="G3j-h2-j03"/>
                                             <constraint firstItem="vEo-B2-XS0" firstAttribute="top" secondItem="Cw2-A5-1aS" secondAttribute="bottom" constant="5" id="Gcz-lQ-IwX"/>
-                                            <constraint firstItem="ft3-5f-Wyg" firstAttribute="centerX" secondItem="wwR-Il-ogv" secondAttribute="centerX" id="Gdv-Im-VQj"/>
                                             <constraint firstItem="YBw-b1-Txx" firstAttribute="top" secondItem="GHu-rw-qBi" secondAttribute="top" id="GjB-WO-tO1"/>
-                                            <constraint firstItem="zzb-I0-CVU" firstAttribute="centerX" secondItem="CT0-BY-2Il" secondAttribute="centerX" id="H3s-hx-q7a"/>
+                                            <constraint firstItem="f5W-dg-ocQ" firstAttribute="top" secondItem="GHu-rw-qBi" secondAttribute="bottom" constant="-5" id="Gnd-z5-p2B"/>
                                             <constraint firstItem="SgC-5U-6Tn" firstAttribute="centerX" secondItem="bw2-qT-XKO" secondAttribute="centerX" id="HEL-gO-3V3"/>
+                                            <constraint firstItem="8P5-tO-K24" firstAttribute="top" secondItem="K8L-R7-nah" secondAttribute="bottom" constant="-5" id="HpT-rc-oAh"/>
                                             <constraint firstItem="jp3-wc-eWB" firstAttribute="leading" secondItem="eVa-W1-1I1" secondAttribute="trailing" id="HwE-jP-y4B"/>
+                                            <constraint firstItem="cfK-Wa-F1o" firstAttribute="centerX" secondItem="MJz-cp-CW8" secondAttribute="centerX" id="IGU-Lp-eER"/>
                                             <constraint firstItem="bUp-EF-LfN" firstAttribute="centerX" secondItem="giE-5b-ZW8" secondAttribute="centerX" id="ImW-IP-1cW"/>
-                                            <constraint firstItem="yJL-KF-vOr" firstAttribute="centerX" secondItem="zEQ-yR-OLU" secondAttribute="centerX" id="JM7-59-NNG"/>
                                             <constraint firstItem="34f-Vw-BKC" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="KVo-bq-8vD"/>
                                             <constraint firstItem="v2o-mb-KSk" firstAttribute="centerY" secondItem="ez8-yi-UkC" secondAttribute="centerY" id="KdX-Y4-EhH"/>
+                                            <constraint firstItem="xqI-J7-RkF" firstAttribute="top" secondItem="hXM-Dd-C8t" secondAttribute="bottom" constant="17" id="Ktc-O0-YMA"/>
                                             <constraint firstItem="Cw2-A5-1aS" firstAttribute="centerX" secondItem="q4x-XV-ONN" secondAttribute="centerX" id="LJu-A4-09Z"/>
+                                            <constraint firstItem="psO-yY-aJK" firstAttribute="centerX" secondItem="Vb4-CJ-ZYw" secondAttribute="centerX" id="LUh-CQ-gva"/>
                                             <constraint firstItem="T2F-gj-OD9" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="LnZ-Y7-oSb"/>
                                             <constraint firstItem="q4x-XV-ONN" firstAttribute="leading" secondItem="hXM-Dd-C8t" secondAttribute="trailing" constant="30" id="LvQ-Jz-cbx"/>
                                             <constraint firstItem="vEo-B2-XS0" firstAttribute="top" secondItem="SgC-5U-6Tn" secondAttribute="top" id="Lvk-qn-Xxa"/>
                                             <constraint firstItem="zEQ-yR-OLU" firstAttribute="leading" secondItem="giE-5b-ZW8" secondAttribute="trailing" constant="30" id="MB5-ad-0qE"/>
-                                            <constraint firstItem="PaI-Wn-hXI" firstAttribute="centerY" secondItem="e8k-Jt-qUj" secondAttribute="centerY" id="MdP-xr-jKb"/>
                                             <constraint firstItem="coR-Ml-i2y" firstAttribute="centerX" secondItem="fC3-49-FLT" secondAttribute="centerX" id="Myv-04-pnG"/>
-                                            <constraint firstItem="TKE-5c-cJP" firstAttribute="top" secondItem="c4y-Ah-NCt" secondAttribute="top" id="NeG-3E-8nx"/>
+                                            <constraint firstItem="2tP-Ky-aLO" firstAttribute="top" secondItem="psO-yY-aJK" secondAttribute="top" id="NdQ-MZ-tTV"/>
                                             <constraint firstItem="eVa-W1-1I1" firstAttribute="top" secondItem="zzb-I0-CVU" secondAttribute="bottom" id="NsZ-an-z1g"/>
                                             <constraint firstItem="nyh-lF-0g1" firstAttribute="top" secondItem="B9i-hF-W4R" secondAttribute="top" id="O5y-1T-aVz"/>
-                                            <constraint firstItem="wwR-Il-ogv" firstAttribute="centerY" secondItem="v2o-mb-KSk" secondAttribute="centerY" id="OEs-3U-JYs"/>
                                             <constraint firstItem="C95-qp-1eZ" firstAttribute="top" secondItem="zEQ-yR-OLU" secondAttribute="top" id="OI7-eZ-h7E"/>
                                             <constraint firstItem="vEo-B2-XS0" firstAttribute="centerX" secondItem="Cw2-A5-1aS" secondAttribute="centerX" id="Oc8-KJ-1Ul"/>
                                             <constraint firstItem="hXM-Dd-C8t" firstAttribute="leading" secondItem="34f-Vw-BKC" secondAttribute="trailing" constant="30" id="P4I-il-Qs1"/>
                                             <constraint firstItem="oSX-nL-5pz" firstAttribute="top" secondItem="ez8-yi-UkC" secondAttribute="bottom" constant="5" id="P5q-ub-mPZ"/>
                                             <constraint firstItem="bw2-qT-XKO" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="PPF-fe-MJr"/>
                                             <constraint firstItem="fC3-49-FLT" firstAttribute="leading" secondItem="MJz-cp-CW8" secondAttribute="trailing" constant="30" id="PRv-MA-Nxn"/>
+                                            <constraint firstItem="WFb-WI-y9T" firstAttribute="centerX" secondItem="giE-5b-ZW8" secondAttribute="centerX" id="PUv-kX-fYB"/>
                                             <constraint firstItem="jp3-wc-eWB" firstAttribute="centerY" secondItem="v2o-mb-KSk" secondAttribute="centerY" id="Pln-vl-nwv"/>
                                             <constraint firstItem="v2o-mb-KSk" firstAttribute="centerX" secondItem="ab5-1A-VN9" secondAttribute="centerX" id="Q5g-En-tyw"/>
-                                            <constraint firstItem="c4y-Ah-NCt" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="QDr-Da-LEL"/>
-                                            <constraint firstItem="yJL-KF-vOr" firstAttribute="top" secondItem="zRd-iZ-qon" secondAttribute="top" id="QOF-PI-luQ"/>
-                                            <constraint firstItem="zRd-iZ-qon" firstAttribute="top" secondItem="TKE-5c-cJP" secondAttribute="top" id="Qnp-hi-tJe"/>
-                                            <constraint firstItem="yJL-KF-vOr" firstAttribute="top" secondItem="zEQ-yR-OLU" secondAttribute="bottom" constant="5" id="RpW-mm-2ao"/>
-                                            <constraint firstItem="CZb-g7-xTY" firstAttribute="centerX" secondItem="Vb4-CJ-ZYw" secondAttribute="centerX" id="S5C-KN-SPa"/>
-                                            <constraint firstItem="TKE-5c-cJP" firstAttribute="centerX" secondItem="q4x-XV-ONN" secondAttribute="centerX" id="TQr-7r-pHB"/>
+                                            <constraint firstItem="f5W-dg-ocQ" firstAttribute="centerX" secondItem="ab5-1A-VN9" secondAttribute="centerX" id="Rx7-Ma-8VO"/>
+                                            <constraint firstItem="zzb-I0-CVU" firstAttribute="centerX" secondItem="ogX-u5-1Nh" secondAttribute="centerX" id="SwI-9e-vTb"/>
                                             <constraint firstItem="oSX-nL-5pz" firstAttribute="centerX" secondItem="ez8-yi-UkC" secondAttribute="centerX" id="TVB-RC-mKn"/>
-                                            <constraint firstItem="1CQ-SF-OTA" firstAttribute="top" secondItem="BH3-LC-akS" secondAttribute="top" id="TeT-VU-60O"/>
-                                            <constraint firstItem="zRd-iZ-qon" firstAttribute="centerX" secondItem="giE-5b-ZW8" secondAttribute="centerX" id="U2f-5B-vQE"/>
                                             <constraint firstItem="s5o-GT-RHZ" firstAttribute="centerX" secondItem="Vb4-CJ-ZYw" secondAttribute="centerX" id="Ups-n1-zIA"/>
-                                            <constraint firstItem="pkT-cH-A3W" firstAttribute="top" secondItem="dMB-CF-edU" secondAttribute="top" id="UvR-ag-LMo"/>
                                             <constraint firstItem="q4x-XV-ONN" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="Vdf-09-2u5"/>
+                                            <constraint firstItem="2tP-Ky-aLO" firstAttribute="centerX" secondItem="nHG-E9-3E1" secondAttribute="centerX" id="Vvf-hv-xLl"/>
+                                            <constraint firstItem="R10-kr-E1g" firstAttribute="centerX" secondItem="C95-qp-1eZ" secondAttribute="centerX" id="W3e-fJ-VOA"/>
                                             <constraint firstItem="ez8-yi-UkC" firstAttribute="centerX" secondItem="34f-Vw-BKC" secondAttribute="centerX" id="Wj2-1I-5wn"/>
-                                            <constraint firstItem="3l9-su-Anj" firstAttribute="centerY" secondItem="1iz-5a-eAB" secondAttribute="centerY" id="X6q-MK-Peu"/>
                                             <constraint firstItem="Vb4-CJ-ZYw" firstAttribute="centerX" secondItem="giE-5b-ZW8" secondAttribute="centerX" id="XGg-vF-v0c"/>
                                             <constraint firstItem="oSX-nL-5pz" firstAttribute="top" secondItem="K8L-R7-nah" secondAttribute="top" id="XfB-nx-mP9"/>
-                                            <constraint firstItem="ft3-5f-Wyg" firstAttribute="top" secondItem="wwR-Il-ogv" secondAttribute="bottom" constant="5" id="Xsc-gM-SDc"/>
                                             <constraint firstItem="zEQ-yR-OLU" firstAttribute="top" secondItem="giE-5b-ZW8" secondAttribute="top" id="Y6z-p9-jrs"/>
+                                            <constraint firstItem="CLV-9C-Ta2" firstAttribute="centerX" secondItem="bw2-qT-XKO" secondAttribute="centerX" id="YHZ-dL-L7R"/>
                                             <constraint firstItem="GHu-rw-qBi" firstAttribute="centerX" secondItem="ab5-1A-VN9" secondAttribute="centerX" id="YVg-b7-Kay"/>
                                             <constraint firstItem="3u8-Bm-zdY" firstAttribute="top" secondItem="4yU-W8-A9g" secondAttribute="top" id="YhU-6b-ph9"/>
+                                            <constraint firstItem="xqI-J7-RkF" firstAttribute="top" secondItem="G8B-if-Ldk" secondAttribute="top" id="ZQa-2K-QZC"/>
                                             <constraint firstItem="hXM-Dd-C8t" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="ZjT-VZ-kW1"/>
                                             <constraint firstItem="T2F-gj-OD9" firstAttribute="top" secondItem="C95-qp-1eZ" secondAttribute="top" id="Zxu-xd-Aby"/>
-                                            <constraint firstItem="3l9-su-Anj" firstAttribute="centerX" secondItem="MJz-cp-CW8" secondAttribute="centerX" id="ZzE-3q-w2z"/>
                                             <constraint firstItem="bw2-qT-XKO" firstAttribute="centerY" secondItem="Cw2-A5-1aS" secondAttribute="centerY" id="aEH-bB-HEx"/>
+                                            <constraint firstItem="ogX-u5-1Nh" firstAttribute="centerX" secondItem="eVa-W1-1I1" secondAttribute="centerX" id="aFF-FD-jY0"/>
                                             <constraint firstItem="bw2-qT-XKO" firstAttribute="leading" secondItem="ez8-yi-UkC" secondAttribute="trailing" constant="30" id="aVj-Jv-o0s"/>
                                             <constraint firstItem="Cw2-A5-1aS" firstAttribute="leading" secondItem="bw2-qT-XKO" secondAttribute="trailing" constant="30" id="ade-SC-HyP"/>
                                             <constraint firstAttribute="trailing" secondItem="T2F-gj-OD9" secondAttribute="trailing" constant="30" id="af3-Wu-cXk"/>
-                                            <constraint firstItem="7nG-d2-062" firstAttribute="top" secondItem="K8L-R7-nah" secondAttribute="bottom" id="cb3-az-Gvh"/>
+                                            <constraint firstItem="zzb-I0-CVU" firstAttribute="top" secondItem="ogX-u5-1Nh" secondAttribute="bottom" id="bSI-mu-ioS"/>
+                                            <constraint firstItem="Z7k-kW-tWV" firstAttribute="top" secondItem="WFb-WI-y9T" secondAttribute="top" id="cUv-wN-Pj5"/>
                                             <constraint firstItem="QTa-4r-2un" firstAttribute="top" secondItem="bUp-EF-LfN" secondAttribute="top" id="ccY-UJ-aUT"/>
-                                            <constraint firstItem="c4y-Ah-NCt" firstAttribute="top" secondItem="pkT-cH-A3W" secondAttribute="top" id="chq-aS-f39"/>
-                                            <constraint firstItem="e8k-Jt-qUj" firstAttribute="centerY" secondItem="X3G-Gp-pk6" secondAttribute="centerY" id="d8g-84-Qeb"/>
+                                            <constraint firstItem="uPE-pw-Hpa" firstAttribute="centerX" secondItem="eVa-W1-1I1" secondAttribute="centerX" id="dIk-yA-p4i"/>
                                             <constraint firstItem="YXZ-AG-1Fq" firstAttribute="centerX" secondItem="nHG-E9-3E1" secondAttribute="centerX" id="dX6-1e-VMu"/>
-                                            <constraint firstItem="BH3-LC-akS" firstAttribute="centerX" secondItem="C95-qp-1eZ" secondAttribute="centerX" id="dka-gG-AC7"/>
                                             <constraint firstItem="SgC-5U-6Tn" firstAttribute="top" secondItem="bw2-qT-XKO" secondAttribute="bottom" constant="5" id="dr5-Za-Ei0"/>
                                             <constraint firstItem="YXZ-AG-1Fq" firstAttribute="top" secondItem="nHG-E9-3E1" secondAttribute="bottom" constant="5" id="dzd-5E-pF1"/>
                                             <constraint firstItem="q4x-XV-ONN" firstAttribute="centerX" secondItem="516-MB-IrL" secondAttribute="centerX" id="eHk-lg-s0R"/>
-                                            <constraint firstItem="dMB-CF-edU" firstAttribute="top" secondItem="ab5-1A-VN9" secondAttribute="bottom" constant="15" id="ejC-Zl-xGu"/>
-                                            <constraint firstItem="wwR-Il-ogv" firstAttribute="centerX" secondItem="CT0-BY-2Il" secondAttribute="centerX" id="fE9-nS-e8b"/>
                                             <constraint firstItem="bUp-EF-LfN" firstAttribute="top" secondItem="3u8-Bm-zdY" secondAttribute="top" id="g2R-Ul-VNW"/>
+                                            <constraint firstItem="ft3-5f-Wyg" firstAttribute="centerX" secondItem="uPE-pw-Hpa" secondAttribute="centerX" id="gQt-9W-BuR"/>
                                             <constraint firstItem="nyh-lF-0g1" firstAttribute="centerX" secondItem="T2F-gj-OD9" secondAttribute="centerX" id="gaB-ZJ-gfn"/>
-                                            <constraint firstItem="X3G-Gp-pk6" firstAttribute="centerX" secondItem="ez8-yi-UkC" secondAttribute="centerX" id="ges-3I-OXc"/>
                                             <constraint firstItem="q4x-XV-ONN" firstAttribute="top" secondItem="hXM-Dd-C8t" secondAttribute="top" id="gjl-Lw-gfH"/>
-                                            <constraint firstItem="wwR-Il-ogv" firstAttribute="top" secondItem="eVa-W1-1I1" secondAttribute="bottom" id="heq-Ne-pQz"/>
-                                            <constraint firstItem="dMB-CF-edU" firstAttribute="centerX" secondItem="ab5-1A-VN9" secondAttribute="centerX" id="hfg-WI-0CX"/>
                                             <constraint firstItem="giE-5b-ZW8" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="hgn-nl-Cou"/>
                                             <constraint firstItem="T2F-gj-OD9" firstAttribute="leading" secondItem="C95-qp-1eZ" secondAttribute="trailing" constant="30" id="hyj-f5-7Fn"/>
                                             <constraint firstItem="ekp-Ri-RV1" firstAttribute="centerY" secondItem="ab5-1A-VN9" secondAttribute="centerY" id="iUj-Y3-i8i"/>
                                             <constraint firstItem="C95-qp-1eZ" firstAttribute="top" secondItem="516-MB-IrL" secondAttribute="top" constant="20" id="iWz-R5-4lI"/>
+                                            <constraint firstItem="ldB-75-EsQ" firstAttribute="top" secondItem="xqI-J7-RkF" secondAttribute="top" id="igP-cQ-T7h"/>
                                             <constraint firstItem="GC4-Zm-OzJ" firstAttribute="top" secondItem="MJz-cp-CW8" secondAttribute="bottom" constant="5" id="iyB-gz-hvw"/>
                                             <constraint firstItem="giE-5b-ZW8" firstAttribute="leading" secondItem="q4x-XV-ONN" secondAttribute="trailing" constant="30" id="j9T-8b-dIL"/>
                                             <constraint firstItem="eVa-W1-1I1" firstAttribute="leading" secondItem="516-MB-IrL" secondAttribute="leading" id="jGe-hu-Hq4"/>
-                                            <constraint firstItem="Szu-et-Mn0" firstAttribute="centerY" secondItem="3l9-su-Anj" secondAttribute="centerY" id="kCf-v1-oM2"/>
+                                            <constraint firstItem="uPE-pw-Hpa" firstAttribute="centerY" secondItem="v2o-mb-KSk" secondAttribute="centerY" id="jz7-T1-TeH"/>
+                                            <constraint firstItem="Z7k-kW-tWV" firstAttribute="centerX" secondItem="zEQ-yR-OLU" secondAttribute="centerX" id="kZG-ok-Fzo"/>
                                             <constraint firstItem="fC3-49-FLT" firstAttribute="centerX" secondItem="T2F-gj-OD9" secondAttribute="centerX" id="l3L-SY-mqY"/>
                                             <constraint firstItem="4yU-W8-A9g" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="lIV-7U-lZg"/>
                                             <constraint firstItem="Cw2-A5-1aS" firstAttribute="centerY" secondItem="Vb4-CJ-ZYw" secondAttribute="centerY" id="lIW-ji-bAZ"/>
                                             <constraint firstItem="coR-Ml-i2y" firstAttribute="top" secondItem="GC4-Zm-OzJ" secondAttribute="top" id="lSp-aO-mIf"/>
-                                            <constraint firstItem="BH3-LC-akS" firstAttribute="top" secondItem="C95-qp-1eZ" secondAttribute="bottom" constant="5" id="lkR-2d-0pC"/>
-                                            <constraint firstItem="pkT-cH-A3W" firstAttribute="centerX" secondItem="34f-Vw-BKC" secondAttribute="centerX" id="mHN-Ta-hUE"/>
                                             <constraint firstItem="Vb4-CJ-ZYw" firstAttribute="centerY" secondItem="nHG-E9-3E1" secondAttribute="centerY" id="mS6-Zy-uzZ"/>
                                             <constraint firstItem="s5o-GT-RHZ" firstAttribute="top" secondItem="Vb4-CJ-ZYw" secondAttribute="bottom" constant="5" id="n1l-3s-rof"/>
                                             <constraint firstItem="nHG-E9-3E1" firstAttribute="centerX" secondItem="zEQ-yR-OLU" secondAttribute="centerX" id="nDy-gd-D0A"/>
-                                            <constraint firstAttribute="bottom" secondItem="7nG-d2-062" secondAttribute="bottom" constant="15" id="nWf-z4-00s"/>
-                                            <constraint firstItem="ab5-1A-VN9" firstAttribute="leading" secondItem="CT0-BY-2Il" secondAttribute="trailing" constant="60" id="nYb-VV-yLY"/>
+                                            <constraint firstItem="cfK-Wa-F1o" firstAttribute="top" secondItem="2tP-Ky-aLO" secondAttribute="top" id="nQz-yj-AfV"/>
+                                            <constraint firstItem="OnE-vj-gmK" firstAttribute="centerX" secondItem="T2F-gj-OD9" secondAttribute="centerX" id="nrl-NU-Vpx"/>
                                             <constraint firstAttribute="trailing" secondItem="fC3-49-FLT" secondAttribute="trailing" constant="30" id="oOa-jU-4k5"/>
                                             <constraint firstItem="MJz-cp-CW8" firstAttribute="leading" secondItem="nHG-E9-3E1" secondAttribute="trailing" constant="30" id="oyr-7t-sVI"/>
-                                            <constraint firstItem="TKE-5c-cJP" firstAttribute="top" secondItem="q4x-XV-ONN" secondAttribute="bottom" constant="5" id="p4D-BE-5kp"/>
-                                            <constraint firstItem="dMB-CF-edU" firstAttribute="top" secondItem="GHu-rw-qBi" secondAttribute="bottom" id="qTm-yK-x2i"/>
+                                            <constraint firstItem="H1L-Xn-FIt" firstAttribute="top" secondItem="8P5-tO-K24" secondAttribute="top" id="peU-hJ-wUx"/>
                                             <constraint firstItem="v2o-mb-KSk" firstAttribute="leading" secondItem="jp3-wc-eWB" secondAttribute="trailing" constant="5" id="qhG-n9-A6n"/>
                                             <constraint firstAttribute="trailing" secondItem="C95-qp-1eZ" secondAttribute="trailing" constant="20" id="qs8-zG-wTW"/>
-                                            <constraint firstItem="CT0-BY-2Il" firstAttribute="centerY" secondItem="ab5-1A-VN9" secondAttribute="centerY" id="rZM-64-dnd"/>
+                                            <constraint firstItem="uPE-pw-Hpa" firstAttribute="top" secondItem="eVa-W1-1I1" secondAttribute="bottom" id="rce-US-1H8"/>
                                             <constraint firstItem="34f-Vw-BKC" firstAttribute="leading" secondItem="ab5-1A-VN9" secondAttribute="trailing" constant="30" id="roh-Vk-f8p"/>
+                                            <constraint firstAttribute="bottom" secondItem="8P5-tO-K24" secondAttribute="bottom" constant="10" id="s4e-qc-9uA"/>
                                             <constraint firstItem="MJz-cp-CW8" firstAttribute="centerY" secondItem="fC3-49-FLT" secondAttribute="centerY" id="sM2-cc-dbh"/>
                                             <constraint firstItem="3u8-Bm-zdY" firstAttribute="centerX" secondItem="q4x-XV-ONN" secondAttribute="centerX" id="scJ-xl-Li8"/>
                                             <constraint firstItem="nHG-E9-3E1" firstAttribute="centerY" secondItem="MJz-cp-CW8" secondAttribute="centerY" id="sqZ-E7-71Y"/>
-                                            <constraint firstItem="pkT-cH-A3W" firstAttribute="top" secondItem="34f-Vw-BKC" secondAttribute="bottom" constant="5" id="v1n-Qb-jlf"/>
-                                            <constraint firstItem="CZb-g7-xTY" firstAttribute="centerY" secondItem="PaI-Wn-hXI" secondAttribute="centerY" id="v6n-PM-Miy"/>
+                                            <constraint firstItem="WFb-WI-y9T" firstAttribute="top" secondItem="ldB-75-EsQ" secondAttribute="top" id="stE-VA-eh0"/>
+                                            <constraint firstItem="R10-kr-E1g" firstAttribute="top" secondItem="Z7k-kW-tWV" secondAttribute="top" id="tcr-sh-DKC"/>
                                             <constraint firstItem="nHG-E9-3E1" firstAttribute="leading" secondItem="Vb4-CJ-ZYw" secondAttribute="trailing" constant="30" id="vId-Md-Z20"/>
-                                            <constraint firstItem="c4y-Ah-NCt" firstAttribute="top" secondItem="hXM-Dd-C8t" secondAttribute="bottom" constant="5" id="vhD-fA-eoh"/>
-                                            <constraint firstItem="CT0-BY-2Il" firstAttribute="leading" secondItem="516-MB-IrL" secondAttribute="leading" constant="15" id="wYh-HW-YUZ"/>
-                                            <constraint firstItem="X3G-Gp-pk6" firstAttribute="centerY" secondItem="7nG-d2-062" secondAttribute="centerY" id="wjl-ev-wrT"/>
+                                            <constraint firstItem="ldB-75-EsQ" firstAttribute="centerX" secondItem="q4x-XV-ONN" secondAttribute="centerX" id="vdK-Zj-KBn"/>
                                             <constraint firstItem="fC3-49-FLT" firstAttribute="top" secondItem="T2F-gj-OD9" secondAttribute="bottom" constant="48" id="xVZ-OZ-bmL"/>
                                             <constraint firstItem="coR-Ml-i2y" firstAttribute="top" secondItem="fC3-49-FLT" secondAttribute="bottom" constant="5" id="xY2-0z-4Sp"/>
+                                            <constraint firstItem="G8B-if-Ldk" firstAttribute="top" secondItem="f5W-dg-ocQ" secondAttribute="top" id="xbR-Gd-tZS"/>
                                             <constraint firstItem="4yU-W8-A9g" firstAttribute="top" secondItem="YBw-b1-Txx" secondAttribute="top" id="xp8-BF-rNn"/>
+                                            <constraint firstItem="G8B-if-Ldk" firstAttribute="centerX" secondItem="34f-Vw-BKC" secondAttribute="centerX" id="yNO-cW-2tE"/>
                                             <constraint firstItem="B9i-hF-W4R" firstAttribute="centerX" secondItem="C95-qp-1eZ" secondAttribute="centerX" id="yVO-Fb-Vgq"/>
-                                            <constraint firstItem="zRd-iZ-qon" firstAttribute="top" secondItem="giE-5b-ZW8" secondAttribute="bottom" constant="5" id="yuD-Lt-LbU"/>
                                             <constraint firstItem="GHu-rw-qBi" firstAttribute="top" secondItem="ab5-1A-VN9" secondAttribute="bottom" constant="5" id="zeM-Lf-Q67"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="wYh-HW-YUZ"/>
-                                                <exclude reference="nYb-VV-yLY"/>
-                                                <exclude reference="ejC-Zl-xGu"/>
                                                 <exclude reference="KVo-bq-8vD"/>
-                                                <exclude reference="v1n-Qb-jlf"/>
-                                                <exclude reference="FIy-df-6wZ"/>
                                                 <exclude reference="ZjT-VZ-kW1"/>
                                                 <exclude reference="P5q-ub-mPZ"/>
-                                                <exclude reference="vhD-fA-eoh"/>
+                                                <exclude reference="Ktc-O0-YMA"/>
                                                 <exclude reference="dr5-Za-Ei0"/>
                                                 <exclude reference="Vdf-09-2u5"/>
                                                 <exclude reference="eHk-lg-s0R"/>
-                                                <exclude reference="p4D-BE-5kp"/>
                                                 <exclude reference="Gcz-lQ-IwX"/>
                                                 <exclude reference="hgn-nl-Cou"/>
-                                                <exclude reference="yuD-Lt-LbU"/>
                                                 <exclude reference="n1l-3s-rof"/>
                                                 <exclude reference="8iP-hL-SwK"/>
-                                                <exclude reference="RpW-mm-2ao"/>
                                                 <exclude reference="dzd-5E-pF1"/>
                                                 <exclude reference="iWz-R5-4lI"/>
                                                 <exclude reference="qs8-zG-wTW"/>
-                                                <exclude reference="lkR-2d-0pC"/>
                                                 <exclude reference="iyB-gz-hvw"/>
                                                 <exclude reference="LnZ-Y7-oSb"/>
                                                 <exclude reference="xVZ-OZ-bmL"/>
-                                                <exclude reference="876-09-kTl"/>
                                                 <exclude reference="xY2-0z-4Sp"/>
                                             </mask>
                                         </variation>
@@ -2276,7 +2070,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" cyan="0.5" magenta="0.29999999999999999" yellow="0.25" black="0.5" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="I7W-1v-e7K" secondAttribute="bottom" constant="15" id="MPT-mj-E2D"/>
                                             <constraint firstAttribute="trailing" secondItem="hvt-TG-OMd" secondAttribute="trailing" constant="15" id="WR6-cR-b9h"/>
@@ -2326,6 +2120,24 @@
                                     <outlet property="freq8RotaryKnob" destination="T2F-gj-OD9" id="ZYQ-nl-ttl"/>
                                     <outlet property="freq9RotaryKnob" destination="v2o-mb-KSk" id="S57-ch-1t0"/>
                                     <outlet property="rateRotaryKnob" destination="hvt-TG-OMd" id="qZZ-YS-0dS"/>
+                                    <outlet property="step10RadioButton" destination="H1L-Xn-FIt" id="3Vo-jj-BqE"/>
+                                    <outlet property="step11RadioButton" destination="CLV-9C-Ta2" id="ib5-t9-C49"/>
+                                    <outlet property="step12RadioButton" destination="HRm-uV-pKO" id="fbU-af-fHV"/>
+                                    <outlet property="step13RadioButton" destination="psO-yY-aJK" id="Vkh-9m-QZc"/>
+                                    <outlet property="step14RadioButton" destination="2tP-Ky-aLO" id="kOt-5v-Ta5"/>
+                                    <outlet property="step15RadioButton" destination="cfK-Wa-F1o" id="aj3-cq-0mH"/>
+                                    <outlet property="step16RadioButton" destination="RuW-3D-hyW" id="8DQ-CA-Wrv"/>
+                                    <outlet property="step1RadioButton" destination="f5W-dg-ocQ" id="88L-L7-PT7"/>
+                                    <outlet property="step1To8RadioButton" destination="ogX-u5-1Nh" id="frT-OA-xWL"/>
+                                    <outlet property="step2RadioButton" destination="G8B-if-Ldk" id="2Nl-M4-qJc"/>
+                                    <outlet property="step3RadioButton" destination="xqI-J7-RkF" id="eV2-OF-cpM"/>
+                                    <outlet property="step4RadioButton" destination="ldB-75-EsQ" id="LDj-tG-ccV"/>
+                                    <outlet property="step5RadioButton" destination="WFb-WI-y9T" id="U7x-sx-FPV"/>
+                                    <outlet property="step6RadioButton" destination="Z7k-kW-tWV" id="gvP-Z8-7Eh"/>
+                                    <outlet property="step7RadioButton" destination="R10-kr-E1g" id="EJJ-id-mPW"/>
+                                    <outlet property="step8RadioButton" destination="OnE-vj-gmK" id="5Sr-oS-ucq"/>
+                                    <outlet property="step9RadioButton" destination="8P5-tO-K24" id="QBR-BK-vA7"/>
+                                    <outlet property="step9To16RadioButton" destination="uPE-pw-Hpa" id="jQd-pK-Z2C"/>
                                     <outletCollection property="rotaryKnobArray" destination="ab5-1A-VN9" collectionClass="NSMutableArray" id="beM-XY-Zcv"/>
                                     <outletCollection property="rotaryKnobArray" destination="34f-Vw-BKC" collectionClass="NSMutableArray" id="No1-lT-xaI"/>
                                     <outletCollection property="rotaryKnobArray" destination="hXM-Dd-C8t" collectionClass="NSMutableArray" id="e5w-Lx-OlH"/>
@@ -2671,6 +2483,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Radio Button Off" width="50" height="50"/>
         <image name="backBarButton" width="36" height="36"/>
         <image name="menuBarButton" width="36" height="36"/>
     </resources>

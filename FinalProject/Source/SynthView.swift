@@ -31,11 +31,6 @@ class SynthView: UIView {
     private func initializeRotaryKnobs() {
         for rotaryKnob in rotaryKnobArray {
             rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyle.SliderVertical
-            
-//            if rotaryKnob.accessibilityLabel == "FilterSlopeKnob" {
-//                rotaryKnob.scalingFactor = 68
-//            }
-//            rotaryKnob.scalingFactor = 2
             rotaryKnob.defaultValue = rotaryKnob.value
             rotaryKnob.resetsToDefault = true
             rotaryKnob.backgroundColor = UIColor.clearColor()
@@ -51,6 +46,20 @@ class SynthView: UIView {
             }
             
             rotaryKnob.addTarget(self, action: #selector(rotaryKnob.didChangeValueForKey(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        }
+    }
+    
+    
+    // MARK: Radio Button Management 
+    
+    @IBAction func triggerRadioButton(button: RadioButtonController) {
+        switch(button.isTriggered) {
+        case(true):
+            button.isTriggered = false
+            button.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
+        case(false):
+            button.isTriggered = true
+            button.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
         }
     }
     
@@ -76,6 +85,11 @@ class SynthView: UIView {
     @IBOutlet var feedbackRotaryKnob: MHRotaryKnob!
     @IBOutlet var rateRotaryKnob: MHRotaryKnob!
     @IBOutlet var amountRotaryKnob: MHRotaryKnob!
+    
+    @IBOutlet var latchRadioButton: RadioButtonController!
+    @IBOutlet var syncRadioButton: RadioButtonController!
+    @IBOutlet var osc1RadioButton: RadioButtonController!
+    @IBOutlet var osc2RadioButton: RadioButtonController!
     
     
 //    @IBOutlet var latchRadioButton: SSRadioButton!
