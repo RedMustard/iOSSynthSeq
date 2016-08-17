@@ -325,7 +325,7 @@
 			if (self.state == UIControlStateNormal)
 			{
 				_knobImageView.image = image;
-				[_knobImageView sizeToFit];
+//				[_knobImageView sizeToFit];
 			}
 		}
 	}

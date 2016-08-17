@@ -42,7 +42,7 @@ class SeqView: UIView {
             if rotaryKnob.accessibilityLabel == "SequenceRateKnob" {
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {
-                rotaryKnob.knobImageCenter = CGPointMake(30.0, 29.0)
+                rotaryKnob.knobImageCenter = CGPointMake(30.0, 30.0)
             }
             
             rotaryKnob.addTarget(self, action: #selector(rotaryKnob.didChangeValueForKey(_:)), forControlEvents: UIControlEvents.ValueChanged)

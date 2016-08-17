@@ -42,7 +42,7 @@ class SynthView: UIView {
             if rotaryKnob.accessibilityLabel == "FilterCutoffKnob" {
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {
-                rotaryKnob.knobImageCenter = CGPointMake(35.0, 31.0)
+                rotaryKnob.knobImageCenter = CGPointMake(35.0, 35.0)
             }
             
             rotaryKnob.addTarget(self, action: #selector(rotaryKnob.didChangeValueForKey(_:)), forControlEvents: UIControlEvents.ValueChanged)
