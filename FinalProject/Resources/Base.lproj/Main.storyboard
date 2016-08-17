@@ -439,7 +439,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEa-Uq-fDZ" userLabel="FilterView">
-                                        <rect key="frame" x="395" y="166" width="394" height="241"/>
+                                        <rect key="frame" x="434" y="166" width="355" height="241"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-iO-mGS">
                                                 <rect key="frame" x="15" y="15" width="70" height="164"/>
@@ -459,7 +459,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVE-SU-V7L">
-                                                <rect key="frame" x="326" y="90" width="36" height="17"/>
+                                                <rect key="frame" x="287" y="90" width="36" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="SLOPE">
                                                         <attributes>
@@ -472,7 +472,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYv-87-i4y">
-                                                <rect key="frame" x="329" y="185" width="30" height="17"/>
+                                                <rect key="frame" x="290" y="185" width="30" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="FDBK">
                                                         <attributes>
@@ -516,7 +516,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e18-pi-ugK" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="309" y="15" width="70" height="70"/>
+                                                <rect key="frame" x="270" y="15" width="70" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="FilterSlopeKnob"/>
                                                 <constraints>
@@ -525,7 +525,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-5X-gCQ" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="309" y="110" width="70" height="70"/>
+                                                <rect key="frame" x="270" y="110" width="70" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="FilterFeedbackKnob"/>
                                                 <constraints>
@@ -547,7 +547,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-Yq-ZZp" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="137" y="37" width="120" height="120"/>
+                                                <rect key="frame" x="118" y="37" width="120" height="120"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="FilterCutoffKnob"/>
                                                 <constraints>
@@ -556,7 +556,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPT-4C-9pQ">
-                                                <rect key="frame" x="176" y="162" width="43" height="17"/>
+                                                <rect key="frame" x="157" y="162" width="43" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="CUTOFF">
                                                         <attributes>
@@ -569,7 +569,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKp-Sm-PfI">
-                                                <rect key="frame" x="15" y="209" width="364" height="1"/>
+                                                <rect key="frame" x="15" y="209" width="325" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="Ajd-k1-ubC"/>
@@ -832,10 +832,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-LA-Nih" userLabel="OscView">
-                                        <rect key="frame" x="10" y="166" width="375" height="241"/>
+                                        <rect key="frame" x="10" y="166" width="414" height="241"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPC-7L-rJv" userLabel="OscSpacerView2">
-                                                <rect key="frame" x="188" y="0.0" width="187" height="209"/>
+                                                <rect key="frame" x="208" y="0.0" width="206" height="209"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="MlB-nH-Bs5"/>
@@ -849,7 +849,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hID-5g-nLl" userLabel="OscSpacerView1">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="209"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="209"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="QV7-6H-Jkx"/>
@@ -890,7 +890,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCy-lV-Y4P" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="205" y="15" width="70" height="70"/>
+                                                <rect key="frame" x="244" y="15" width="70" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="Osc2OctKnob"/>
                                                 <constraints>
@@ -899,7 +899,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atG-0T-xRc" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="205" y="110" width="70" height="70"/>
+                                                <rect key="frame" x="244" y="110" width="70" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="Osc2WaveKnob"/>
                                                 <constraints>
@@ -908,7 +908,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIa-W5-1Zc" customClass="MHRotaryKnob">
-                                                <rect key="frame" x="290" y="15" width="70" height="70"/>
+                                                <rect key="frame" x="329" y="15" width="70" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" label="Osc2VolKnob"/>
                                                 <constraints>
@@ -930,7 +930,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ko-mF-mpR">
-                                                <rect key="frame" x="187" y="15" width="1" height="179"/>
+                                                <rect key="frame" x="207" y="15" width="1" height="179"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="fYY-cb-Kfj"/>
@@ -943,7 +943,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9T-iT-Azj">
-                                                <rect key="frame" x="15" y="209" width="345" height="1"/>
+                                                <rect key="frame" x="15" y="209" width="384" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="G22-Qk-cE3"/>
@@ -969,7 +969,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p8-nX-7zF">
-                                                <rect key="frame" x="302" y="183" width="47" height="19"/>
+                                                <rect key="frame" x="341" y="183" width="47" height="19"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="OSC 2">
                                                         <attributes>
@@ -982,7 +982,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-4L-v1i">
-                                                <rect key="frame" x="314" y="90" width="22" height="17"/>
+                                                <rect key="frame" x="353" y="90" width="22" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="VOL">
                                                         <attributes>
@@ -995,7 +995,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuc-rd-5er">
-                                                <rect key="frame" x="229" y="90" width="23" height="17"/>
+                                                <rect key="frame" x="268" y="90" width="23" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="OCT">
                                                         <attributes>
@@ -1008,7 +1008,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2k4-Ut-x3P">
-                                                <rect key="frame" x="224" y="185" width="32" height="17"/>
+                                                <rect key="frame" x="263" y="185" width="32" height="17"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="WAVE">
                                                         <attributes>
@@ -1136,6 +1136,7 @@
                                                 <exclude reference="IFa-ev-pz7"/>
                                                 <exclude reference="ldF-KR-FnN"/>
                                                 <exclude reference="r0c-nU-dDW"/>
+                                                <exclude reference="xTp-pm-nqE"/>
                                                 <exclude reference="7gi-24-2Yz"/>
                                                 <exclude reference="RQ2-ik-7ME"/>
                                                 <exclude reference="XVa-tS-fLL"/>
@@ -1182,6 +1183,7 @@
                                     <constraint firstItem="oEa-Uq-fDZ" firstAttribute="leading" secondItem="BhS-LA-Nih" secondAttribute="trailing" constant="10" id="iXW-dL-DEE"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="width" secondItem="t7n-VI-YZC" secondAttribute="width" id="jcg-zq-pah"/>
                                     <constraint firstItem="qw8-gY-Bdl" firstAttribute="top" secondItem="LYv-87-i4y" secondAttribute="top" id="mpg-Nm-RPE"/>
+                                    <constraint firstItem="1FQ-V2-h2Y" firstAttribute="width" secondItem="BhS-LA-Nih" secondAttribute="width" id="pHd-zB-pzm"/>
                                     <constraint firstItem="pgY-DB-hSA" firstAttribute="height" secondItem="FFV-lZ-f8m" secondAttribute="height" id="qkN-UY-rex"/>
                                     <constraint firstItem="FFV-lZ-f8m" firstAttribute="height" secondItem="pgY-DB-hSA" secondAttribute="height" id="un8-jE-dlm"/>
                                     <constraint firstAttribute="bottom" secondItem="t7n-VI-YZC" secondAttribute="bottom" constant="10" id="zHB-6Y-yOZ"/>
@@ -1874,7 +1876,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.81801718202189133" green="0.81179966543512661" blue="0.84441105769230773" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.84216447871892686" green="0.84441105769230773" blue="0.8298164564913374" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="s5o-GT-RHZ" firstAttribute="top" secondItem="vEo-B2-XS0" secondAttribute="top" id="04N-Mc-BO2"/>
                                             <constraint firstItem="xqI-J7-RkF" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="07b-GZ-4Lt"/>
