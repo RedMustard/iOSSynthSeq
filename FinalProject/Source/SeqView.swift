@@ -53,12 +53,38 @@ class SeqView: UIView {
     
     
     // MARK: Radio Button Management
-    @IBAction func triggerRadioButton(button: RadioButtonController) {
-        switch(button.isTriggered) {
-        case(true):
+    @IBAction func triggerRadioButton(button: RadioButton) {
+        switch(button.accessibilityLabel!, button.isTriggered) {
+        case("SequenceSteps1To8OnButton", true):
             button.isTriggered = false
             button.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
-        case(false):
+            
+            for button in step1To8RadioButtonArray {
+                button.enabled = false
+            }
+        case("SequenceSteps1To8OnButton", false):
+            button.isTriggered = true
+            button.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
+            for button in step1To8RadioButtonArray {
+                button.enabled = true
+            }
+        case("SequenceSteps9To16OnButton", true):
+            button.isTriggered = false
+            button.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
+            
+            for button in step9To16RadioButtonArray {
+                button.enabled = false
+            }
+        case("SequenceSteps9To16OnButton", false):
+            button.isTriggered = true
+            button.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
+            for button in step9To16RadioButtonArray {
+                button.enabled = true
+            }
+        case(_, true):
+            button.isTriggered = false
+            button.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
+        case(_, false):
             button.isTriggered = true
             button.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
         }
@@ -66,6 +92,8 @@ class SeqView: UIView {
     
     // MARK: Properties
     @IBOutlet var rotaryKnobArray: [MHRotaryKnob]!
+    @IBOutlet var step1To8RadioButtonArray: [RadioButton]!
+    @IBOutlet var step9To16RadioButtonArray: [RadioButton]!
 
     @IBOutlet var freq1RotaryKnob: MHRotaryKnob!
     @IBOutlet var freq2RotaryKnob: MHRotaryKnob!
@@ -85,24 +113,24 @@ class SeqView: UIView {
     @IBOutlet var freq16RotaryKnob: MHRotaryKnob!
     @IBOutlet var rateRotaryKnob: MHRotaryKnob!
  
-    @IBOutlet var step1To8RadioButton: RadioButtonController!
-    @IBOutlet var step9To16RadioButton: RadioButtonController!
-    @IBOutlet var step1RadioButton: RadioButtonController!
-    @IBOutlet var step2RadioButton: RadioButtonController!
-    @IBOutlet var step3RadioButton: RadioButtonController!
-    @IBOutlet var step4RadioButton: RadioButtonController!
-    @IBOutlet var step5RadioButton: RadioButtonController!
-    @IBOutlet var step6RadioButton: RadioButtonController!
-    @IBOutlet var step7RadioButton: RadioButtonController!
-    @IBOutlet var step8RadioButton: RadioButtonController!
-    @IBOutlet var step9RadioButton: RadioButtonController!
-    @IBOutlet var step10RadioButton: RadioButtonController!
-    @IBOutlet var step11RadioButton: RadioButtonController!
-    @IBOutlet var step12RadioButton: RadioButtonController!
-    @IBOutlet var step13RadioButton: RadioButtonController!
-    @IBOutlet var step14RadioButton: RadioButtonController!
-    @IBOutlet var step15RadioButton: RadioButtonController!
-    @IBOutlet var step16RadioButton: RadioButtonController!
+    @IBOutlet var step1To8RadioButton: RadioButton!
+    @IBOutlet var step9To16RadioButton: RadioButton!
+    @IBOutlet var step1RadioButton: RadioButton!
+    @IBOutlet var step2RadioButton: RadioButton!
+    @IBOutlet var step3RadioButton: RadioButton!
+    @IBOutlet var step4RadioButton: RadioButton!
+    @IBOutlet var step5RadioButton: RadioButton!
+    @IBOutlet var step6RadioButton: RadioButton!
+    @IBOutlet var step7RadioButton: RadioButton!
+    @IBOutlet var step8RadioButton: RadioButton!
+    @IBOutlet var step9RadioButton: RadioButton!
+    @IBOutlet var step10RadioButton: RadioButton!
+    @IBOutlet var step11RadioButton: RadioButton!
+    @IBOutlet var step12RadioButton: RadioButton!
+    @IBOutlet var step13RadioButton: RadioButton!
+    @IBOutlet var step14RadioButton: RadioButton!
+    @IBOutlet var step15RadioButton: RadioButton!
+    @IBOutlet var step16RadioButton: RadioButton!
     
     
 

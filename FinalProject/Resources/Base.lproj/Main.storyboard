@@ -225,7 +225,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDR-Lk-g0S" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDR-Lk-g0S" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="25" y="25" width="50" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" label="OutputLatchButton"/>
                                                 <constraints>
@@ -733,7 +733,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmu-gH-AOa" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmu-gH-AOa" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="110" width="35" height="35"/>
                                                 <accessibility key="accessibilityConfiguration" label="LFOSyncButton"/>
                                                 <constraints>
@@ -745,7 +745,7 @@
                                                     <action selector="triggerRadioButton:" destination="k66-uy-iDN" eventType="touchUpInside" id="GjK-cO-3XM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87b-bP-sAd" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87b-bP-sAd" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="110" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" label="LFOOsc1Button"/>
                                                 <constraints>
@@ -757,7 +757,7 @@
                                                     <action selector="triggerRadioButton:" destination="k66-uy-iDN" eventType="touchUpInside" id="Pb6-4O-Ahn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-WQ-AMF" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-WQ-AMF" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="156" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" label="LFOOsc2Button"/>
                                                 <constraints>
@@ -1659,7 +1659,7 @@
                                                 <rect key="frame" x="0.0" y="85" width="83" height="62"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogX-u5-1Nh" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogX-u5-1Nh" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="19" y="23" width="45" height="45"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceSteps1To8OnButton"/>
                                                 <constraints>
@@ -1671,7 +1671,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="7yR-d6-uyV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPE-pw-Hpa" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPE-pw-Hpa" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="19" y="147" width="45" height="45"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceSteps9To16OnButton"/>
                                                 <constraints>
@@ -1683,7 +1683,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="Soo-en-53n"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5W-dg-ocQ" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5W-dg-ocQ" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="134" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep1OnButton"/>
                                                 <constraints>
@@ -1695,7 +1695,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="9fk-5a-ojJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-if-Ldk" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-if-Ldk" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="224" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep2OnButton"/>
                                                 <constraints>
@@ -1707,7 +1707,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="jxF-5k-70b"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqI-J7-RkF" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqI-J7-RkF" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="314" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep3OnButton"/>
                                                 <constraints>
@@ -1719,7 +1719,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="JGQ-B4-vS9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-75-EsQ" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-75-EsQ" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="404" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep4OnButton"/>
                                                 <constraints>
@@ -1731,7 +1731,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="FI6-Ts-U8t"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-WI-y9T" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-WI-y9T" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="494" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep5OnButton"/>
                                                 <constraints>
@@ -1743,7 +1743,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="bxg-wU-ZQy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-kW-tWV" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-kW-tWV" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="584" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep6OnButton"/>
                                                 <constraints>
@@ -1755,7 +1755,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="3wb-Md-T0I"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R10-kr-E1g" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R10-kr-E1g" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="674" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep7OnButton"/>
                                                 <constraints>
@@ -1767,7 +1767,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="jqE-ZW-HgW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-vj-gmK" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-vj-gmK" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="764" y="92" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep8OnButton"/>
                                                 <constraints>
@@ -1779,7 +1779,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="HNQ-kL-fRf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P5-tO-K24" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P5-tO-K24" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="134" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep9OnButton"/>
                                                 <constraints>
@@ -1791,7 +1791,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="zpI-Ls-Sj6"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-Xn-FIt" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-Xn-FIt" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="224" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep10OnButton"/>
                                                 <constraints>
@@ -1803,7 +1803,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="2Hh-c9-WEn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLV-9C-Ta2" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLV-9C-Ta2" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="314" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep11OnButton"/>
                                                 <constraints>
@@ -1815,7 +1815,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="TRu-Ye-TsX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-uV-pKO" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-uV-pKO" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="404" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep12OnButton"/>
                                                 <constraints>
@@ -1827,7 +1827,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="AmT-21-uNU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yY-aJK" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yY-aJK" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="494" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep13OnButton"/>
                                                 <constraints>
@@ -1839,7 +1839,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="SPa-q1-Tj7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tP-Ky-aLO" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tP-Ky-aLO" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="584" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep14OnButton"/>
                                                 <constraints>
@@ -1851,7 +1851,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="Ewf-fj-wXi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-Wa-F1o" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-Wa-F1o" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="674" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep15OnButton"/>
                                                 <constraints>
@@ -1863,7 +1863,7 @@
                                                     <action selector="triggerRadioButton:" destination="Sav-1s-AUK" eventType="touchUpInside" id="cAU-ce-h72"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-3D-hyW" customClass="RadioButtonController" customModule="FinalProject" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-3D-hyW" customClass="RadioButton" customModule="FinalProject" customModuleProvider="target">
                                                 <rect key="frame" x="764" y="216" width="40" height="40"/>
                                                 <accessibility key="accessibilityConfiguration" label="SequenceStep16OnButton"/>
                                                 <constraints>
@@ -2072,7 +2072,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.73094951923076923" green="0.73094951923076923" blue="0.73094951923076923" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.8421644787" green="0.84441105770000002" blue="0.82981645650000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="I7W-1v-e7K" secondAttribute="bottom" constant="15" id="MPT-mj-E2D"/>
                                             <constraint firstAttribute="trailing" secondItem="hvt-TG-OMd" secondAttribute="trailing" constant="15" id="WR6-cR-b9h"/>
@@ -2157,6 +2157,23 @@
                                     <outletCollection property="rotaryKnobArray" destination="MJz-cp-CW8" collectionClass="NSMutableArray" id="xQz-fv-qBT"/>
                                     <outletCollection property="rotaryKnobArray" destination="fC3-49-FLT" collectionClass="NSMutableArray" id="m8e-uz-qcA"/>
                                     <outletCollection property="rotaryKnobArray" destination="hvt-TG-OMd" collectionClass="NSMutableArray" id="zDh-PO-Vli"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="f5W-dg-ocQ" id="bHl-sl-deL"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="G8B-if-Ldk" id="Kvd-iO-SVb"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="xqI-J7-RkF" id="62t-6b-73i"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="ldB-75-EsQ" id="reL-HS-hrN"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="WFb-WI-y9T" id="FUq-Xg-7ES"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="Z7k-kW-tWV" id="cVw-nL-RcZ"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="R10-kr-E1g" id="zLg-oH-1sU"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="OnE-vj-gmK" id="3yR-wk-zvO"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="8P5-tO-K24" id="HF4-IY-5kM"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="H1L-Xn-FIt" id="cUc-wZ-w8B"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="CLV-9C-Ta2" id="akQ-At-RRc"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="HRm-uV-pKO" id="wUb-ai-VAK"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="psO-yY-aJK" id="a52-Te-I2W"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="psO-yY-aJK" id="FVF-mn-pgf"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="2tP-Ky-aLO" id="o7E-29-azF"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="cfK-Wa-F1o" id="mYx-Gt-7Zr"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="RuW-3D-hyW" id="ocZ-aU-6D0"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -2198,7 +2215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaE-gQ-V0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="1240"/>
+            <point key="canvasLocation" x="766" y="1240"/>
         </scene>
         <!--Presets List View Controller-->
         <scene sceneID="gFb-mQ-bxc">

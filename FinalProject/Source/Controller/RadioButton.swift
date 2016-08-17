@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RadioButtonController: UIButton {
+class RadioButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         self.isTriggered = false
         super.init(coder: aDecoder)

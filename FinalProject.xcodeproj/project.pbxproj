@@ -27,7 +27,7 @@
 		F604C65E1D50437B002224E8 /* FullPresetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C65D1D50437B002224E8 /* FullPresetsListViewController.swift */; };
 		F604C6601D50438D002224E8 /* SynthPresetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C65F1D50438D002224E8 /* SynthPresetsListViewController.swift */; };
 		F604C6621D504398002224E8 /* SequencesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604C6611D504398002224E8 /* SequencesListViewController.swift */; };
-		F63204441D62D3E300980165 /* RadioButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63204431D62D3E300980165 /* RadioButtonController.swift */; };
+		F63204441D62D3E300980165 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63204431D62D3E300980165 /* RadioButton.swift */; };
 		F65D46A71D59A8E000086F56 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46A61D59A8E000086F56 /* SynthView.swift */; };
 		F65D46A91D59A8FA00086F56 /* SeqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46A81D59A8FA00086F56 /* SeqView.swift */; };
 		F65D46AD1D5AFCCA00086F56 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D46AB1D5AFCCA00086F56 /* SSRadioButton.swift */; };
@@ -118,7 +118,7 @@
 		F604C65D1D50437B002224E8 /* FullPresetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullPresetsListViewController.swift; sourceTree = "<group>"; };
 		F604C65F1D50438D002224E8 /* SynthPresetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthPresetsListViewController.swift; sourceTree = "<group>"; };
 		F604C6611D504398002224E8 /* SequencesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencesListViewController.swift; sourceTree = "<group>"; };
-		F63204431D62D3E300980165 /* RadioButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonController.swift; sourceTree = "<group>"; };
+		F63204431D62D3E300980165 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		F65D46A61D59A8E000086F56 /* SynthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
 		F65D46A81D59A8FA00086F56 /* SeqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeqView.swift; sourceTree = "<group>"; };
 		F65D46AB1D5AFCCA00086F56 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 				F604C65D1D50437B002224E8 /* FullPresetsListViewController.swift */,
 				F604C65F1D50438D002224E8 /* SynthPresetsListViewController.swift */,
 				F604C6611D504398002224E8 /* SequencesListViewController.swift */,
-				F63204431D62D3E300980165 /* RadioButtonController.swift */,
+				F63204431D62D3E300980165 /* RadioButton.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -586,7 +586,7 @@
 				F604C65E1D50437B002224E8 /* FullPresetsListViewController.swift in Sources */,
 				F65D46AE1D5AFCCA00086F56 /* SSRadioButtonsController.swift in Sources */,
 				F65D46A71D59A8E000086F56 /* SynthView.swift in Sources */,
-				F63204441D62D3E300980165 /* RadioButtonController.swift in Sources */,
+				F63204441D62D3E300980165 /* RadioButton.swift in Sources */,
 				56BEFEBE1B68C3E0006F0664 /* Model.xcdatamodeld in Sources */,
 				F604C6601D50438D002224E8 /* SynthPresetsListViewController.swift in Sources */,
 				F604C65C1D4DE74C002224E8 /* PresetsListViewController.swift in Sources */,

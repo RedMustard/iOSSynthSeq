@@ -52,7 +52,7 @@ class SynthView: UIView {
     
     // MARK: Radio Button Management 
     
-    @IBAction func triggerRadioButton(button: RadioButtonController) {
+    @IBAction func triggerRadioButton(button: RadioButton) {
         switch(button.isTriggered) {
         case(true):
             button.isTriggered = false
@@ -86,10 +86,10 @@ class SynthView: UIView {
     @IBOutlet var rateRotaryKnob: MHRotaryKnob!
     @IBOutlet var amountRotaryKnob: MHRotaryKnob!
     
-    @IBOutlet var latchRadioButton: RadioButtonController!
-    @IBOutlet var syncRadioButton: RadioButtonController!
-    @IBOutlet var osc1RadioButton: RadioButtonController!
-    @IBOutlet var osc2RadioButton: RadioButtonController!
+    @IBOutlet var latchRadioButton: RadioButton!
+    @IBOutlet var syncRadioButton: RadioButton!
+    @IBOutlet var osc1RadioButton: RadioButton!
+    @IBOutlet var osc2RadioButton: RadioButton!
     
     
 //    @IBOutlet var latchRadioButton: SSRadioButton!
