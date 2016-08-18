@@ -46,7 +46,8 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
             case ("Presets"):
                 self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
             case ("Save"):
-                return
+                saveAlert(self)
+
             case ("Undo"):
                 return
             case (_):
@@ -56,9 +57,35 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    private func saveAlert(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Save Preset", message: "Enter the name of the preset:", preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Save", style: .Default, handler: { (action) in
+//            print(SynthView().rotaryKnobs)
+//            if let field = alertController.textFields![0] as? UITextField {
+                // store your data
+//                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "userEmail")
+//                NSUserDefaults.standardUserDefaults().synchronize()
+                
+//            } else {
+                // user did not fill field
+//            }
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action) in
+
+        }))
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Preset Name"
+        }
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
+    
+    
     // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        synthView.delegate = self
         
         let revealController = self.revealViewController()
         revealController.delegate = self
@@ -86,4 +113,5 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     // MARK: Properties
     let menuItemArray: Array<String> = ["Presets", "Save", "Undo"]
     @IBOutlet var menuTableView: UITableView!
+//    @IBOutlet var synthView: SynthView!
 }

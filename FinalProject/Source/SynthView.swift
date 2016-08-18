@@ -66,6 +66,7 @@ class SynthView: UIView {
     
     // MARK: Properties
     @IBOutlet var rotaryKnobArray: [MHRotaryKnob]!
+    @IBOutlet var radioButtonArray: [RadioButton]!
     
     @IBOutlet var volRotaryKnob: MHRotaryKnob!
     @IBOutlet var attackRotaryKnob: MHRotaryKnob!

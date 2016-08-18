@@ -597,6 +597,7 @@
                                             <constraint firstItem="EQL-5X-gCQ" firstAttribute="top" secondItem="e18-pi-ugK" secondAttribute="bottom" constant="35" id="Glm-Eh-ktq"/>
                                             <constraint firstItem="OfP-c2-gnd" firstAttribute="top" secondItem="6IN-eT-zqa" secondAttribute="bottom" constant="5" id="Jrx-EG-Rty"/>
                                             <constraint firstItem="f9T-iO-mGS" firstAttribute="width" secondItem="6IN-eT-zqa" secondAttribute="width" id="NB1-oN-rCC"/>
+                                            <constraint firstItem="sOM-Mi-GCh" firstAttribute="top" secondItem="6IN-eT-zqa" secondAttribute="bottom" constant="25" id="Nfw-Lp-dDS"/>
                                             <constraint firstAttribute="trailing" secondItem="e18-pi-ugK" secondAttribute="trailing" constant="15" id="Ofq-J2-Aol"/>
                                             <constraint firstItem="iPT-4C-9pQ" firstAttribute="top" secondItem="bmy-Yq-ZZp" secondAttribute="bottom" constant="5" id="PIh-b0-Huk"/>
                                             <constraint firstItem="LYv-87-i4y" firstAttribute="centerX" secondItem="EQL-5X-gCQ" secondAttribute="centerX" id="QxP-Nr-rhR"/>
@@ -956,7 +957,7 @@
                                                 </variation>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKX-6T-efJ">
-                                                <rect key="frame" x="112" y="183" width="47" height="19"/>
+                                                <rect key="frame" x="123" y="183" width="47" height="19"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="OSC 1">
                                                         <attributes>
@@ -969,7 +970,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p8-nX-7zF">
-                                                <rect key="frame" x="341" y="183" width="47" height="19"/>
+                                                <rect key="frame" x="352" y="183" width="47" height="19"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="OSC 2">
                                                         <attributes>
@@ -1100,9 +1101,12 @@
                                             <constraint firstItem="IKX-6T-efJ" firstAttribute="centerX" secondItem="trQ-Rz-lqx" secondAttribute="centerX" id="eBC-VJ-noi"/>
                                             <constraint firstItem="tuc-rd-5er" firstAttribute="top" secondItem="nCy-lV-Y4P" secondAttribute="bottom" constant="5" id="fQE-d7-8bE"/>
                                             <constraint firstItem="OSr-UR-1lW" firstAttribute="top" secondItem="mc9-pG-AX2" secondAttribute="bottom" constant="35" id="ff9-aR-oh6"/>
+                                            <constraint firstItem="IKX-6T-efJ" firstAttribute="centerY" secondItem="mc9-pG-AX2" secondAttribute="centerY" id="fp8-ie-GEZ"/>
                                             <constraint firstAttribute="trailing" secondItem="yPC-7L-rJv" secondAttribute="trailing" id="g18-v9-8Jy"/>
+                                            <constraint firstItem="6p8-nX-7zF" firstAttribute="trailing" secondItem="iIa-W5-1Zc" secondAttribute="trailing" id="g3U-jR-Qiq"/>
                                             <constraint firstAttribute="trailing" secondItem="iIa-W5-1Zc" secondAttribute="trailing" constant="15" id="gOC-ol-RcR"/>
                                             <constraint firstItem="nCy-lV-Y4P" firstAttribute="top" secondItem="BhS-LA-Nih" secondAttribute="top" constant="15" id="geo-Hr-eaZ"/>
+                                            <constraint firstItem="IKX-6T-efJ" firstAttribute="centerX" secondItem="trQ-Rz-lqx" secondAttribute="centerX" id="hXg-gL-qq8"/>
                                             <constraint firstItem="mc9-pG-AX2" firstAttribute="top" secondItem="trQ-Rz-lqx" secondAttribute="bottom" constant="25" id="iM0-8n-AFV"/>
                                             <constraint firstItem="2k4-Ut-x3P" firstAttribute="top" secondItem="atG-0T-xRc" secondAttribute="bottom" constant="5" id="ioS-8f-yvm"/>
                                             <constraint firstItem="IKX-6T-efJ" firstAttribute="centerY" secondItem="hID-5g-nLl" secondAttribute="centerY" id="isU-SN-MsG"/>
@@ -1115,11 +1119,13 @@
                                             <constraint firstItem="6p8-nX-7zF" firstAttribute="centerX" secondItem="iIa-W5-1Zc" secondAttribute="centerX" id="o6c-fn-xW8"/>
                                             <constraint firstItem="hID-5g-nLl" firstAttribute="height" secondItem="yPC-7L-rJv" secondAttribute="height" id="ose-XJ-QDM"/>
                                             <constraint firstAttribute="bottom" secondItem="hID-5g-nLl" secondAttribute="bottom" id="pJ7-iR-msG"/>
+                                            <constraint firstItem="IKX-6T-efJ" firstAttribute="trailing" secondItem="trQ-Rz-lqx" secondAttribute="trailing" id="pO6-9t-5w5"/>
                                             <constraint firstItem="d9T-iT-Azj" firstAttribute="leading" secondItem="BhS-LA-Nih" secondAttribute="leading" constant="15" id="qaP-3w-Zxk"/>
                                             <constraint firstItem="6p8-nX-7zF" firstAttribute="centerX" secondItem="atG-0T-xRc" secondAttribute="centerX" id="qes-4e-3ag"/>
                                             <constraint firstAttribute="bottom" secondItem="yPC-7L-rJv" secondAttribute="bottom" id="r0c-nU-dDW"/>
                                             <constraint firstItem="iIa-W5-1Zc" firstAttribute="leading" secondItem="atG-0T-xRc" secondAttribute="trailing" constant="15" id="rb1-8W-Non"/>
                                             <constraint firstItem="3Xk-4L-v1i" firstAttribute="centerX" secondItem="iIa-W5-1Zc" secondAttribute="centerX" id="rld-Oi-v27"/>
+                                            <constraint firstItem="IKX-6T-efJ" firstAttribute="bottom" secondItem="tbw-SN-1gv" secondAttribute="bottom" id="spJ-18-XDw"/>
                                             <constraint firstItem="oWO-2W-nYp" firstAttribute="top" secondItem="ZmJ-cU-3LC" secondAttribute="bottom" constant="5" id="svM-x1-REy"/>
                                             <constraint firstItem="6p8-nX-7zF" firstAttribute="centerX" secondItem="yPC-7L-rJv" secondAttribute="centerX" id="u0e-D3-CU6"/>
                                             <constraint firstItem="OSr-UR-1lW" firstAttribute="top" secondItem="d9T-iT-Azj" secondAttribute="bottom" constant="5" id="vSO-R5-FYc"/>
@@ -1134,21 +1140,26 @@
                                             <mask key="constraints">
                                                 <exclude reference="pJ7-iR-msG"/>
                                                 <exclude reference="IFa-ev-pz7"/>
+                                                <exclude reference="0Gw-r4-7lu"/>
+                                                <exclude reference="45f-vA-ekX"/>
+                                                <exclude reference="6nU-6o-xzl"/>
+                                                <exclude reference="eBC-VJ-noi"/>
+                                                <exclude reference="fp8-ie-GEZ"/>
+                                                <exclude reference="hXg-gL-qq8"/>
+                                                <exclude reference="isU-SN-MsG"/>
+                                                <exclude reference="mZd-a8-ldT"/>
                                                 <exclude reference="ldF-KR-FnN"/>
                                                 <exclude reference="r0c-nU-dDW"/>
-                                                <exclude reference="xTp-pm-nqE"/>
                                                 <exclude reference="7gi-24-2Yz"/>
                                                 <exclude reference="RQ2-ik-7ME"/>
                                                 <exclude reference="XVa-tS-fLL"/>
                                                 <exclude reference="amD-ad-ON4"/>
-                                                <exclude reference="0Gw-r4-7lu"/>
-                                                <exclude reference="6nU-6o-xzl"/>
-                                                <exclude reference="isU-SN-MsG"/>
-                                                <exclude reference="mZd-a8-ldT"/>
                                                 <exclude reference="Gjq-I2-T5e"/>
+                                                <exclude reference="xTp-pm-nqE"/>
                                                 <exclude reference="wGZ-ml-bzR"/>
                                                 <exclude reference="JOq-uT-C8G"/>
                                                 <exclude reference="UgD-2n-gEy"/>
+                                                <exclude reference="o6c-fn-xW8"/>
                                                 <exclude reference="qes-4e-3ag"/>
                                                 <exclude reference="u0e-D3-CU6"/>
                                             </mask>
@@ -1195,6 +1206,7 @@
                                         <exclude reference="JYB-EZ-zd9"/>
                                         <exclude reference="9DE-Ga-YIG"/>
                                         <exclude reference="THy-HZ-z4t"/>
+                                        <exclude reference="GGg-2i-Lt4"/>
                                         <exclude reference="Dpg-bt-NrZ"/>
                                         <exclude reference="b82-Mx-EMi"/>
                                         <exclude reference="un8-jE-dlm"/>
@@ -1243,6 +1255,10 @@
                                     <outletCollection property="rotaryKnobArray" destination="ZmJ-cU-3LC" collectionClass="NSMutableArray" id="K0n-Hb-9cU"/>
                                     <outletCollection property="rotaryKnobArray" destination="0Ub-hr-QzN" collectionClass="NSMutableArray" id="LwV-5L-hNN"/>
                                     <outletCollection property="rotaryKnobArray" destination="5O9-t4-Ove" collectionClass="NSMutableArray" id="mau-Wa-iGg"/>
+                                    <outletCollection property="radioButtonArray" destination="fDR-Lk-g0S" id="qjQ-jA-WzO"/>
+                                    <outletCollection property="radioButtonArray" destination="wmu-gH-AOa" id="NLs-Rn-Kq3"/>
+                                    <outletCollection property="radioButtonArray" destination="87b-bP-sAd" id="3Hm-Vo-Ltb"/>
+                                    <outletCollection property="radioButtonArray" destination="P8d-WQ-AMF" id="5JB-jM-x7h"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-1s-AUK" customClass="SeqView" customModule="FinalProject" customModuleProvider="target">
@@ -2157,23 +2173,23 @@
                                     <outletCollection property="rotaryKnobArray" destination="MJz-cp-CW8" collectionClass="NSMutableArray" id="xQz-fv-qBT"/>
                                     <outletCollection property="rotaryKnobArray" destination="fC3-49-FLT" collectionClass="NSMutableArray" id="m8e-uz-qcA"/>
                                     <outletCollection property="rotaryKnobArray" destination="hvt-TG-OMd" collectionClass="NSMutableArray" id="zDh-PO-Vli"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="f5W-dg-ocQ" id="bHl-sl-deL"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="G8B-if-Ldk" id="Kvd-iO-SVb"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="xqI-J7-RkF" id="62t-6b-73i"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="ldB-75-EsQ" id="reL-HS-hrN"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="WFb-WI-y9T" id="FUq-Xg-7ES"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="Z7k-kW-tWV" id="cVw-nL-RcZ"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="R10-kr-E1g" id="zLg-oH-1sU"/>
-                                    <outletCollection property="step1To8RadioButtonArray" destination="OnE-vj-gmK" id="3yR-wk-zvO"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="8P5-tO-K24" id="HF4-IY-5kM"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="H1L-Xn-FIt" id="cUc-wZ-w8B"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="CLV-9C-Ta2" id="akQ-At-RRc"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="HRm-uV-pKO" id="wUb-ai-VAK"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="psO-yY-aJK" id="a52-Te-I2W"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="psO-yY-aJK" id="FVF-mn-pgf"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="2tP-Ky-aLO" id="o7E-29-azF"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="cfK-Wa-F1o" id="mYx-Gt-7Zr"/>
-                                    <outletCollection property="step9To16RadioButtonArray" destination="RuW-3D-hyW" id="ocZ-aU-6D0"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="f5W-dg-ocQ" collectionClass="NSMutableArray" id="bHl-sl-deL"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="G8B-if-Ldk" collectionClass="NSMutableArray" id="Kvd-iO-SVb"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="xqI-J7-RkF" collectionClass="NSMutableArray" id="62t-6b-73i"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="ldB-75-EsQ" collectionClass="NSMutableArray" id="reL-HS-hrN"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="WFb-WI-y9T" collectionClass="NSMutableArray" id="FUq-Xg-7ES"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="Z7k-kW-tWV" collectionClass="NSMutableArray" id="cVw-nL-RcZ"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="R10-kr-E1g" collectionClass="NSMutableArray" id="zLg-oH-1sU"/>
+                                    <outletCollection property="step1To8RadioButtonArray" destination="OnE-vj-gmK" collectionClass="NSMutableArray" id="3yR-wk-zvO"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="8P5-tO-K24" collectionClass="NSMutableArray" id="HF4-IY-5kM"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="H1L-Xn-FIt" collectionClass="NSMutableArray" id="cUc-wZ-w8B"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="CLV-9C-Ta2" collectionClass="NSMutableArray" id="akQ-At-RRc"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="HRm-uV-pKO" collectionClass="NSMutableArray" id="wUb-ai-VAK"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="psO-yY-aJK" collectionClass="NSMutableArray" id="a52-Te-I2W"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="psO-yY-aJK" collectionClass="NSMutableArray" id="FVF-mn-pgf"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="2tP-Ky-aLO" collectionClass="NSMutableArray" id="o7E-29-azF"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="cfK-Wa-F1o" collectionClass="NSMutableArray" id="mYx-Gt-7Zr"/>
+                                    <outletCollection property="step9To16RadioButtonArray" destination="RuW-3D-hyW" collectionClass="NSMutableArray" id="ocZ-aU-6D0"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -2211,6 +2227,8 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="menuButton" destination="bqM-Er-b7M" id="URw-tS-GaT"/>
+                        <outlet property="seqView" destination="Sav-1s-AUK" id="1Se-Rx-2jD"/>
+                        <outlet property="synthView" destination="k66-uy-iDN" id="Xit-iU-8UU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaE-gQ-V0r" userLabel="First Responder" sceneMemberID="firstResponder"/>

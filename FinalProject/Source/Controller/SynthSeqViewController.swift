@@ -53,7 +53,7 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
     
     // MARK: Properties
     @IBOutlet var menuButton: UIBarButtonItem!
-    @IBOutlet var synthView: SynthView!
+    @IBOutlet internal var synthView: SynthView!
     @IBOutlet var seqView: SeqView!
     
 }
