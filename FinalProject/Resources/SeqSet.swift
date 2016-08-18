@@ -8,9 +8,10 @@
 
 import Foundation
 import CoreData
+import CoreDataService
 
 
-class SeqSet: NSManagedObject {
+class SeqSet: NSManagedObject, NamedEntity {
     // MARK: Properties (NamedEntity)
     static var entityName: String {
         return "SeqSet"
@@ -52,6 +53,7 @@ class SeqSet: NSManagedObject {
     @NSManaged var step14: NSNumber
     @NSManaged var step15: NSNumber
     @NSManaged var step16: NSNumber
+    @NSManaged var orderIndex: NSNumber
     @NSManaged var name: String
 }
 

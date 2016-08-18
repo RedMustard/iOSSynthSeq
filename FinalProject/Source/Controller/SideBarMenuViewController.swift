@@ -23,7 +23,6 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath)
-        
         cell.textLabel!.text = menuItemArray[indexPath.row]
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
@@ -41,7 +40,6 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         if let tableViewCellIdentifier = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text {
-        
             switch(tableViewCellIdentifier) {
             case ("Presets"):
                 self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
@@ -57,6 +55,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    // MARK: Data Management
     private func saveAlert(sender: AnyObject) {
         let alertController = UIAlertController(title: "Save Preset", message: "Enter the name of the preset:", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Save", style: .Default, handler: { (action) in
@@ -76,7 +75,6 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
 
     
     private func saveCurrentSettings(presetName: String) {
-        
         if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
             let rotaryKnobArray = synthViewController.synthView.rotaryKnobArray
             let radioButtonArray = synthViewController.synthView.radioButtonArray
@@ -84,31 +82,17 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
             do {
                 try PresetService.sharedPresetService.addPresetWithName(presetName)
                 try PresetService.sharedPresetService.addSynthPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
-            }
-            catch _ {
+                try PresetService.sharedPresetService.addSeqPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+            } catch _ {
                 print("Failed to save")
             }
         }
-        
-        
-        
-        //            print()
-        //            if let field = alertController.textFields![0] as? UITextField {
-        // store your data
-        //                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "userEmail")
-        //                NSUserDefaults.standardUserDefaults().synchronize()
-        
-        //            } else {
-        // user did not fill field
-        //            }
-
     }
+    
     
     // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         
         let revealController = self.revealViewController()
         revealController.delegate = self
@@ -135,6 +119,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     
     // MARK: Properties
     let menuItemArray: Array<String> = ["Presets", "Save", "Undo"]
+    
+    // MARK: Properties (IBOutlet)
     @IBOutlet var menuTableView: UITableView!
-//    @IBOutlet var synthView: SynthView!
 }

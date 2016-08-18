@@ -40,5 +40,7 @@ class SynSet: NSManagedObject, NamedEntity {
     @NSManaged var sync: NSNumber
     @NSManaged var osc1: NSNumber
     @NSManaged var osc2: NSNumber
+    @NSManaged var orderIndex: NSNumber
     @NSManaged var name: String
+    
 }

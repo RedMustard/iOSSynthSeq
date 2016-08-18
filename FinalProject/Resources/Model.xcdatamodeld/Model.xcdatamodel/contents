@@ -2,28 +2,30 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 4.3">
     <entity name="Presets" representedClassName=".Presets" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="sequencerSettings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SeqSet" syncable="YES"/>
-        <relationship name="synthesizerSettings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SynSet" syncable="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="sequencerSettings" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="SeqSet" inverseName="fullPreset" inverseEntity="SeqSet" syncable="YES"/>
+        <relationship name="synthesizerSettings" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="SynSet" inverseName="fullPreset" inverseEntity="SynSet" syncable="YES"/>
     </entity>
     <entity name="SeqSet" representedClassName=".SeqSet" syncable="YES">
-        <attribute name="frequency1" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency2" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency3" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency4" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency5" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency6" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency7" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency8" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency9" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency10" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency11" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency12" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency13" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency14" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency15" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="frequency16" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency1" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency2" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency3" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency4" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency5" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency6" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency7" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency8" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency9" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency10" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency11" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency12" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency13" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency14" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency15" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequency16" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="rate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="step1" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="step1To8" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="step2" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -42,35 +44,38 @@
         <attribute name="step14" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="step15" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="step16" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="fullPreset" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Presets" inverseName="sequencerSettings" inverseEntity="Presets" syncable="YES"/>
     </entity>
     <entity name="SynSet" representedClassName=".SynSet" syncable="YES">
-        <attribute name="amount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="attack" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="cutoff" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="decay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="feedback" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="attack" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="cutoff" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="decay" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="feedback" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="latch" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="noise" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="noise" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="osc1" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="osc1Oct" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="osc1Vol" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="osc1Wave" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="osc1Oct" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="osc1Vol" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="osc1Wave" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="osc2" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="osc2Oct" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="osc2Vol" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="osc2Wave" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="rate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="releaseVal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="resonance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="slope" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="sustain" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="osc2Oct" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="osc2Vol" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="osc2Wave" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="releaseVal" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="resonance" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="slope" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="sustain" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="sync" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="volume" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="fullPreset" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Presets" inverseName="synthesizerSettings" inverseEntity="Presets" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Presets" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="SynSet" positionX="-45" positionY="27" width="128" height="390"/>
-        <element name="SeqSet" positionX="-36" positionY="36" width="128" height="585"/>
+        <element name="Presets" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="SynSet" positionX="-45" positionY="27" width="128" height="420"/>
+        <element name="SeqSet" positionX="-36" positionY="36" width="128" height="615"/>
     </elements>
 </model>

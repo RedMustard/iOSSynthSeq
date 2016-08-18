@@ -64,7 +64,7 @@ class SynthView: UIView {
     }
     
     
-    // MARK: Properties
+    // MARK: Properties (IBOutlet)
     @IBOutlet internal var rotaryKnobArray: [MHRotaryKnob]!
     @IBOutlet internal var radioButtonArray: [RadioButton]!
     
@@ -91,12 +91,4 @@ class SynthView: UIView {
     @IBOutlet var syncRadioButton: RadioButton!
     @IBOutlet var osc1RadioButton: RadioButton!
     @IBOutlet var osc2RadioButton: RadioButton!
-    
-    
-//    @IBOutlet var latchRadioButton: SSRadioButton!
-//    @IBOutlet var syncRadioButton: SSRadioButton!
-//    @IBOutlet var osc1RadioButton: SSRadioButton!
-//    @IBOutlet var osc2RadioButton: SSRadioButton!
-    
-    
 }

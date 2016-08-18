@@ -97,7 +97,9 @@ class PresetsListViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     
+    // MARK: Properties (IBOutlet)
+    @IBOutlet var presetTableView: UITableView!
+    
     // MARK: Properties
     let presetsItemArray: Array<String> = ["Full Presets", "Synth Presets", "Sequences"]
-    @IBOutlet var presetTableView: UITableView!
 }

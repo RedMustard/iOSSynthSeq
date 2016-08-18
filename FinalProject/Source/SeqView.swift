@@ -39,8 +39,6 @@ class SeqView: UIView {
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Highlighted"), forState: UIControlState.Highlighted)
             rotaryKnob.setKnobImage(UIImage(imageLiteral: "Knob Disabled"), forState: UIControlState.Disabled)
             
-//            rotaryKnob.enabled = false
-            
             if rotaryKnob.accessibilityLabel == "SequenceRateKnob" {
                 rotaryKnob.knobImageCenter = CGPointMake(60.0, 60.0)
             } else {
@@ -90,7 +88,7 @@ class SeqView: UIView {
         }
     }
     
-    // MARK: Properties
+    // MARK: Properties (IBOutlet)
     @IBOutlet var rotaryKnobArray: [MHRotaryKnob]!
     @IBOutlet var step1To8RadioButtonArray: [RadioButton]!
     @IBOutlet var step9To16RadioButtonArray: [RadioButton]!
@@ -131,8 +129,4 @@ class SeqView: UIView {
     @IBOutlet var step14RadioButton: RadioButton!
     @IBOutlet var step15RadioButton: RadioButton!
     @IBOutlet var step16RadioButton: RadioButton!
-    
-    
-
-    
 }
