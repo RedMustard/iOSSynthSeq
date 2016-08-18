@@ -60,15 +60,9 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     private func saveAlert(sender: AnyObject) {
         let alertController = UIAlertController(title: "Save Preset", message: "Enter the name of the preset:", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Save", style: .Default, handler: { (action) in
-//            print(SynthView().rotaryKnobs)
-//            if let field = alertController.textFields![0] as? UITextField {
-                // store your data
-//                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "userEmail")
-//                NSUserDefaults.standardUserDefaults().synchronize()
-                
-//            } else {
-                // user did not fill field
-//            }
+            if let presetName = alertController.textFields![0].text {
+                self.saveCurrentSettings(presetName)
+            }
         }))
         alertController.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action) in
 
@@ -76,16 +70,45 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         alertController.addTextFieldWithConfigurationHandler { (textField) in
             textField.placeholder = "Preset Name"
         }
+        
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
     
+    private func saveCurrentSettings(presetName: String) {
+        
+        if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
+            let rotaryKnobArray = synthViewController.synthView.rotaryKnobArray
+            let radioButtonArray = synthViewController.synthView.radioButtonArray
+            
+            do {
+                try PresetService.sharedPresetService.addPresetWithName(presetName)
+                try PresetService.sharedPresetService.addSynthPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+            }
+            catch _ {
+                print("Failed to save")
+            }
+        }
+        
+        
+        
+        //            print()
+        //            if let field = alertController.textFields![0] as? UITextField {
+        // store your data
+        //                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "userEmail")
+        //                NSUserDefaults.standardUserDefaults().synchronize()
+        
+        //            } else {
+        // user did not fill field
+        //            }
+
+    }
     
     // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        synthView.delegate = self
+
         
         let revealController = self.revealViewController()
         revealController.delegate = self

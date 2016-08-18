@@ -59,6 +59,25 @@ class PresetService {
     }
     
     
+    
+    func fetchedResultsControllerForSynthPreset(name: String) throws -> NSFetchedResultsController {
+        let fetchRequest = NSFetchRequest(namedEntity: SynSet.self)
+//        fetchRequest.predicate = NSPredicate(format: "category == %@", category)
+//        switch sortOrder {
+//        case .Borrower:
+//            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "borrower", ascending: true)]
+//        case .Name:
+//            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+//        }
+        fetchRequest.fetchBatchSize = 15
+        
+        let context = CoreDataService.sharedCoreDataService.mainQueueContext
+        let resultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        try resultsController.performFetch()
+        
+        return resultsController
+    }
+
     func addSynthPresetWithName(name: String, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         let synthPreset = NSEntityDescription.insertNewObjectForNamedEntity(SynSet.self, inManagedObjectContext: context)
@@ -104,7 +123,7 @@ class PresetService {
             case("OutputVolumeKnob"):
                 synthPreset.volume = rotaryKnob.value
             case(_):
-                return
+                continue
             }
         }
         
@@ -117,15 +136,14 @@ class PresetService {
             case("LFOOsc2Button"):
                 synthPreset.osc2 = radioButton.isTriggered
             case(_):
-                return
+                continue
             }
         }
-        
         
         try context.save()
         
         CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Add lent item save finished")
+            print("Add synth preset save finished")
         }
 
     }

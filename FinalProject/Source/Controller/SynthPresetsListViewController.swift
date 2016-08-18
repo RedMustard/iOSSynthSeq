@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+import CoreDataService
 
 class SynthPresetsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
     
@@ -18,23 +20,30 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
     
     // TODO: UITableViewDelegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return resultsController?.sections?.count ?? 0
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return synthPresetItemArray.count
+        return resultsController!.sections![section].numberOfObjects
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let presets = resultsController!.objectAtIndexPath(indexPath) as! SynSet
         let cell = tableView.dequeueReusableCellWithIdentifier("SynthPresetCell", forIndexPath: indexPath)
-        
-        cell.textLabel!.text = synthPresetItemArray[indexPath.row] // PLACEHOLDER
+        cell.textLabel!.text = presets.name
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
         
         return cell
+        //        let cell = tableView.dequeueReusableCellWithIdentifier("SynthPresetCell", forIndexPath: indexPath)
+//        
+//        cell.textLabel!.text = synthPresetItemArray[indexPath.row] // PLACEHOLDER
+//        cell.textLabel!.textColor = UIColor.whiteColor()
+//        cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
+//        
+//        return cell
     }
     
     
@@ -55,9 +64,13 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
 
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
-        
         recognizer.direction = .Right
         self.view .addGestureRecognizer(recognizer)
+        
+        // These need to be init before table view will populate
+//        let resultsController = PresetService.sharedPresetService.fetchedResultsControllerForSynthPreset()
+//        try! resultsController.performFetch()
+//        self.resultsController = resultsController
     }
     
     
@@ -84,4 +97,6 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
     // MARK: Properties
     let synthPresetItemArray: Array<String> = ["Synth Preset 1", "Synth Preset 2", "Synth Preset 3"] // PLACEHOLDER
     @IBOutlet var synthPresetTableView: UITableView!
+    
+    private var resultsController: NSFetchedResultsController?
 }

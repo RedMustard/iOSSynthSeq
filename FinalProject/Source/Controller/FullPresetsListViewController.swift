@@ -26,7 +26,6 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsController!.sections![section].numberOfObjects
-//        return fullPresetItemArray.count
     }
     
     
@@ -75,7 +74,6 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
         
         let resultsController = PresetService.sharedPresetService.presetNames()
         try! resultsController.performFetch()
-        
         self.resultsController = resultsController
     }
     
