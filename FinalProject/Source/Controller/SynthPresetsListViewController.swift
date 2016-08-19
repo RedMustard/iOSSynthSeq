@@ -50,89 +50,13 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
     }
     
     
-    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-    
-    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        ignoreUpdates = true
-        
-        if let preset = resultsController?.objectAtIndexPath(sourceIndexPath) as? Presets {
-            preset.orderIndex = destinationIndexPath.row
-            
-            if let presets = resultsController?.fetchedObjects as? Array<Presets> {
-                let reindexRange: NSRange
-                let shiftForward: Bool
-                if sourceIndexPath.row > destinationIndexPath.row {
-                    reindexRange = NSMakeRange(destinationIndexPath.row, sourceIndexPath.row - destinationIndexPath.row)
-                    shiftForward = true
-                }
-                else {
-                    reindexRange = NSMakeRange(sourceIndexPath.row + 1, destinationIndexPath.row - sourceIndexPath.row)
-                    shiftForward = false
-                }
-                
-                let subPresets = ((presets as NSArray).subarrayWithRange(reindexRange)) as! Array<Presets>
-                do {
-                    try PresetService.sharedPresetService.reindexPresets(subPresets, shiftForward: shiftForward, withSaveCompletionHandler: {
-                        self.ignoreUpdates = false
-                    })
-                }
-                catch {
-                    let alertController = UIAlertController(title: "Move Failed", message: "Failed to move category", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                    presentViewController(alertController, animated: true, completion: nil)
-                }
-            }
-        }
-    }
-    
-    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            var presetsToReindex: Array<SynSet>?
-            let numberOfRows = synthPresetTableView.numberOfRowsInSection(0)
-            if indexPath.row + 1 < numberOfRows {
-                if let presets = resultsController?.fetchedObjects as? Array<SynSet> {
-                    let reindexRange = NSMakeRange(indexPath.row + 1, numberOfRows - (indexPath.row + 1))
-                    presetsToReindex = ((presets as NSArray).subarrayWithRange(reindexRange)) as? Array<SynSet>
-                }
-            }
-            
             if let preset = resultsController?.objectAtIndexPath(indexPath) as? SynSet {
-//                let fullPreset = preset.objectIDsForRelationshipNamed("fullPreset")
-//                print(fullPreset)
                 let alertController = UIAlertController(title: "Delete the preset?", message: "If you delete this preset, it will remove the corresponding Full Preset.\n\n Are you sure you wish to delete this preset?", preferredStyle: .Alert)
                 alertController.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) in
                     do {
-                        try PresetService.sharedPresetService.deleteSynthPreset(preset, withSaveCompletionHandler: {
-                            if let somePresets = presetsToReindex {
-                                do {
-                                    try PresetService.sharedPresetService.reindexSynthPresets(somePresets, shiftForward: false)
-                                }
-                                catch _ {
-                                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
-                                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                                    self.presentViewController(alertController, animated: true, completion: nil)
-                                }
-                            }
-                        })
-                        
-                        
-//                        let fullPreset = preset.objectIDsForRelationshipNamed("fullPreset")
-//                        print(fullPreset)
-//                        if let fullPreset = resultsController?.
-//                        if let fullPreset = preset.objectIDsForRelationshipNamed("fullPreset").first {
-//                            try PresetService.sharedPresetService.deletePresetWithID(fullPreset)
-//                            try PresetService.sharedPresetService.deletePreset(fullPreset, withSaveCompletionHandler: {})
-//                        }
-//                        let request = NSFetchRequest(entityName: "Presets")
-//                        let predicate = NSPredicate(format: "name = %@", self)
-//                        if let fullPreset = resultsController?.objec
-//                            try PresetService.sharedPresetService.deletePreset(fullPreset, withSaveCompletionHandler: {})
-//                        }
-                        
+                        try PresetService.sharedPresetService.deleteSynthPreset(preset, withSaveCompletionHandler: {})
                         self.reloadCurrentView()
                     }
                     catch _ {
@@ -148,51 +72,7 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
             }
         }
     }
-    
-    
-    // MARK: NSFetchedResultsControllerDelegate
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        if !ignoreUpdates {
-            synthPresetTableView.beginUpdates()
-        }
-    }
-    
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        if !ignoreUpdates {
-            switch type {
-            case .Delete:
-                synthPresetTableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Left)
-            case .Insert:
-                synthPresetTableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Left)
-            case .Move:
-                synthPresetTableView.moveRowAtIndexPath(indexPath!, toIndexPath: newIndexPath!)
-            case .Update:
-                if let cell = synthPresetTableView.cellForRowAtIndexPath(indexPath!), let preset = anObject as? SynSet {
-                    cell.textLabel!.text = preset.name
-                }
-            }
-        }
-    }
-    
-    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
-        if !ignoreUpdates {
-            switch type {
-            case .Delete:
-                synthPresetTableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Left)
-            case .Insert:
-                synthPresetTableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Left)
-            default:
-                print("Unexpected change type in controller:didChangeSection:atIndex:forChangeType:")
-            }
-        }
-    }
-    
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        if !ignoreUpdates {
-            synthPresetTableView.endUpdates()
-        }
-    }
-    
+
     
     // MARK: UIViewController
     override func viewDidLoad() {
@@ -239,5 +119,4 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
     
     // MARK: Properties (Private)
     private var resultsController: NSFetchedResultsController?
-    private var ignoreUpdates = false
 }

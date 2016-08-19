@@ -80,29 +80,6 @@ class PresetService {
             saveCompletionHandler()
         }
     }
-
-    
-    func reindexPresets(presets: Array<Presets>, shiftForward: Bool, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler? = nil) throws {
-    
-        for preset in presets {
-            let currentOrderIndex = preset.orderIndex.integerValue
-            if shiftForward {
-                preset.orderIndex = currentOrderIndex + 1
-            }
-            else {
-                preset.orderIndex = currentOrderIndex - 1
-            }
-        }
-        
-        let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        try context.save()
-        
-        CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Reindex full preset save finished")
-            
-            saveCompletionHandler?()
-        }
-    }
     
     
     func fetchedResultsControllerForSynthPreset() -> NSFetchedResultsController {
@@ -196,29 +173,6 @@ class PresetService {
             print("Delete synth preset save finished")
             
             saveCompletionHandler()
-        }
-    }
-    
-    
-    func reindexSynthPresets(presets: Array<SynSet>, shiftForward: Bool, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler? = nil) throws {
-        
-        for preset in presets {
-            let currentOrderIndex = preset.orderIndex.integerValue
-            if shiftForward {
-                preset.orderIndex = currentOrderIndex + 1
-            }
-            else {
-                preset.orderIndex = currentOrderIndex - 1
-            }
-        }
-        
-        let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        try context.save()
-        
-        CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Reindex synth preset save finished")
-            
-            saveCompletionHandler?()
         }
     }
     
@@ -331,6 +285,7 @@ class PresetService {
         }
     }
     
+    
     func deleteSeqPreset(preset: SeqSet, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         
@@ -345,30 +300,6 @@ class PresetService {
         }
     }
     
-    
-    func reindexSeqPresets(presets: Array<SeqSet>, shiftForward: Bool, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler? = nil) throws {
-        
-        for preset in presets {
-            let currentOrderIndex = preset.orderIndex.integerValue
-            if shiftForward {
-                preset.orderIndex = currentOrderIndex + 1
-            }
-            else {
-                preset.orderIndex = currentOrderIndex - 1
-            }
-        }
-        
-        let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        try context.save()
-        
-        CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Reindex sequence preset save finished")
-            
-            saveCompletionHandler?()
-        }
-    }
-    
-
     
     // MARK: Properties (Static)
     static let sharedPresetService = PresetService()
