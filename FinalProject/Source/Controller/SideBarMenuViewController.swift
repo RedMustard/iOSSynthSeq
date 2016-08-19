@@ -80,9 +80,8 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
             let radioButtonArray = synthViewController.synthView.radioButtonArray
             
             do {
-                try PresetService.sharedPresetService.addPresetWithName(presetName)
-                try PresetService.sharedPresetService.addSynthPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
-                try PresetService.sharedPresetService.addSeqPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+                try PresetService.sharedPresetService.addPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+                
             } catch _ {
                 print("Failed to save")
             }

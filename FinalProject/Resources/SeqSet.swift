@@ -55,5 +55,8 @@ class SeqSet: NSManagedObject, NamedEntity {
     @NSManaged var step16: NSNumber
     @NSManaged var orderIndex: NSNumber
     @NSManaged var name: String
+    
+    // MARK: Properties (Core Data Relationships)
+    @NSManaged var fullPreset: Presets
 }
 

@@ -46,12 +46,19 @@ class PresetService {
     }
     
     
-    func addPresetWithName(name: String) throws {
+    func addPresetWithName(name: String, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         
         let preset = NSEntityDescription.insertNewObjectForNamedEntity(Presets.self, inManagedObjectContext: context)
+        let synthPreset = NSEntityDescription.insertNewObjectForNamedEntity(SynSet.self, inManagedObjectContext: context)
+        let seqPreset = NSEntityDescription.insertNewObjectForNamedEntity(SeqSet.self, inManagedObjectContext: context)
         
         preset.name = name
+        preset.synthesizerSettings = synthPreset
+        preset.sequencerSettings = seqPreset
+        
+        try addSynthPresetWithName(name, fullPreset: preset, preset: synthPreset, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+        try addSeqPresetWithName(name, fullPreset: preset, preset: seqPreset, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
         
         try context.save()
         
@@ -73,21 +80,7 @@ class PresetService {
             saveCompletionHandler()
         }
     }
-    
-    func deletePresetWithID(presetID: NSManagedObjectID) throws {
-        let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
-//        let presetEntity: NSManagedObject
-//        presetEntity.exis
-        context.deleteObject(context.objectWithID(presetID))
-        
-        try context.save()
 
-        CoreDataService.sharedCoreDataService.saveRootContext {
-            print("delete preset with ID save finished")
-        }
-    }
-    
     
     func reindexPresets(presets: Array<Presets>, shiftForward: Bool, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler? = nil) throws {
     
@@ -122,51 +115,50 @@ class PresetService {
     }
 
     
-    func addSynthPresetWithName(name: String, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
+    func addSynthPresetWithName(name: String, fullPreset: Presets, preset: SynSet, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        let synthPreset = NSEntityDescription.insertNewObjectForNamedEntity(SynSet.self, inManagedObjectContext: context)
-        
-        synthPreset.name = name + " Synth"
-//        synthPreset.fullPreset
+
+        preset.name = name + " Synth"
+        preset.fullPreset = fullPreset
         
         for rotaryKnob in rotaryKnobArray {
             switch(rotaryKnob.accessibilityLabel!) {
             case("Osc1OctKnob"):
-                synthPreset.osc1Oct = rotaryKnob.value
+                preset.osc1Oct = rotaryKnob.value
             case("Osc1WaveKnob"):
-                synthPreset.osc1Wave = rotaryKnob.value
+                preset.osc1Wave = rotaryKnob.value
             case("Osc1VolKnob"):
-                synthPreset.osc1Vol = rotaryKnob.value
+                preset.osc1Vol = rotaryKnob.value
             case("Osc2OctKnob"):
-                synthPreset.osc2Oct = rotaryKnob.value
+                preset.osc2Oct = rotaryKnob.value
             case("Osc2WaveKnob"):
-                synthPreset.osc2Wave = rotaryKnob.value
+                preset.osc2Wave = rotaryKnob.value
             case("Osc2VolKnob"):
-                synthPreset.osc2Vol = rotaryKnob.value
+                preset.osc2Vol = rotaryKnob.value
             case("AttackKnob"):
-                synthPreset.attack = rotaryKnob.value
+                preset.attack = rotaryKnob.value
             case("DecayKnob"):
-                synthPreset.decay = rotaryKnob.value
+                preset.decay = rotaryKnob.value
             case("SustainKnob"):
-                synthPreset.sustain = rotaryKnob.value
+                preset.sustain = rotaryKnob.value
             case("ReleaseKnob"):
-                synthPreset.releaseVal = rotaryKnob.value
+                preset.releaseVal = rotaryKnob.value
             case("FilterNoiseKnob"):
-                synthPreset.noise = rotaryKnob.value
+                preset.noise = rotaryKnob.value
             case("FilterResonanceKnob"):
-                synthPreset.resonance = rotaryKnob.value
+                preset.resonance = rotaryKnob.value
             case("FilterSlopeKnob"):
-                synthPreset.slope = rotaryKnob.value
+                preset.slope = rotaryKnob.value
             case("FilterFeedbackKnob"):
-                synthPreset.feedback = rotaryKnob.value
+                preset.feedback = rotaryKnob.value
             case("FilterCutoffKnob"):
-                synthPreset.cutoff = rotaryKnob.value
+                preset.cutoff = rotaryKnob.value
             case("LFORateKnob"):
-                synthPreset.rate = rotaryKnob.value
+                preset.rate = rotaryKnob.value
             case("LFOAmountKnob"):
-                synthPreset.amount = rotaryKnob.value
+                preset.amount = rotaryKnob.value
             case("OutputVolumeKnob"):
-                synthPreset.volume = rotaryKnob.value
+                preset.volume = rotaryKnob.value
             case(_):
                 continue
             }
@@ -175,11 +167,11 @@ class PresetService {
         for radioButton in radioButtonArray {
             switch(radioButton.accessibilityLabel!) {
             case("LFOSyncButton"):
-                synthPreset.sync = radioButton.isTriggered
+                preset.sync = radioButton.isTriggered
             case("LFOOsc1Button"):
-                synthPreset.osc1 = radioButton.isTriggered
+                preset.osc1 = radioButton.isTriggered
             case("LFOOsc2Button"):
-                synthPreset.osc2 = radioButton.isTriggered
+                preset.osc2 = radioButton.isTriggered
             case(_):
                 continue
             }
@@ -191,6 +183,7 @@ class PresetService {
             print("Add synth preset save finished")
         }
     }
+    
     
     func deleteSynthPreset(preset: SynSet, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
@@ -240,48 +233,48 @@ class PresetService {
     }
     
     
-    func addSeqPresetWithName(name: String, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
+    func addSeqPresetWithName(name: String, fullPreset: Presets, preset: SeqSet, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         
-        let seqPreset = NSEntityDescription.insertNewObjectForNamedEntity(SeqSet.self, inManagedObjectContext: context)
-        seqPreset.name = name + " Sequence"
+        preset.name = name + " Sequence"
+        preset.fullPreset = fullPreset
         
         for rotaryKnob in rotaryKnobArray {
             switch(rotaryKnob.accessibilityLabel!) {
             case("SequenceStep1FreqKnob"):
-                seqPreset.frequency1 = rotaryKnob.value
+                preset.frequency1 = rotaryKnob.value
             case("SequenceStep2FreqKnob"):
-                seqPreset.frequency2 = rotaryKnob.value
+                preset.frequency2 = rotaryKnob.value
             case("SequenceStep3FreqKnob"):
-                seqPreset.frequency3 = rotaryKnob.value
+                preset.frequency3 = rotaryKnob.value
             case("SequenceStep4FreqKnob"):
-                seqPreset.frequency4 = rotaryKnob.value
+                preset.frequency4 = rotaryKnob.value
             case("SequenceStep5FreqKnob"):
-                seqPreset.frequency5 = rotaryKnob.value
+                preset.frequency5 = rotaryKnob.value
             case("SequenceStep6FreqKnob"):
-                seqPreset.frequency6 = rotaryKnob.value
+                preset.frequency6 = rotaryKnob.value
             case("SequenceStep7FreqKnob"):
-                seqPreset.frequency7 = rotaryKnob.value
+                preset.frequency7 = rotaryKnob.value
             case("SequenceStep8FreqKnob"):
-                seqPreset.frequency8 = rotaryKnob.value
+                preset.frequency8 = rotaryKnob.value
             case("SequenceStep9FreqKnob"):
-                seqPreset.frequency9 = rotaryKnob.value
+                preset.frequency9 = rotaryKnob.value
             case("SequenceStep10FreqKnob"):
-                seqPreset.frequency10 = rotaryKnob.value
+                preset.frequency10 = rotaryKnob.value
             case("SequenceStep11FreqKnob"):
-                seqPreset.frequency11 = rotaryKnob.value
+                preset.frequency11 = rotaryKnob.value
             case("SequenceStep12FreqKnob"):
-                seqPreset.frequency12 = rotaryKnob.value
+                preset.frequency12 = rotaryKnob.value
             case("SequenceStep13FreqKnob"):
-                seqPreset.frequency13 = rotaryKnob.value
+                preset.frequency13 = rotaryKnob.value
             case("SequenceStep14FreqKnob"):
-                seqPreset.frequency14 = rotaryKnob.value
+                preset.frequency14 = rotaryKnob.value
             case("SequenceStep15FreqKnob"):
-                seqPreset.frequency15 = rotaryKnob.value
+                preset.frequency15 = rotaryKnob.value
             case("SequenceStep16FreqKnob"):
-                seqPreset.frequency16 = rotaryKnob.value
+                preset.frequency16 = rotaryKnob.value
             case("SequenceRateKnob"):
-                seqPreset.rate = rotaryKnob.value
+                preset.rate = rotaryKnob.value
             case(_):
                 continue
             }
@@ -290,42 +283,42 @@ class PresetService {
         for radioButton in radioButtonArray {
             switch(radioButton.accessibilityLabel!) {
             case("SequenceStep1OnButton"):
-                seqPreset.step1 = radioButton.isTriggered
+                preset.step1 = radioButton.isTriggered
             case("SequenceStep2OnButton"):
-                seqPreset.step2 = radioButton.isTriggered
+                preset.step2 = radioButton.isTriggered
             case("SequenceStep3OnButton"):
-                seqPreset.step3 = radioButton.isTriggered
+                preset.step3 = radioButton.isTriggered
             case("SequenceStep4OnButton"):
-                seqPreset.step4 = radioButton.isTriggered
+                preset.step4 = radioButton.isTriggered
             case("SequenceStep5OnButton"):
-                seqPreset.step5 = radioButton.isTriggered
+                preset.step5 = radioButton.isTriggered
             case("SequenceStep6OnButton"):
-                seqPreset.step6 = radioButton.isTriggered
+                preset.step6 = radioButton.isTriggered
             case("SequenceStep7OnButton"):
-                seqPreset.step7 = radioButton.isTriggered
+                preset.step7 = radioButton.isTriggered
             case("SequenceStep8OnButton"):
-                seqPreset.step8 = radioButton.isTriggered
+                preset.step8 = radioButton.isTriggered
             case("SequenceStep9OnButton"):
-                seqPreset.step9 = radioButton.isTriggered
+                preset.step9 = radioButton.isTriggered
             case("SequenceStep10OnButton"):
-                seqPreset.step10 = radioButton.isTriggered
+                preset.step10 = radioButton.isTriggered
             case("SequenceStep11OnButton"):
-                seqPreset.step11 = radioButton.isTriggered
+                preset.step11 = radioButton.isTriggered
             case("SequenceStep12OnButton"):
-                seqPreset.step12 = radioButton.isTriggered
+                preset.step12 = radioButton.isTriggered
             case("SequenceStep13OnButton"):
-                seqPreset.step13 = radioButton.isTriggered
+                preset.step13 = radioButton.isTriggered
             case("SequenceStep14OnButton"):
-                seqPreset.step14 = radioButton.isTriggered
+                preset.step14 = radioButton.isTriggered
             case("SequenceStep15OnButton"):
-                seqPreset.step15 = radioButton.isTriggered
+                preset.step15 = radioButton.isTriggered
             case("SequenceStep16OnButton"):
-                seqPreset.step16 = radioButton.isTriggered
+                preset.step16 = radioButton.isTriggered
 
             case("SequenceSteps1To8OnButton"):
-                seqPreset.step1To8 = radioButton.isTriggered
+                preset.step1To8 = radioButton.isTriggered
             case("SequenceSteps9To16OnButton"):
-                seqPreset.step9To16 = radioButton.isTriggered
+                preset.step9To16 = radioButton.isTriggered
             case(_):
                 continue
             }
