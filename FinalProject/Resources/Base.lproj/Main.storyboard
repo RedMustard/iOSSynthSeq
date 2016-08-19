@@ -2190,6 +2190,24 @@
                                     <outletCollection property="step9To16RadioButtonArray" destination="2tP-Ky-aLO" collectionClass="NSMutableArray" id="o7E-29-azF"/>
                                     <outletCollection property="step9To16RadioButtonArray" destination="cfK-Wa-F1o" collectionClass="NSMutableArray" id="mYx-Gt-7Zr"/>
                                     <outletCollection property="step9To16RadioButtonArray" destination="RuW-3D-hyW" collectionClass="NSMutableArray" id="ocZ-aU-6D0"/>
+                                    <outletCollection property="radioButtonArray" destination="ogX-u5-1Nh" id="W1K-7d-yl7"/>
+                                    <outletCollection property="radioButtonArray" destination="uPE-pw-Hpa" id="WbI-hT-5vV"/>
+                                    <outletCollection property="radioButtonArray" destination="f5W-dg-ocQ" id="jH0-kx-8N3"/>
+                                    <outletCollection property="radioButtonArray" destination="8P5-tO-K24" id="7rl-yF-J84"/>
+                                    <outletCollection property="radioButtonArray" destination="G8B-if-Ldk" id="H1B-Mb-mDc"/>
+                                    <outletCollection property="radioButtonArray" destination="H1L-Xn-FIt" id="ZVO-pI-Wb6"/>
+                                    <outletCollection property="radioButtonArray" destination="xqI-J7-RkF" id="6nU-y7-j7Z"/>
+                                    <outletCollection property="radioButtonArray" destination="CLV-9C-Ta2" id="z3S-Qw-7td"/>
+                                    <outletCollection property="radioButtonArray" destination="ldB-75-EsQ" id="vqJ-vz-os6"/>
+                                    <outletCollection property="radioButtonArray" destination="HRm-uV-pKO" id="TY8-Wk-Kh5"/>
+                                    <outletCollection property="radioButtonArray" destination="WFb-WI-y9T" id="bU4-hP-d3m"/>
+                                    <outletCollection property="radioButtonArray" destination="psO-yY-aJK" id="o11-ti-Qf4"/>
+                                    <outletCollection property="radioButtonArray" destination="Z7k-kW-tWV" id="DQk-IT-fIi"/>
+                                    <outletCollection property="radioButtonArray" destination="2tP-Ky-aLO" id="6eg-qw-WkO"/>
+                                    <outletCollection property="radioButtonArray" destination="R10-kr-E1g" id="HIx-vb-Wy9"/>
+                                    <outletCollection property="radioButtonArray" destination="cfK-Wa-F1o" id="VbJ-Uk-TpG"/>
+                                    <outletCollection property="radioButtonArray" destination="OnE-vj-gmK" id="NNA-N5-bqt"/>
+                                    <outletCollection property="radioButtonArray" destination="RuW-3D-hyW" id="cUi-Zc-wZj"/>
                                 </connections>
                             </view>
                         </subviews>

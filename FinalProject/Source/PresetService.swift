@@ -46,7 +46,7 @@ class PresetService {
     }
     
     
-    func addPresetWithName(name: String, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
+    func addPresetWithName(name: String, synthRotaryKnobArray: Array<MHRotaryKnob>, synthRadioButtonArray: Array<RadioButton>, seqRotaryKnobArray: Array<MHRotaryKnob>, seqRadioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         
         let preset = NSEntityDescription.insertNewObjectForNamedEntity(Presets.self, inManagedObjectContext: context)
@@ -57,8 +57,8 @@ class PresetService {
         preset.synthesizerSettings = synthPreset
         preset.sequencerSettings = seqPreset
         
-        try addSynthPresetWithName(name, fullPreset: preset, preset: synthPreset, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
-        try addSeqPresetWithName(name, fullPreset: preset, preset: seqPreset, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+        try addSynthPresetWithName(name, fullPreset: preset, preset: synthPreset, rotaryKnobArray: synthRotaryKnobArray, radioButtonArray: synthRadioButtonArray)
+        try addSeqPresetWithName(name, fullPreset: preset, preset: seqPreset, rotaryKnobArray: seqRotaryKnobArray, radioButtonArray: seqRadioButtonArray)
         
         try context.save()
         
@@ -194,6 +194,7 @@ class PresetService {
         preset.fullPreset = fullPreset
         
         for rotaryKnob in rotaryKnobArray {
+            print(rotaryKnob.value)
             switch(rotaryKnob.accessibilityLabel!) {
             case("SequenceStep1FreqKnob"):
                 preset.frequency1 = rotaryKnob.value
@@ -235,14 +236,19 @@ class PresetService {
         }
         
         for radioButton in radioButtonArray {
+//            print(radioButton.accessibilityLabel)
             switch(radioButton.accessibilityLabel!) {
             case("SequenceStep1OnButton"):
+//                print(radioButton.isTriggered)
                 preset.step1 = radioButton.isTriggered
             case("SequenceStep2OnButton"):
+//                print(radioButton.isTriggered)
                 preset.step2 = radioButton.isTriggered
             case("SequenceStep3OnButton"):
+//                print(radioButton.isTriggered)
                 preset.step3 = radioButton.isTriggered
             case("SequenceStep4OnButton"):
+//                print(radioButton.isTriggered)
                 preset.step4 = radioButton.isTriggered
             case("SequenceStep5OnButton"):
                 preset.step5 = radioButton.isTriggered

@@ -49,12 +49,6 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    /////////
-    //
-    //  Compare table bounds and content size in order to enable scrolling dynamically
-    //
-    //
-    
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -90,6 +84,7 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
         
         fullPresetTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
         fullPresetTableView.separatorColor = UIColor.blackColor()
+        fullPresetTableView.alwaysBounceVertical = false
 
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         recognizer.direction = .Right

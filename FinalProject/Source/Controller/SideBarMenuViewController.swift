@@ -76,11 +76,13 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     
     private func saveCurrentSettings(presetName: String) {
         if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
-            let rotaryKnobArray = synthViewController.synthView.rotaryKnobArray
-            let radioButtonArray = synthViewController.synthView.radioButtonArray
+            let synthRotaryKnobArray = synthViewController.synthView.rotaryKnobArray
+            let synthRadioButtonArray = synthViewController.synthView.radioButtonArray
+            let seqRotaryKnobArray = synthViewController.seqView.rotaryKnobArray
+            let seqRadioButtonArray = synthViewController.seqView.radioButtonArray
             
             do {
-                try PresetService.sharedPresetService.addPresetWithName(presetName, rotaryKnobArray: rotaryKnobArray, radioButtonArray: radioButtonArray)
+                try PresetService.sharedPresetService.addPresetWithName(presetName, synthRotaryKnobArray: synthRotaryKnobArray, synthRadioButtonArray: synthRadioButtonArray, seqRotaryKnobArray: seqRotaryKnobArray, seqRadioButtonArray: seqRadioButtonArray)
                 
             } catch _ {
                 print("Failed to save")

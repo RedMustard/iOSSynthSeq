@@ -47,6 +47,20 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if let preset = resultsController?.objectAtIndexPath(indexPath) as? SeqSet {
+            if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
+                synthViewController.seqView.initializeRadioButtons(preset)
+                synthViewController.seqView.initializeRotaryKnobs(preset)
+            }
+        }
+//        if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
+//            let rotaryKnobArray = synthViewController.synthView.rotaryKnobArray
+//            let radioButtonArray = synthViewController.synthView.radioButtonArray
+            
+//            synthViewController.seqView.
+//        }
+        
     }
     
     
@@ -83,6 +97,7 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
         
         sequencesTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
         sequencesTableView.separatorColor = UIColor.blackColor()
+        sequencesTableView.alwaysBounceVertical = false
         
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         recognizer.direction = .Right

@@ -83,6 +83,7 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
         
         synthPresetTableView.backgroundColor = UIColor(white: 0.2, alpha: 1)
         synthPresetTableView.separatorColor = UIColor.blackColor()
+        synthPresetTableView.alwaysBounceVertical = false
 
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(PresetsListViewController.swipeRight(_:)))
         recognizer.direction = .Right
