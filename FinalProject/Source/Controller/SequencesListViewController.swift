@@ -16,6 +16,10 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
     @IBAction func goBackToPreviousMenu() {
         self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
     }
+    
+    func reloadCurrentView() {
+        self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("SequencesViewController"), animated: true)
+    }
 
     
     // MARK: UITableViewDelegate
@@ -97,26 +101,33 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
             }
             
             if let preset = resultsController?.objectAtIndexPath(indexPath) as? SeqSet {
-                do {
-                    try PresetService.sharedPresetService.deleteSeqPreset(preset, withSaveCompletionHandler: {
-                        if let somePresets = presetsToReindex {
-                            do {
-                                try PresetService.sharedPresetService.reindexSeqPresets(somePresets, shiftForward: false)
+                let alertController = UIAlertController(title: "Delete the preset?", message: "If you delete this preset, it will remove the corresponding Full Preset.\n\n Are you sure you wish to delete this preset?", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) in
+                    do {
+                        try PresetService.sharedPresetService.deleteSeqPreset(preset, withSaveCompletionHandler: {
+                            if let somePresets = presetsToReindex {
+                                do {
+                                    try PresetService.sharedPresetService.reindexSeqPresets(somePresets, shiftForward: false)
+                                }
+                                catch _ {
+                                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
+                                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                                    self.presentViewController(alertController, animated: true, completion: nil)
+                                }
                             }
-                            catch _ {
-                                let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
-                                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                                self.presentViewController(alertController, animated: true, completion: nil)
-                            }
-                        }
-                    })
-                    self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("SequencesViewController"), animated: true)
-                }
-                catch _ {
-                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to delete category", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                    presentViewController(alertController, animated: true, completion: nil)
-                }
+                        })
+                        
+                        self.reloadCurrentView()
+                    }
+                    catch _ {
+                        let alertController = UIAlertController(title: "Delete Failed", message: "Failed to delete category", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+                }))
+                
+                alertController.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+                presentViewController(alertController, animated: true, completion: nil)
             }
         }
     }

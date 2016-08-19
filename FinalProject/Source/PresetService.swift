@@ -50,6 +50,7 @@ class PresetService {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         
         let preset = NSEntityDescription.insertNewObjectForNamedEntity(Presets.self, inManagedObjectContext: context)
+        
         preset.name = name
         
         try context.save()
@@ -70,6 +71,20 @@ class PresetService {
             print("Delete full preset save finished")
             
             saveCompletionHandler()
+        }
+    }
+    
+    func deletePresetWithID(presetID: NSManagedObjectID) throws {
+        let context = CoreDataService.sharedCoreDataService.mainQueueContext
+        
+//        let presetEntity: NSManagedObject
+//        presetEntity.exis
+        context.deleteObject(context.objectWithID(presetID))
+        
+        try context.save()
+
+        CoreDataService.sharedCoreDataService.saveRootContext {
+            print("delete preset with ID save finished")
         }
     }
     
@@ -112,6 +127,7 @@ class PresetService {
         let synthPreset = NSEntityDescription.insertNewObjectForNamedEntity(SynSet.self, inManagedObjectContext: context)
         
         synthPreset.name = name + " Synth"
+//        synthPreset.fullPreset
         
         for rotaryKnob in rotaryKnobArray {
             switch(rotaryKnob.accessibilityLabel!) {
@@ -330,7 +346,7 @@ class PresetService {
         try context.save()
         
         CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Delete synth preset save finished")
+            print("Delete sequence preset save finished")
             
             saveCompletionHandler()
         }
@@ -353,7 +369,7 @@ class PresetService {
         try context.save()
         
         CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Reindex synth preset save finished")
+            print("Reindex sequence preset save finished")
             
             saveCompletionHandler?()
         }

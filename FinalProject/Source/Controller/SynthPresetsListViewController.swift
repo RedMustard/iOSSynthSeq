@@ -16,6 +16,10 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
     @IBAction func goBackToPreviousMenu() {
         self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
     }
+    
+    func reloadCurrentView() {
+        self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("SynthPresetsViewController"), animated: true)
+    }
 
     
     // MARK: UITableViewDelegate
@@ -97,26 +101,50 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
             }
             
             if let preset = resultsController?.objectAtIndexPath(indexPath) as? SynSet {
-                do {
-                    try PresetService.sharedPresetService.deleteSynthPreset(preset, withSaveCompletionHandler: {
-                        if let somePresets = presetsToReindex {
-                            do {
-                                try PresetService.sharedPresetService.reindexSynthPresets(somePresets, shiftForward: false)
+//                let fullPreset = preset.objectIDsForRelationshipNamed("fullPreset")
+//                print(fullPreset)
+                let alertController = UIAlertController(title: "Delete the preset?", message: "If you delete this preset, it will remove the corresponding Full Preset.\n\n Are you sure you wish to delete this preset?", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) in
+                    do {
+                        try PresetService.sharedPresetService.deleteSynthPreset(preset, withSaveCompletionHandler: {
+                            if let somePresets = presetsToReindex {
+                                do {
+                                    try PresetService.sharedPresetService.reindexSynthPresets(somePresets, shiftForward: false)
+                                }
+                                catch _ {
+                                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
+                                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                                    self.presentViewController(alertController, animated: true, completion: nil)
+                                }
                             }
-                            catch _ {
-                                let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
-                                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                                self.presentViewController(alertController, animated: true, completion: nil)
-                            }
-                        }
-                    })
-                    self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("SynthPresetsViewController"), animated: true)
-                }
-                catch _ {
-                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to delete category", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                    presentViewController(alertController, animated: true, completion: nil)
-                }
+                        })
+                        
+                        
+//                        let fullPreset = preset.objectIDsForRelationshipNamed("fullPreset")
+//                        print(fullPreset)
+//                        if let fullPreset = resultsController?.
+//                        if let fullPreset = preset.objectIDsForRelationshipNamed("fullPreset").first {
+//                            try PresetService.sharedPresetService.deletePresetWithID(fullPreset)
+//                            try PresetService.sharedPresetService.deletePreset(fullPreset, withSaveCompletionHandler: {})
+//                        }
+//                        let request = NSFetchRequest(entityName: "Presets")
+//                        let predicate = NSPredicate(format: "name = %@", self)
+//                        if let fullPreset = resultsController?.objec
+//                            try PresetService.sharedPresetService.deletePreset(fullPreset, withSaveCompletionHandler: {})
+//                        }
+                        
+                        self.reloadCurrentView()
+                    }
+                    catch _ {
+                        let alertController = UIAlertController(title: "Delete Failed", message: "Failed to delete category", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+                }))
+                
+                alertController.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+                presentViewController(alertController, animated: true, completion: nil)
+
             }
         }
     }

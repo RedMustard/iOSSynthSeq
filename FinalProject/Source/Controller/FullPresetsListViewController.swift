@@ -18,6 +18,10 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
+    func reloadCurrentView() {
+        self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("FullPresetsViewController"), animated: true)
+    }
+    
     // MARK: UITableViewDelegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return resultsController?.sections?.count ?? 0
@@ -103,26 +107,33 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
             }
             
             if let preset = resultsController?.objectAtIndexPath(indexPath) as? Presets {
-                do {
-                    try PresetService.sharedPresetService.deletePreset(preset, withSaveCompletionHandler: {
-                        if let somePresets = presetsToReindex {
-                            do {
-                                try PresetService.sharedPresetService.reindexPresets(somePresets, shiftForward: false)
+                let alertController = UIAlertController(title: "Are You Sure?", message: "Are you sure you want to delete this preset?", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) in
+                    do {
+                        try PresetService.sharedPresetService.deletePreset(preset, withSaveCompletionHandler: {
+                            if let somePresets = presetsToReindex {
+                                do {
+                                    try PresetService.sharedPresetService.reindexPresets(somePresets, shiftForward: false)
+                                }
+                                catch _ {
+                                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
+                                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                                    self.presentViewController(alertController, animated: true, completion: nil)
+                                }
                             }
-                            catch _ {
-                                let alertController = UIAlertController(title: "Delete Failed", message: "Failed to re-order remaining categories", preferredStyle: .Alert)
-                                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                                self.presentViewController(alertController, animated: true, completion: nil)
-                            }
-                        }
-                    })
-                    self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("FullPresetsViewController"), animated: true)
-                }
-                catch _ {
-                    let alertController = UIAlertController(title: "Delete Failed", message: "Failed to delete category", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                    presentViewController(alertController, animated: true, completion: nil)
-                }
+                        })
+                        self.reloadCurrentView()
+                    }
+                    catch _ {
+                        let alertController = UIAlertController(title: "Delete Failed", message: "Failed to delete category", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+
+                }))
+
+                alertController.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+                presentViewController(alertController, animated: true, completion: nil)
             }
         }
     }
@@ -192,13 +203,13 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
-    func swipeRight(recognizer : UISwipeGestureRecognizer) {
-        goBackToPreviousMenu()
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    func swipeRight(recognizer : UISwipeGestureRecognizer) {
+        goBackToPreviousMenu()
     }
     
     

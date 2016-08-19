@@ -43,4 +43,5 @@ class SynSet: NSManagedObject, NamedEntity {
     @NSManaged var orderIndex: NSNumber
     @NSManaged var name: String
     
+    @NSManaged var fullPreset: Presets
 }

@@ -71,7 +71,7 @@
         <attribute name="sustain" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="sync" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
-        <relationship name="fullPreset" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Presets" inverseName="synthesizerSettings" inverseEntity="Presets" syncable="YES"/>
+        <relationship name="fullPreset" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Presets" inverseName="synthesizerSettings" inverseEntity="Presets" syncable="YES"/>
     </entity>
     <elements>
         <element name="Presets" positionX="-63" positionY="-18" width="128" height="105"/>
