@@ -1,8 +1,8 @@
 //
-//  SeqSet.swift
+//  DefaultSeqSet.swift
 //  FinalProject
 //
-//  Created by Travis Barnes on 8/17/16.
+//  Created by Travis Barnes on 8/20/16.
 //
 //
 
@@ -11,12 +11,12 @@ import CoreData
 import CoreDataService
 
 
-class SeqSet: NSManagedObject, NamedEntity {
+class DefaultSeqSet: NSManagedObject, NamedEntity {
     // MARK: Properties (NamedEntity)
     static var entityName: String {
-        return "SeqSet"
+        return "DefaultSeqSet"
     }
-
+    
     // MARK: Properties (Core Data Attributes)
     @NSManaged var name: String
     @NSManaged var rate: NSNumber
@@ -56,6 +56,6 @@ class SeqSet: NSManagedObject, NamedEntity {
     @NSManaged var step16: NSNumber
     
     // MARK: Properties (Core Data Relationships)
-    @NSManaged var fullPreset: Presets
+    @NSManaged var defaultPreset: DefaultPreset
 }
 

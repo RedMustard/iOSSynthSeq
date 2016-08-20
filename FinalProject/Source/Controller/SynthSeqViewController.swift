@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
+import CoreDataService
 
-class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
+class SynthSeqViewController: UIViewController, NSFetchedResultsControllerDelegate, SWRevealViewControllerDelegate {
     
     // MARK: UIViewController
     override func viewDidLoad() {
@@ -24,8 +26,14 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
             // Reveal View Controller Init Properties
             revealController.rearViewRevealWidth = 325
             revealController.rearViewRevealOverdraw = 0
-            
         }
+        
+        
+        let resultsController = DefaultPresetService.sharedPresetService.fetchedResultsControllerForDefaultPreset()
+        try! resultsController.performFetch()
+        self.resultsController = resultsController
+
+        loadDefaultPreset()
     }
     
     
@@ -33,6 +41,47 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
         return UIStatusBarStyle.LightContent
     }
     
+    
+    override func viewWillDisappear(animated: Bool) {
+        saveDefaultSettings()
+        
+    }
+    
+    
+    // MARK: Default Preset Management
+    private func loadDefaultPreset() {
+        if let preset = resultsController?.fetchedObjects?.first as? DefaultPreset {
+            print("Default Preset Loaded")
+            synthView.initializeDefaultRadioButtons(preset.defaultSynthSettings)
+            synthView.initializeDefaultRotaryKnobs(preset.defaultSynthSettings)
+            seqView.initializeDefaultRadioButtons(preset.defaultSeqSettings)
+            seqView.initializeDefaultRotaryKnobs(preset.defaultSeqSettings)
+        }
+    }
+    
+    
+    private func saveDefaultSettings() {
+        let synthRotaryKnobArray = synthView.rotaryKnobArray
+        let synthRadioButtonArray = synthView.radioButtonArray
+        let seqRotaryKnobArray = seqView.rotaryKnobArray
+        let seqRadioButtonArray = seqView.radioButtonArray
+        
+        if let preset = resultsController?.fetchedObjects?.first as? DefaultPreset {
+            do {
+                try DefaultPresetService.sharedPresetService.updateDefaultPreset(preset, synthRotaryKnobArray: synthRotaryKnobArray, synthRadioButtonArray: synthRadioButtonArray, seqRotaryKnobArray: seqRotaryKnobArray, seqRadioButtonArray: seqRadioButtonArray)
+            } catch _ {
+                ("Failed to update")
+            }
+        } else {
+            do {
+                try DefaultPresetService.sharedPresetService.addDefaultPreset(synthRotaryKnobArray, synthRadioButtonArray: synthRadioButtonArray, seqRotaryKnobArray: seqRotaryKnobArray, seqRadioButtonArray: seqRadioButtonArray)
+                
+            } catch _ {
+                print("Failed to save")
+            }
+        }
+    }
+
     
     // MARK: SWRevealViewControllerDelegate
     func revealControllerPanGestureShouldBegin(revealController: SWRevealViewController!) -> Bool {
@@ -55,5 +104,9 @@ class SynthSeqViewController: UIViewController, SWRevealViewControllerDelegate {
     @IBOutlet var menuButton: UIBarButtonItem!
     @IBOutlet internal var synthView: SynthView!
     @IBOutlet var seqView: SeqView!
+    
+    
+    // MARK: Properties (Private)
+    private var resultsController: NSFetchedResultsController?
     
 }

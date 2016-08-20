@@ -1,8 +1,8 @@
 //
-//  PresetService.swift
+//  DefaultPresetService.swift
 //  FinalProject
 //
-//  Created by Travis Barnes on 8/17/16.
+//  Created by Travis Barnes on 8/20/16.
 //
 //
 
@@ -10,69 +10,70 @@ import CoreData
 import CoreDataService
 import Foundation
 
-class PresetService {
+class DefaultPresetService {
     // MARK: Service
-    func fetchedResultsControllerForPresets() -> NSFetchedResultsController {
-        let fetchRequest = NSFetchRequest(namedEntity: Presets.self)
+    func fetchedResultsControllerForDefaultPreset() -> NSFetchedResultsController {
+        let fetchRequest = NSFetchRequest(namedEntity: DefaultPreset.self)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        
+    
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }
     
     
-    func addPresetWithName(name: String, synthRotaryKnobArray: Array<MHRotaryKnob>, synthRadioButtonArray: Array<RadioButton>, seqRotaryKnobArray: Array<MHRotaryKnob>, seqRadioButtonArray: Array<RadioButton>) throws {
+    func addDefaultPreset(synthRotaryKnobArray: Array<MHRotaryKnob>, synthRadioButtonArray: Array<RadioButton>, seqRotaryKnobArray: Array<MHRotaryKnob>, seqRadioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
-        let preset = NSEntityDescription.insertNewObjectForNamedEntity(Presets.self, inManagedObjectContext: context)
-        let synthPreset = NSEntityDescription.insertNewObjectForNamedEntity(SynSet.self, inManagedObjectContext: context)
-        let seqPreset = NSEntityDescription.insertNewObjectForNamedEntity(SeqSet.self, inManagedObjectContext: context)
-        
-        preset.name = name
-        preset.synthesizerSettings = synthPreset
-        preset.sequencerSettings = seqPreset
-        
-        try addSynthPresetWithName(name, fullPreset: preset, preset: synthPreset, rotaryKnobArray: synthRotaryKnobArray, radioButtonArray: synthRadioButtonArray)
-        try addSeqPresetWithName(name, fullPreset: preset, preset: seqPreset, rotaryKnobArray: seqRotaryKnobArray, radioButtonArray: seqRadioButtonArray)
-        
+
+        let preset = NSEntityDescription.insertNewObjectForNamedEntity(DefaultPreset.self, inManagedObjectContext: context)
+        let synthPreset = NSEntityDescription.insertNewObjectForNamedEntity(DefaultSynSet.self, inManagedObjectContext: context)
+        let seqPreset = NSEntityDescription.insertNewObjectForNamedEntity(DefaultSeqSet.self, inManagedObjectContext: context)
+    
+        preset.name = "Default Preset"
+        preset.defaultSynthSettings = synthPreset
+        preset.defaultSeqSettings = seqPreset
+    
+        try addDefaultSynthPreset(preset, preset: synthPreset, rotaryKnobArray: synthRotaryKnobArray, radioButtonArray: synthRadioButtonArray)
+        try addDefaultSeqPreset(preset, preset: seqPreset, rotaryKnobArray: seqRotaryKnobArray, radioButtonArray: seqRadioButtonArray)
+    
         try context.save()
-        
+    
         CoreDataService.sharedCoreDataService.saveRootContext {
             print("Add preset save finished")
         }
     }
     
-    func deletePreset(preset: Presets, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler) throws {
+    
+    func updateDefaultPreset(preset: DefaultPreset, synthRotaryKnobArray: Array<MHRotaryKnob>, synthRadioButtonArray: Array<RadioButton>, seqRotaryKnobArray: Array<MHRotaryKnob>, seqRadioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
         
-        context.deleteObject(preset)
+        try addDefaultSynthPreset(preset, preset: preset.defaultSynthSettings, rotaryKnobArray: synthRotaryKnobArray, radioButtonArray: synthRadioButtonArray)
+        
+        try addDefaultSeqPreset(preset, preset: preset.defaultSeqSettings, rotaryKnobArray: seqRotaryKnobArray, radioButtonArray: seqRadioButtonArray)
         
         try context.save()
         
         CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Delete full preset save finished")
-            
-            saveCompletionHandler()
+            print("Update preset save finished")
         }
     }
     
     
-    func fetchedResultsControllerForSynthPreset() -> NSFetchedResultsController {
-        let fetchRequest = NSFetchRequest(namedEntity: SynSet.self)
+    func fetchedResultsControllerForDefaultSynthPreset() -> NSFetchedResultsController {
+        let fetchRequest = NSFetchRequest(namedEntity: DefaultSynSet.self)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        
+    
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
+    
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }
-
     
-    func addSynthPresetWithName(name: String, fullPreset: Presets, preset: SynSet, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
+    
+    func addDefaultSynthPreset(defaultPreset: DefaultPreset, preset: DefaultSynSet, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
-
-        preset.name = name + " Synth"
-        preset.fullPreset = fullPreset
-        
+    
+        preset.name = "Default Synth"
+        preset.defaultPreset = defaultPreset
+    
         for rotaryKnob in rotaryKnobArray {
             switch(rotaryKnob.accessibilityLabel!) {
             case("Osc1OctKnob"):
@@ -115,7 +116,7 @@ class PresetService {
                 continue
             }
         }
-        
+    
         for radioButton in radioButtonArray {
             switch(radioButton.accessibilityLabel!) {
             case("LFOSyncButton"):
@@ -128,46 +129,30 @@ class PresetService {
                 continue
             }
         }
-        
+    
         try context.save()
-        
+    
         CoreDataService.sharedCoreDataService.saveRootContext {
             print("Add synth preset save finished")
         }
     }
     
-    
-    func deleteSynthPreset(preset: SynSet, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler) throws {
-        let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
-        context.deleteObject(preset)
-        
-        try context.save()
-        
-        CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Delete synth preset save finished")
-            
-            saveCompletionHandler()
-        }
-    }
-    
-    
-    func fetchedResultsControllerForSeqPreset() -> NSFetchedResultsController {
-        let fetchRequest = NSFetchRequest(namedEntity: SeqSet.self)
+    func fetchedResultsControllerForDefaultSeqPreset() -> NSFetchedResultsController {
+        let fetchRequest = NSFetchRequest(namedEntity: DefaultSeqSet.self)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        
+    
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
+    
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }
     
     
-    func addSeqPresetWithName(name: String, fullPreset: Presets, preset: SeqSet, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
+    func addDefaultSeqPreset(defaultPreset: DefaultPreset, preset: DefaultSeqSet, rotaryKnobArray: Array<MHRotaryKnob>, radioButtonArray: Array<RadioButton>) throws {
         let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
-        preset.name = name + " Sequence"
-        preset.fullPreset = fullPreset
-        
+    
+        preset.name = "Default Sequence"
+        preset.defaultPreset = defaultPreset
+    
         for rotaryKnob in rotaryKnobArray {
             print(rotaryKnob.value)
             switch(rotaryKnob.accessibilityLabel!) {
@@ -209,7 +194,7 @@ class PresetService {
                 continue
             }
         }
-        
+    
         for radioButton in radioButtonArray {
             switch(radioButton.accessibilityLabel!) {
             case("SequenceStep1OnButton"):
@@ -244,7 +229,6 @@ class PresetService {
                 preset.step15 = radioButton.isTriggered
             case("SequenceStep16OnButton"):
                 preset.step16 = radioButton.isTriggered
-
             case("SequenceSteps1To8OnButton"):
                 preset.step1To8 = radioButton.isTriggered
             case("SequenceSteps9To16OnButton"):
@@ -253,30 +237,15 @@ class PresetService {
                 continue
             }
         }
-        
+            
         try context.save()
-        
+            
         CoreDataService.sharedCoreDataService.saveRootContext {
             print("Add sequence preset save finished")
         }
     }
     
     
-    func deleteSeqPreset(preset: SeqSet, withSaveCompletionHandler saveCompletionHandler: SaveCompletionHandler) throws {
-        let context = CoreDataService.sharedCoreDataService.mainQueueContext
-        
-        context.deleteObject(preset)
-        
-        try context.save()
-        
-        CoreDataService.sharedCoreDataService.saveRootContext {
-            print("Delete sequence preset save finished")
-            
-            saveCompletionHandler()
-        }
-    }
-    
-    
     // MARK: Properties (Static)
-    static let sharedPresetService = PresetService()
+    static let sharedPresetService = DefaultPresetService()
 }

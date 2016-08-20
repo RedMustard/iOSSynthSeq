@@ -96,6 +96,52 @@ class SynthView: UIView {
     }
     
     
+    func initializeDefaultRotaryKnobs(settings: DefaultSynSet) {
+        for knob in rotaryKnobArray {
+            switch(knob.accessibilityLabel!) {
+            case("Osc1OctKnob"):
+                knob.value = CGFloat(settings.osc1Oct)
+            case("Osc1WaveKnob"):
+                knob.value = CGFloat(settings.osc1Wave)
+            case("Osc1VolKnob"):
+                knob.value = CGFloat(settings.osc1Vol)
+            case("Osc2OctKnob"):
+                knob.value = CGFloat(settings.osc2Oct)
+            case("Osc2WaveKnob"):
+                knob.value = CGFloat(settings.osc2Wave)
+            case("Osc2VolKnob"):
+                knob.value = CGFloat(settings.osc2Vol)
+            case("AttackKnob"):
+                knob.value = CGFloat(settings.attack)
+            case("DecayKnob"):
+                knob.value = CGFloat(settings.decay)
+            case("SustainKnob"):
+                knob.value = CGFloat(settings.sustain)
+            case("ReleaseKnob"):
+                knob.value = CGFloat(settings.releaseVal)
+            case("FilterNoiseKnob"):
+                knob.value = CGFloat(settings.noise)
+            case("FilterResonanceKnob"):
+                knob.value = CGFloat(settings.resonance)
+            case("FilterSlopeKnob"):
+                knob.value = CGFloat(settings.slope)
+            case("FilterFeedbackKnob"):
+                knob.value = CGFloat(settings.feedback)
+            case("FilterCutoffKnob"):
+                knob.value = CGFloat(settings.cutoff)
+            case("OutputVolumeKnob"):
+                knob.value = CGFloat(settings.volume)
+            case("LFORateKnob"):
+                knob.value = CGFloat(settings.rate)
+            case("LFOAmountKnob"):
+                knob.value = CGFloat(settings.amount)
+            case(_):
+                continue
+            }
+        }
+    }
+    
+    
     // MARK: Radio Button Management
     @IBAction func triggerRadioButton(button: RadioButton) {
         switch(button.isTriggered) {
@@ -110,6 +156,24 @@ class SynthView: UIView {
     
     
     func initializeRadioButtons(settings: SynSet) {
+        for button in radioButtonArray {
+            switch(button.accessibilityLabel!) {
+            case("LFOSyncButton"):
+                button.isTriggered = Bool(settings.sync)
+            case("LFOOsc1Button"):
+                button.isTriggered = Bool(settings.osc1)
+            case("LFOOsc2Button"):
+                button.isTriggered = Bool(settings.osc2)
+            case(_):
+                continue
+            }
+        }
+        
+        updateRadioButtons()
+    }
+    
+    
+    func initializeDefaultRadioButtons(settings: DefaultSynSet) {
         for button in radioButtonArray {
             switch(button.accessibilityLabel!) {
             case("LFOSyncButton"):

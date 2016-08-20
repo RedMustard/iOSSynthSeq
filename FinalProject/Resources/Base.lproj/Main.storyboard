@@ -1255,10 +1255,10 @@
                                     <outletCollection property="rotaryKnobArray" destination="ZmJ-cU-3LC" collectionClass="NSMutableArray" id="K0n-Hb-9cU"/>
                                     <outletCollection property="rotaryKnobArray" destination="0Ub-hr-QzN" collectionClass="NSMutableArray" id="LwV-5L-hNN"/>
                                     <outletCollection property="rotaryKnobArray" destination="5O9-t4-Ove" collectionClass="NSMutableArray" id="mau-Wa-iGg"/>
-                                    <outletCollection property="radioButtonArray" destination="fDR-Lk-g0S" id="qjQ-jA-WzO"/>
-                                    <outletCollection property="radioButtonArray" destination="wmu-gH-AOa" id="NLs-Rn-Kq3"/>
-                                    <outletCollection property="radioButtonArray" destination="87b-bP-sAd" id="3Hm-Vo-Ltb"/>
-                                    <outletCollection property="radioButtonArray" destination="P8d-WQ-AMF" id="5JB-jM-x7h"/>
+                                    <outletCollection property="radioButtonArray" destination="fDR-Lk-g0S" collectionClass="NSMutableArray" id="qjQ-jA-WzO"/>
+                                    <outletCollection property="radioButtonArray" destination="wmu-gH-AOa" collectionClass="NSMutableArray" id="NLs-Rn-Kq3"/>
+                                    <outletCollection property="radioButtonArray" destination="87b-bP-sAd" collectionClass="NSMutableArray" id="3Hm-Vo-Ltb"/>
+                                    <outletCollection property="radioButtonArray" destination="P8d-WQ-AMF" collectionClass="NSMutableArray" id="5JB-jM-x7h"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-1s-AUK" customClass="SeqView" customModule="FinalProject" customModuleProvider="target">
@@ -1892,7 +1892,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.84216447871892686" green="0.84441105769230773" blue="0.8298164564913374" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.78285670534393492" green="0.78663862179487176" blue="0.77907478889299797" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="s5o-GT-RHZ" firstAttribute="top" secondItem="vEo-B2-XS0" secondAttribute="top" id="04N-Mc-BO2"/>
                                             <constraint firstItem="xqI-J7-RkF" firstAttribute="centerX" secondItem="hXM-Dd-C8t" secondAttribute="centerX" id="07b-GZ-4Lt"/>
@@ -2088,7 +2088,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.8421644787" green="0.84441105770000002" blue="0.82981645650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.78285670529999996" green="0.78663862179999999" blue="0.77907478890000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="I7W-1v-e7K" secondAttribute="bottom" constant="15" id="MPT-mj-E2D"/>
                                             <constraint firstAttribute="trailing" secondItem="hvt-TG-OMd" secondAttribute="trailing" constant="15" id="WR6-cR-b9h"/>
@@ -2190,24 +2190,24 @@
                                     <outletCollection property="step9To16RadioButtonArray" destination="2tP-Ky-aLO" collectionClass="NSMutableArray" id="o7E-29-azF"/>
                                     <outletCollection property="step9To16RadioButtonArray" destination="cfK-Wa-F1o" collectionClass="NSMutableArray" id="mYx-Gt-7Zr"/>
                                     <outletCollection property="step9To16RadioButtonArray" destination="RuW-3D-hyW" collectionClass="NSMutableArray" id="ocZ-aU-6D0"/>
-                                    <outletCollection property="radioButtonArray" destination="ogX-u5-1Nh" id="W1K-7d-yl7"/>
-                                    <outletCollection property="radioButtonArray" destination="uPE-pw-Hpa" id="WbI-hT-5vV"/>
-                                    <outletCollection property="radioButtonArray" destination="f5W-dg-ocQ" id="jH0-kx-8N3"/>
-                                    <outletCollection property="radioButtonArray" destination="8P5-tO-K24" id="7rl-yF-J84"/>
-                                    <outletCollection property="radioButtonArray" destination="G8B-if-Ldk" id="H1B-Mb-mDc"/>
-                                    <outletCollection property="radioButtonArray" destination="H1L-Xn-FIt" id="ZVO-pI-Wb6"/>
-                                    <outletCollection property="radioButtonArray" destination="xqI-J7-RkF" id="6nU-y7-j7Z"/>
-                                    <outletCollection property="radioButtonArray" destination="CLV-9C-Ta2" id="z3S-Qw-7td"/>
-                                    <outletCollection property="radioButtonArray" destination="ldB-75-EsQ" id="vqJ-vz-os6"/>
-                                    <outletCollection property="radioButtonArray" destination="HRm-uV-pKO" id="TY8-Wk-Kh5"/>
-                                    <outletCollection property="radioButtonArray" destination="WFb-WI-y9T" id="bU4-hP-d3m"/>
-                                    <outletCollection property="radioButtonArray" destination="psO-yY-aJK" id="o11-ti-Qf4"/>
-                                    <outletCollection property="radioButtonArray" destination="Z7k-kW-tWV" id="DQk-IT-fIi"/>
-                                    <outletCollection property="radioButtonArray" destination="2tP-Ky-aLO" id="6eg-qw-WkO"/>
-                                    <outletCollection property="radioButtonArray" destination="R10-kr-E1g" id="HIx-vb-Wy9"/>
-                                    <outletCollection property="radioButtonArray" destination="cfK-Wa-F1o" id="VbJ-Uk-TpG"/>
-                                    <outletCollection property="radioButtonArray" destination="OnE-vj-gmK" id="NNA-N5-bqt"/>
-                                    <outletCollection property="radioButtonArray" destination="RuW-3D-hyW" id="cUi-Zc-wZj"/>
+                                    <outletCollection property="radioButtonArray" destination="ogX-u5-1Nh" collectionClass="NSMutableArray" id="W1K-7d-yl7"/>
+                                    <outletCollection property="radioButtonArray" destination="uPE-pw-Hpa" collectionClass="NSMutableArray" id="WbI-hT-5vV"/>
+                                    <outletCollection property="radioButtonArray" destination="f5W-dg-ocQ" collectionClass="NSMutableArray" id="jH0-kx-8N3"/>
+                                    <outletCollection property="radioButtonArray" destination="8P5-tO-K24" collectionClass="NSMutableArray" id="7rl-yF-J84"/>
+                                    <outletCollection property="radioButtonArray" destination="G8B-if-Ldk" collectionClass="NSMutableArray" id="H1B-Mb-mDc"/>
+                                    <outletCollection property="radioButtonArray" destination="H1L-Xn-FIt" collectionClass="NSMutableArray" id="ZVO-pI-Wb6"/>
+                                    <outletCollection property="radioButtonArray" destination="xqI-J7-RkF" collectionClass="NSMutableArray" id="6nU-y7-j7Z"/>
+                                    <outletCollection property="radioButtonArray" destination="CLV-9C-Ta2" collectionClass="NSMutableArray" id="z3S-Qw-7td"/>
+                                    <outletCollection property="radioButtonArray" destination="ldB-75-EsQ" collectionClass="NSMutableArray" id="vqJ-vz-os6"/>
+                                    <outletCollection property="radioButtonArray" destination="HRm-uV-pKO" collectionClass="NSMutableArray" id="TY8-Wk-Kh5"/>
+                                    <outletCollection property="radioButtonArray" destination="WFb-WI-y9T" collectionClass="NSMutableArray" id="bU4-hP-d3m"/>
+                                    <outletCollection property="radioButtonArray" destination="psO-yY-aJK" collectionClass="NSMutableArray" id="o11-ti-Qf4"/>
+                                    <outletCollection property="radioButtonArray" destination="Z7k-kW-tWV" collectionClass="NSMutableArray" id="DQk-IT-fIi"/>
+                                    <outletCollection property="radioButtonArray" destination="2tP-Ky-aLO" collectionClass="NSMutableArray" id="6eg-qw-WkO"/>
+                                    <outletCollection property="radioButtonArray" destination="R10-kr-E1g" collectionClass="NSMutableArray" id="HIx-vb-Wy9"/>
+                                    <outletCollection property="radioButtonArray" destination="cfK-Wa-F1o" collectionClass="NSMutableArray" id="VbJ-Uk-TpG"/>
+                                    <outletCollection property="radioButtonArray" destination="OnE-vj-gmK" collectionClass="NSMutableArray" id="NNA-N5-bqt"/>
+                                    <outletCollection property="radioButtonArray" destination="RuW-3D-hyW" collectionClass="NSMutableArray" id="cUi-Zc-wZj"/>
                                 </connections>
                             </view>
                         </subviews>

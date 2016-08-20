@@ -1,8 +1,8 @@
 //
-//  SynSet.swift
+//  DefaultSynSet.swift
 //  FinalProject
 //
-//  Created by Travis Barnes on 8/17/16.
+//  Created by Travis Barnes on 8/20/16.
 //
 //
 
@@ -11,10 +11,10 @@ import CoreData
 import CoreDataService
 
 
-class SynSet: NSManagedObject, NamedEntity {
+class DefaultSynSet: NSManagedObject, NamedEntity {
     // MARK: Properties (NamedEntity)
     static var entityName: String {
-        return "SynSet"
+        return "DefaultSynSet"
     }
     
     // MARK: Properties (Core Data Attributes)
@@ -43,5 +43,6 @@ class SynSet: NSManagedObject, NamedEntity {
     @NSManaged var osc2: NSNumber
     
     // MARK: Properties (Core Data Relationships)
-    @NSManaged var fullPreset: Presets
+    @NSManaged var defaultPreset: DefaultPreset
 }
+
