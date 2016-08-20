@@ -144,6 +144,9 @@ class SynthView: UIView {
     
     // MARK: Radio Button Management
     @IBAction func triggerRadioButton(button: RadioButton) {
+        undoManager?.registerUndoWithTarget(self, selector: #selector(SynthView.triggerRadioButton(_:)), object: button)
+        undoManager?.setActionName("Synth Radio Button Trigger")
+        
         switch(button.isTriggered) {
         case(true):
             button.isTriggered = false

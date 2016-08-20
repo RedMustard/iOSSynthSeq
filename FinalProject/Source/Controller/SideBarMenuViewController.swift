@@ -47,7 +47,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
                 saveAlert(self)
 
             case ("Undo"):
-                return
+                undoManager?.undo()
             case (_):
                 return
             }

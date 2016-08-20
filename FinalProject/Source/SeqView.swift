@@ -278,6 +278,9 @@ class SeqView: UIView {
     
     
     @IBAction func triggerRadioButton(button: RadioButton) {
+        undoManager?.registerUndoWithTarget(self, selector: #selector(SynthView.triggerRadioButton(_:)), object: button)
+        undoManager?.setActionName("Seq Radio Button Trigger")
+        
         switch(button.accessibilityLabel!, button.isTriggered) {
         case("SequenceSteps1To8OnButton", true):
             button.isTriggered = false

@@ -154,7 +154,6 @@ class DefaultPresetService {
         preset.defaultPreset = defaultPreset
     
         for rotaryKnob in rotaryKnobArray {
-            print(rotaryKnob.value)
             switch(rotaryKnob.accessibilityLabel!) {
             case("SequenceStep1FreqKnob"):
                 preset.frequency1 = rotaryKnob.value
