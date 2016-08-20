@@ -47,6 +47,14 @@ class FullPresetsListViewController: UIViewController, UITableViewDataSource, UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if let preset = resultsController?.objectAtIndexPath(indexPath) as? Presets {
+            if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
+                synthViewController.synthView.initializeRadioButtons(preset.synthesizerSettings)
+                synthViewController.synthView.initializeRotaryKnobs(preset.synthesizerSettings)
+                synthViewController.seqView.initializeRadioButtons(preset.sequencerSettings)
+                synthViewController.seqView.initializeRotaryKnobs(preset.sequencerSettings)
+            }
+        }
     }
     
     

@@ -47,6 +47,12 @@ class SynthPresetsListViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if let preset = resultsController?.objectAtIndexPath(indexPath) as? SynSet {
+            if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
+                synthViewController.synthView.initializeRadioButtons(preset)
+                synthViewController.synthView.initializeRotaryKnobs(preset)
+            }
+        }
     }
     
     

@@ -139,40 +139,28 @@ class SeqView: UIView {
             }
         }
         
-//        step1To8RadioButton.isTriggered = Bool(settings.step1To8)
-//        step9To16RadioButton.isTriggered = Bool(settings.step9To16)
-        
         updateRadioButtons()
     }
     
     
     private func updateRadioButtons() {
         for button in radioButtonArray {
-            if button.isTriggered == false {
+            switch(button.isTriggered) {
+            case(false):
                 button.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
-                
-            } else if button.isTriggered == true {
+            case(true):
                 button.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
             }
         }
         
-//        for button in step9To16RadioButtonArray {
-//            if button.isTriggered == false {
-//                button.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
-//                
-//            } else if button.isTriggered == true {
-//                button.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
-//            }
-//        }
-        
-        if step1To8RadioButton.isTriggered == false {
+        switch(step1To8RadioButton.isTriggered) {
+        case(false):
             step1To8RadioButton.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
             
             for button in step1To8RadioButtonArray {
                 button.enabled = false
             }
-            
-        } else if step1To8RadioButton.isTriggered == true {
+        case(true):
             step1To8RadioButton.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
             
             for button in step1To8RadioButtonArray {
@@ -180,14 +168,14 @@ class SeqView: UIView {
             }
         }
         
-        if step9To16RadioButton.isTriggered == false {
+        switch(step9To16RadioButton.isTriggered) {
+        case(false):
             step9To16RadioButton.setImage(UIImage(named: "Radio Button Off"), forState: UIControlState.Normal)
             
             for button in step9To16RadioButtonArray {
                 button.enabled = false
             }
-            
-        } else if step9To16RadioButton.isTriggered == true {
+        case(true):
             step9To16RadioButton.setImage(UIImage(named: "Radio Button On"), forState: UIControlState.Normal)
             
             for button in step9To16RadioButtonArray {

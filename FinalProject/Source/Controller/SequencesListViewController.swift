@@ -54,13 +54,6 @@ class SequencesListViewController: UIViewController, UITableViewDataSource, UITa
                 synthViewController.seqView.initializeRotaryKnobs(preset)
             }
         }
-//        if let synthViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
-//            let rotaryKnobArray = synthViewController.synthView.rotaryKnobArray
-//            let radioButtonArray = synthViewController.synthView.radioButtonArray
-            
-//            synthViewController.seqView.
-//        }
-        
     }
     
     
