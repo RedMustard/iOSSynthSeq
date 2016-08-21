@@ -27,12 +27,24 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor(white: 0.2, alpha: 1)
         
-        if menuItemArray[indexPath.row] == "Presets" {
+        switch(menuItemArray[indexPath.row]) {
+        case("Presets"):
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        case("Undo"):
+            if undoManager?.canUndo == false {
+                cell.textLabel?.enabled = false
+                cell.userInteractionEnabled = false
+            }
+        case("Redo"):
+            if undoManager?.canRedo == false {
+                cell.textLabel?.enabled = false
+                cell.userInteractionEnabled = false
+            }
+        case(_):
+            break
         }
         
         return cell
-
     }
     
     
@@ -41,13 +53,19 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
         
         if let tableViewCellIdentifier = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text {
             switch(tableViewCellIdentifier) {
-            case ("Presets"):
+            case("Presets"):
                 self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("PresetsViewController"), animated: true)
-            case ("Save"):
+            case("Save"):
                 saveAlert(self)
 
-            case ("Undo"):
+            case("Undo"):
                 undoManager?.undo()
+            self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"), animated: true)
+        
+            case("Redo"):
+                undoManager?.redo()
+            self.revealViewController().setRearViewController(storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"), animated: true)
+            
             case (_):
                 return
             }
@@ -119,7 +137,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
 
     
     // MARK: Properties
-    let menuItemArray: Array<String> = ["Presets", "Save", "Undo"]
+    let menuItemArray: Array<String> = ["Presets", "Save", "Undo", "Redo"]
     
     // MARK: Properties (IBOutlet)
     @IBOutlet var menuTableView: UITableView!
