@@ -121,6 +121,14 @@ class SideBarMenuViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    override func viewWillDisappear(animated: Bool) {
+        if let synthSeqViewController = self.revealViewController().frontViewController.childViewControllers.first as? SynthSeqViewController {
+            synthSeqViewController.synthView.userInteractionEnabled = true
+            synthSeqViewController.seqView.userInteractionEnabled = true
+        }
+    }
+    
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }

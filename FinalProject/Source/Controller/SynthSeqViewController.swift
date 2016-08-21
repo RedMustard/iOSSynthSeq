@@ -43,7 +43,7 @@ class SynthSeqViewController: UIViewController, NSFetchedResultsControllerDelega
     
     
     override func viewWillDisappear(animated: Bool) {
-        saveDefaultSettings()
+        saveDefaultPreset()
         
     }
     
@@ -60,7 +60,7 @@ class SynthSeqViewController: UIViewController, NSFetchedResultsControllerDelega
     }
     
     
-    private func saveDefaultSettings() {
+    private func saveDefaultPreset() {
         let synthRotaryKnobArray = synthView.rotaryKnobArray
         let synthRadioButtonArray = synthView.radioButtonArray
         let seqRotaryKnobArray = seqView.rotaryKnobArray
@@ -97,6 +97,8 @@ class SynthSeqViewController: UIViewController, NSFetchedResultsControllerDelega
     @IBAction func toggleRearViewController() {
         setRearViewToMenuController()
         self.revealViewController().revealToggle(self)
+        synthView.userInteractionEnabled = false
+        seqView.userInteractionEnabled = false
     }
     
     

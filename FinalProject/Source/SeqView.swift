@@ -26,6 +26,13 @@ class SeqView: UIView {
         initializeRotaryKnobs(rotaryKnobArray)
     }
     
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        
+//        let touch: UITouch = touches.first as UITouch!
+        
+    }
+    
     
     // MARK: Rotary Knob Management
     private func initializeRotaryKnobs(knobArray: Array<MHRotaryKnob>) {

@@ -178,6 +178,7 @@
 	return YES;
 }
 
+// MARK: POSSIBLE
 - (BOOL)handleTouch:(UITouch *)touch
 {
 	if (touch.tapCount > 1 && self.resetsToDefault && _canReset)
